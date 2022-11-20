@@ -1,14 +1,14 @@
 let listOfTools = [
     {
-        name: 'autoescala',
+        name: 'Auto escala',
         link: '/autoescala',
-        description: 'bla bla bla bla bla',
+        description: 'Ferramenta para criação automática de turnos de serviços.',
         image: '../img/autoescala.png'
     },
     {
-        name: 'circulocoord',
+        name: 'Coordenadas do círculo',
         link: '/circulocoord',
-        description: 'bla bla bla bla bla',
+        description: 'A partir de uma coordenada central de um círculo, encontre as coordenadas geográficas do perímetro.',
         image: '../img/circulocoord.png'
     },
   
