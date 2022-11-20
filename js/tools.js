@@ -6,17 +6,12 @@ let listOfTools = [
         image: '../img/autoescala.png'
     },
     {
-        name: 'circoord',
-        link: '/circoord',
+        name: 'circulocoord',
+        link: '/circulocoord',
         description: 'bla bla bla bla bla',
-        image: '../img/circoord.png'
+        image: '../img/circulocoord.png'
     },
-    {
-        name: 'whatsapp',
-        link: '/whatsapp',
-        description: 'bla bla bla bla bla',
-        image: '../img/whatsapp.jpg'
-    },
+  
 ]
 
 let tools = new Vue({
