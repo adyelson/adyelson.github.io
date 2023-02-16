@@ -226,15 +226,15 @@
 			
 			<div v-for="projeto in projetos" class="mt-30 mb-30 col-xl-6 col-lg-10 col-md-5 col-sm-6 d-lg-flex align-items-stretch product" data-aos-duration="600" data-aos="fade-down" data-aos-delay="0">
 				<a :href="projeto.nome" class="align-self-start flex-shrink-0 img_link">
-					<img :srcset="projeto.imagens[0]" :src="projeto.imagens[0]" alt="" class="img-fluid radius10" />
+					<img :srcset="projeto.imagens[0]" :src="projeto.imagens[0]" alt="" class="img-fluid radius10 border" />
 				</a>
 				<div class="mt-30 mt-lg-0 ml-30 pb-60 relative inner">
 					<a :href="projeto.nome" class="d-block link color-main f-22 semibold title">{{projeto.nome}}</a>
 					<div class="mb-15 f-14 semibold sp-20 color-heading price"><span  style="padding:8px;margin-right:5px" class="badge badge-dark" v-for="tag in projeto.tags"> {{tag }}  </span></div>
-					<div class="color-heading text-adaptive">{{projeto.descricao}}</div>
+					<div :href="projeto.nome" class="color-heading text-adaptive">{{projeto.descricao}}</div>
 					<div class="mt-30 mt-lg-0 absolute d-flex flex-wrap align-items-baseline buttons">
-						<a href="#" class="mr-10 btn sm border-action-2 medium f-16">Visitar</a>
-						<a href="#" class="link action-2 medium f-16">Detalhes</a>
+						<a :href="projeto.nome" class="link action-2 medium f-16 mr-5">Detalhes</a>
+						<a :href="projeto.titulo" class="btn sm border-action-2 medium f-16">Visitar</a>
 					</div>
 				</div>
 			</div>

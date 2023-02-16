@@ -1,30 +1,35 @@
 let projetos = [
     {
-        nome:"TicTacToe",        
+        titulo:"TicTacToe",        
         descricao:"Jogo da velha",
         detalhes:"",
         tags:["Jogos","Criatividade"],
-        qtd_img: 3,
-        imagens: []
-        
+        qtd_img: 3      
     }, {
-        nome:"MarketList",        
+        titulo:"MarketList",              
         descricao:"Lista de mercado",
         detalhes:"",
         tags:["Facilidades","Ferramentas"],
-        qtd_img: 2,
-        imagens: []
-        
+        qtd_img: 2 
     }
 ]
 
-function listar_imagens(nome, qtd_img){
+ 
+function nome_projeto(titulo){  
+    
+    return (titulo).toLowerCase() ;
+} 
+ function listar_imagens(nome, qtd_img){
     let imagens = [];
     for(let i= 1; i<=qtd_img;i++){
         imagens.push("i/"+nome+"_"+i+".jpg")
     }
     return imagens;
-}  
+} 
+
+projetos.forEach(projeto => {
+    projeto.nome = nome_projeto(projeto.titulo)
+});
 
 projetos.forEach(projeto => {
     projeto.imagens = listar_imagens(projeto.nome, projeto.qtd_img)
