@@ -79,14 +79,11 @@
 						<a href="#tecnologias" class="link color-heading mx-15">Tecnologias</a>
 						<a href="#projetos" class="link color-heading mx-15">Projetos</a>
 						<a href="#sobre" class="link color-heading mx-15">Sobre</a>
-						<a href="#" class="link color-heading f-16 mx-15">
+						<!-- <a href="#" class="link color-heading f-16 mx-15">
 							<i class="fas fa-search"></i>
-						</a>
+						</a> -->
 					</div>
-					<!-- <div class="col-lg-3 col-md-4 col-sm-6 d-flex justify-content-end align-items-center">
-							<a href="#" class="link mr-20 color-heading">Sign In</a>
-							<a href="#" class="btn sm action-1">Sign Up</a>
-						</div> -->
+					
 				</div>
 			</div>
 		</nav>
@@ -113,23 +110,22 @@
 	<!-- Feature 34 -->
 	<section id="solucoes" class="pt-100 pb-120 bg-light feature_34">
 		<div class="container px-xl-0">
-			<div class="row align-items-center text-center text-sm-left">
+			<div class="row align-items-center text-center text-sm-left justify-content-center">
 				<div class="col-xl-1">
 				</div>
 				<div class="col-lg-4 col-sm-6">
 					<h2 class="mb-20">Agilidade nas tarefas</h2>
-					<div class="mb-40 mb-sm-0 f-22 color-heading text-adaptive">Soluções para ganhar tempo e evitar
-						gastos em processos repetitivos ou redundantes.
+					<div class="mb-40 mb-sm-0 f-22 color-heading text-adaptive">Soluções para poupar tempo e evitar	gastos em processos repetitivos ou redundantes.
 					</div>
 				</div>
 				<div class="col-sm-1">
 				</div>
 				<div class="col-sm-5">
 					<img style="border-radius: 15px;" src="i/feature_34_img.png" srcset="i/feature_34_img@2x.png 2x"
-						alt="" class="img" />
+						alt="" class="img-fluid" />
 				</div>
 			</div>
-			<div class="mt-95 row justify-content-center text-center blocks">
+			<div class="mt-145 row justify-content-center text-center blocks">
 				<div class="mb-50 mb-md-0 col-md-4 col-sm-8">
 					<img src="i/feature_101_img.png" srcset="i/feature_101_img@2x.png 2x" alt="" />
 					<div class="mt-20 mb-20 f-14 semibold text-uppercase sp-20 title">Design responsivo</div>
@@ -231,23 +227,20 @@
 	<section id="projetos" class="ecommerce_18 bg-light pt-100 pb-70">
 		<div class="container px-xl-0">
 			<h2 class="mb-60 text-center" data-aos-duration="600" data-aos="fade-down" data-aos-delay="0">Projetos</h2>
-			<div class="d-flex flex-wrap justify-content-between align-items-baseline relative ecommerce_18_nav">
-				<div class="f-14 semibold text-uppercase sp-20 categories mb-20" data-aos-duration="600"
+			<div class="d-flex flex-wrap justify-content-around align-items-baseline relative ecommerce_18_nav">
+				<div class="f-14  semibold text-uppercase sp-20 categories mb-20" data-aos-duration="600"
 					data-aos="fade-down" data-aos-delay="0">
-					<a v-for="tag in tags" href="#" class=" badge badge-dark mr-25 link color-heading f-16 mb-20"
+					<a v-for="tag in tags" class="badge badge-dark mr-25 link color-heading f-16 mb-20 tagbutton"
 						style="padding:10px 15px 10px  15px ; color:aliceblue">{{tag}}</a>
 
 				</div>
 
 			</div>
 			<div class="row  justify-content-around mt-30">
-				<div v-for="projeto in projetos" class="card border-0" style="width: 16rem;" data-toggle="tooltip"
-					data-placement="right" :title="(projeto.tags).join(' | ')">
-
-			
+				<div v-for="projeto in projetos" class="card border-0 projetoitem" style="width: 16rem;" data-toggle="tooltip"
+					data-placement="right" :title="(projeto.tags).join(' | ')">			
 					<div :id="projeto.nome" class="carousel slide" data-ride="carousel">
 						<div class="carousel-inner">
-
 							<div v-for="(imagem, index) in projeto.imagens" :class="index+1==1 ? 'carousel-item active' : 'carousel-item'">
 								<img class="card-img-top border radius10" :src="imagem" >
 							</div>	
@@ -280,92 +273,11 @@
 					</div>
 				</div>
 
-				<!-- <div v-for="projeto in projetos" class="mt-30 mb-30 col-xl-6 col-lg-7 col-md-4 col-sm-5 d-lg-flex align-items-stretch product justify-content-center" data-aos-duration="600" data-aos="fade-down" data-aos-delay="0">
-				<a :href="projeto.nome" class="align-self-start flex-shrink-0 img_link">
-					<img  :srcset="projeto.imagens[0]" :src="projeto.imagens[0]" alt="" class="img-fluid radius10 border mw-200 " />
-				</a>
-				<div class="mt-30 mt-lg-0 ml-30 pb-60 relative inner align-items-center justify-content-center ">
-					<a :href="projeto.nome" class="d-block link color-main f-22 semibold title">{{projeto.nome}}</a>
-					<div class="mb-15 f-14 semibold sp-20 color-heading price d-none"><span  style="padding:8px;margin-right:5px" class="badge badge-dark" v-for="tag in projeto.tags"> {{tag }}  </span></div>
-					<div :href="projeto.nome" class="color-heading text-adaptive">{{projeto.descricao}}</div>
-					<div class="mt-30 mt-lg-0 absolute d-flex flex-wrap align-items-center  buttons">
-						<a :href="projeto.nome" class="link action-1 medium f-16 mr-10 ">Detalhes</a>
-						<a :href="projeto.titulo" class="link action-1 small f-16">Visualizar</a>
-					</div>
-				</div>
-			</div>
-						 -->
+				
 
 			</div>
 		</div>
 	</section>
-	<!-- 
-<section class="ecommerce_25 bg-gray pt-100 pb-100 text-center">
-	<div class="container px-xl-0">
-		<div class="col-12 pt-70 pb-75 bg-light radius10 inner">
-			<div class="mb-2 f-14 color-heading semibold text-uppercase sp-20 subtitle" data-aos-duration="600" data-aos="fade-down" data-aos-delay="0">Enjoy Our Serivces</div>
-			<h2 class="mb-40 small" data-aos-duration="600" data-aos="fade-down" data-aos-delay="150">Free Shipping on Each Purchase</h2>
-			<span data-aos-duration="600" data-aos="fade-down" data-aos-delay="300"><a href="#" class="mb-40 btn lg action-2">Go to Market</a></span>			<div class="mx-auto mw-470 color-heading text-adaptive" data-aos-duration="600" data-aos="fade-down" data-aos-delay="450">
-				Free shipping is valid for qualifying orders of $99 or more <br />
-				before taxes and after applicable discounts.			</div>
-		</div>
-	</div>
-</section> -->
-
-	<!-- Feature 22 -->
-	<!-- <section class="pt-100 pb-100 bg-light feature_22">
-			<div class="container px-xl-0">
-				<div class="row flex-row-reverse justify-content-between">
-					<div class="col-lg-6 col-md-7">
-						<h2 class="small">Your Application Builder Created by Designers and Developers</h2>
-						<div class="mt-25 mb-75 f-22 color-heading text-adaptive description">We created an application that helps designers, developers, and companies create Bootstrap website themes. Go live fast right now.
-						</div>
-						<div class="mb-40 mb-md-0 d-sm-flex align-items-center buttons">
-							<a href="#" class="btn mb-20 mb-sm-0 mr-15 action-1">Get Started</a>
-							<div class="d-flex links">
-								<a href="#" class="link color-gray f-32 mx-20">
-									<i class="fab fa-android"></i>
-								</a>
-								<a href="#" class="link color-gray f-32 mx-20">
-									<i class="fab fa-windows"></i>
-								</a>
-								<a href="#" class="link color-gray f-32 mx-20">
-									<i class="fab fa-slack-hash"></i>
-								</a>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-1 d-none d-lg-block">
-					</div>
-					<div class="col-xl-4 col-lg-5 col-md-4">
-						<div class="row">
-							<div class="mb-80 col-md-12 col-sm-6 d-lg-flex align-items-start block">
-								<div class="w-70 flex-shrink-0 icon">
-									<i class="far fa-comment-dots color-gray f-50"></i>
-								</div>
-								<div class="inner">
-									<div class="mt-10 mb-20 f-22 text-adaptive title">Online Editor</div>
-									<div class="color-heading text-adaptive">Edit page content online using the Startup editor. We’re always improving the editor.
-									</div>
-								</div>
-							</div>
-							<div class="mb-80 col-md-12 col-sm-6 d-lg-flex align-items-start block">
-								<div class="w-70 flex-shrink-0 icon">
-									<i class="fab fa-html5 color-gray f-50"></i>
-								</div>
-								<div class="inner">
-									<div class="mt-10 mb-20 f-22 text-adaptive title">Unlimited Styles</div>
-									<div class="color-heading text-adaptive">Select the desired style of your website or generate your own look of your Bootstrap theme.
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-1 d-none d-xl-block">
-					</div>
-				</div>
-			</div>
-		</section> -->
 
 	<!-- Testimonial 2 -->
 	<section id="sobre" class="pt-75 pb-75 bg-light testimonial_2">
@@ -373,9 +285,7 @@
 			<div class="row justify-content-center">
 				<div class="col-xl-6 col-lg-8 col-md-10">
 					<i class="fas fa-quote-left f-30 color-gray"></i>
-					<div class="mt-35 mb-45 f-22 text-adaptive">You can decide whether to create your site using UI
-						Kit blocks or samples. The blocks can merge
-						together in various combinations.
+					<div class="mt-35 mb-45 f-22 text-adaptive">Tudo é alcançavel! Só depende do tempo e energia quevocê irá dedicar para alcançar seu objetivo!
 					</div>
 					<img src="i/avatar.svg" srcset="i/avatar.svg 2x" alt="" class="w-120 h-120 radius_full" />
 					<div class="mt-20 f-18 medium">Adyelson Felix Loureiro</div>
@@ -385,113 +295,6 @@
 		</div>
 	</section>
 
-	<!-- Content 30 -->
-	<!-- <section class="pt-105 pb-70 bg-light text-center content_30">
-			<div class="container px-xl-0">
-				<div class="row justify-content-center">
-					<h2 class="col-lg-9 small">Trusted by over 500 great businesses</h2>
-					<div class="col-lg-8 col-md-10 mt-15 mb-50 f-18 medium op-7 color-heading text-adaptive">					<div>
-Big companies and thousands of freelancers trust in our apps, you could be part of our community too.
-					</div>
-					</div>
-				</div>
-				<div class="row justify-content-center">
-					<div class="mb-30 col-lg-3 col-md-5 col-sm-6">
-						<div class="d-flex justify-content-center align-items-center block h-160 mw-270 mx-auto radius10">
-							<img src="i/content_30_logo_1.png" srcset="i/content_30_logo_1@2x.png 2x" alt="" class="img-fluid" />
-						</div>
-					</div>
-					<div class="mb-30 col-lg-3 col-md-5 col-sm-6">
-						<div class="d-flex justify-content-center align-items-center block h-160 mw-270 mx-auto radius10">
-							<img src="i/content_30_logo_2.png" srcset="i/content_30_logo_2@2x.png 2x" alt="" class="img-fluid" />
-						</div>
-					</div>
-					<div class="mb-30 col-lg-3 col-md-5 col-sm-6">
-						<div class="d-flex justify-content-center align-items-center block h-160 mw-270 mx-auto radius10">
-							<img src="i/content_30_logo_3.png" srcset="i/content_30_logo_3@2x.png 2x" alt="" class="img-fluid" />
-						</div>
-					</div>
-					<div class="mb-30 col-lg-3 col-md-5 col-sm-6">
-						<div class="d-flex justify-content-center align-items-center block h-160 mw-270 mx-auto radius10">
-							<img src="i/content_30_logo_4.png" srcset="i/content_30_logo_4@2x.png 2x" alt="" class="img-fluid" />
-						</div>
-					</div>
-					<div class="mb-30 col-lg-3 col-md-5 col-sm-6">
-						<div class="d-flex justify-content-center align-items-center block h-160 mw-270 mx-auto radius10">
-							<img src="i/content_30_logo_5.png" srcset="i/content_30_logo_5@2x.png 2x" alt="" class="img-fluid" />
-						</div>
-					</div>
-					<div class="mb-30 col-lg-3 col-md-5 col-sm-6">
-						<div class="d-flex justify-content-center align-items-center block h-160 mw-270 mx-auto radius10">
-							<img src="i/content_30_logo_6.png" srcset="i/content_30_logo_6@2x.png 2x" alt="" class="img-fluid" />
-						</div>
-					</div>
-					<div class="mb-30 col-lg-3 col-md-5 col-sm-6">
-						<div class="d-flex justify-content-center align-items-center block h-160 mw-270 mx-auto radius10">
-							<img src="i/content_30_logo_7.png" srcset="i/content_30_logo_7@2x.png 2x" alt="" class="img-fluid" />
-						</div>
-					</div>
-					<div class="mb-30 col-lg-3 col-md-5 col-sm-6">
-						<div class="d-flex justify-content-center align-items-center block h-160 mw-270 mx-auto radius10">
-							<img src="i/content_30_logo_8.png" srcset="i/content_30_logo_8@2x.png 2x" alt="" class="img-fluid" />
-						</div>
-					</div>
-				</div>
-			</div>
-		</section> -->
-
-
-	<!-- Contact 2
-		<section class="pt-80 pb-100 bg-light text-center contact_2">
-			<div class="container px-xl-0">
-				<form action="form-handler.php" method="post">
-					<div class="row justify-content-center">
-						<div class="col-xl-6 col-lg-8 col-md-10">
-							<div class="f-14 semibold text-uppercase sp-20 color-heading">Get Started</div>
-							<h2 class="mt-20 mb-40 small">Get in Touch with Us</h2>
-							<div>
-								<textarea name="message" placeholder="Your message" required="required" class="input mb-30 w-full lg radius10 border-gray focus-action-1 color-heading placeholder-heading text-left"></textarea>
-							</div>
-						</div>
-						<div class="col-12">
-						</div>
-						<div class="col-xl-4 col-lg-5 col-md-6 col-sm-7">
-							<input type="email" name="email" placeholder="Your email" required="required" class="input mb-30 w-full lg border-gray focus-action-1 color-heading placeholder-heading text-center text-sm-left" />
-						</div>
-						<div class="col-xl-2 col-lg-3 col-md-4 col-sm-5">
-							<button class="btn mb-30 lg w-full action-1">Send</button>
-						</div>
-					</div>
-				</form>
-				<div class="row justify-content-center">
-					<div class="col-xl-1">
-					</div>
-					<div class="col-xl-3 col-md-4 col-sm-8 mt-50">
-						<div class="mb-10 f-14 semibold text-uppercase sp-20 title">New York, NY</div>
-						<div class="color-heading text-adaptive">
-							62 West 55th Street, Suite 302 
-							New York, NY, 10230
-						</div>
-					</div>
-					<div class="col-md-4 col-sm-8 mt-50">
-						<div class="mb-10 f-14 semibold text-uppercase sp-20 title">San Francisco, CA</div>
-						<div class="color-heading text-adaptive">
-							560 Judah St &amp; 15th Ave, Apt. 5 <br>
-							San Francisco, CA, 230903
-						</div>
-					</div>
-					<div class="col-xl-3 col-md-4 col-sm-8 mt-50">
-						<div class="mb-10 f-14 semibold text-uppercase sp-20 title">Dubai</div>
-						<div class="color-heading text-adaptive">
-							U237-02, Gold Tower, Jumeirah 
-							Lakes Towers, Dubai, UAE
-						</div>
-					</div>
-					<div class="col-xl-1">
-					</div>
-				</div>
-			</div>
-		</section> -->
 
 	<!-- Footer 11 -->
 	<footer class="pt-45 pb-45 bg-gray color-black text-center footer_11">
