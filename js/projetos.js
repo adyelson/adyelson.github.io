@@ -3,7 +3,7 @@ let projetos = [
         nome:"TicTacToe",        
         descricao:"Jogo da velha",
         detalhes:"",
-        tags:["jogos"],
+        tags:["Jogos","Criatividade"],
         qtd_img: 3,
         imagens: []
         
