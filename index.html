@@ -31,8 +31,8 @@
 	<a  href="#" class="close_menu color-white"><i style="color:black" class="fas fa-times"></i></a>
 	<div class="px-40 pt-60 pb-60 inner">
 		<div style="margin-left: -3%" class="logo color-white mb-30"><a href="#" class="logo link color-main"><img src="./i/footerlogo.png"></a></div>
-		<div><a href="#" class="f-heading f-22 link color-white mb-20" style="color:black">Soluções</a></div>	
-		<div><a href="#" class="f-heading f-22 link color-white mb-20" style="color:black">Tecnologias</a></div>	
+		<div><a href="#solucoes" class="f-heading f-22 link color-white mb-20" style="color:black">Soluções</a></div>	
+		<div><a href="#tecnologias" class="f-heading f-22 link color-white mb-20" style="color:black">Tecnologias</a></div>	
 		<div><a href="#projetos" class="f-heading f-22 link color-white mb-20" style="color:black">Projetos</a></div>	
 		<div><a href="#sobre" class="f-heading f-22 link color-white mb-20" style="color:black">Sobre</a></div>	
 		<!-- <div><a href="#" class="f-heading f-22 link color-white mb-20">Development</a></div>	 -->
@@ -60,8 +60,8 @@
 							<a href="#" class="logo link color-main"><img src="./i/f3lixtech.png"></a>
 						</div>
 						<div class="col-lg-6 text-center">
-							<a href="#" class="link color-heading mx-15">Soluções</a>
-							<a href="#" class="link color-heading mx-15">Tecnologias</a>
+							<a href="#solucoes" class="link color-heading mx-15">Soluções</a>
+							<a href="#tecnologias" class="link color-heading mx-15">Tecnologias</a>
 							<a href="#projetos" class="link color-heading mx-15">Projetos</a>
 							<a href="#sobre" class="link color-heading mx-15">Sobre</a>
 							<a href="#" class="link color-heading f-16 mx-15">
@@ -95,7 +95,7 @@
 		</header>
 
 		<!-- Feature 34 -->
-		<section class="pt-100 pb-120 bg-light feature_34">
+		<section id="solucoes" class="pt-100 pb-120 bg-light feature_34">
 			<div class="container px-xl-0">
 				<div class="row align-items-center text-center text-sm-left">
 					<div class="col-xl-1">
@@ -135,7 +135,7 @@
 		</section>
 
 		<!-- Application 2 -->
-		<section class="pt-65 pb-65 bg-light application_2">
+		<section id="tecnologias" class="pt-65 pb-65 bg-light application_2">
 			<div class="container px-xl-0">
 				<div class="row justify-content-center justify-content-md-between align-items-center">
 					<div class="mb-15 mb-md-0 col-12 col-md-5 col-xl-6 d-flex justify-content-center">
@@ -193,17 +193,7 @@
 	}
 </style>
 
-<section class="ecommerce_25 bg-gray pt-100 pb-100 text-center">
-	<div class="container px-xl-0">
-		<div class="col-12 pt-70 pb-75 bg-light radius10 inner">
-			<div class="mb-2 f-14 color-heading semibold text-uppercase sp-20 subtitle" data-aos-duration="600" data-aos="fade-down" data-aos-delay="0">Enjoy Our Serivces</div>
-			<h2 class="mb-40 small" data-aos-duration="600" data-aos="fade-down" data-aos-delay="150">Free Shipping on Each Purchase</h2>
-			<span data-aos-duration="600" data-aos="fade-down" data-aos-delay="300"><a href="#" class="mb-40 btn lg action-2">Go to Market</a></span>			<div class="mx-auto mw-470 color-heading text-adaptive" data-aos-duration="600" data-aos="fade-down" data-aos-delay="450">
-				Free shipping is valid for qualifying orders of $99 or more <br />
-				before taxes and after applicable discounts.			</div>
-		</div>
-	</div>
-</section>
+
 
 <!-- Ecommerce 18 -->
 
@@ -233,33 +223,41 @@
 			</div>
 		</div> -->
 		<div class="row align-items-start align-items-lg-stretch products">
-			<div class="mt-30 mb-30 col-xl-6 col-lg-10 col-md-5 col-sm-6 d-lg-flex align-items-stretch product" data-aos-duration="600" data-aos="fade-down" data-aos-delay="0">
-				<a href="#" class="align-self-start flex-shrink-0 img_link">
-					<img srcset="i/ecommerce_18_product_1@2x.jpg 2x" src="i/ecommerce_18_product_1.jpg" alt="" class="img-fluid radius10" />
+			
+			<div v-for="projeto in projetos" class="mt-30 mb-30 col-xl-6 col-lg-10 col-md-5 col-sm-6 d-lg-flex align-items-stretch product" data-aos-duration="600" data-aos="fade-down" data-aos-delay="0">
+				<a :href="projeto.nome" class="align-self-start flex-shrink-0 img_link">
+					<img :srcset="projeto.imagens[0]" :src="projeto.imagens[0]" alt="" class="img-fluid radius10" />
 				</a>
 				<div class="mt-30 mt-lg-0 ml-30 pb-60 relative inner">
-					<a href="#" class="d-block link color-main f-22 semibold title">M&amp;M Jar</a>
-					<div class="mb-15 f-14 semibold sp-20 color-heading price">$13.99</div>
-					<div class="color-heading text-adaptive">They’ve graduated — now it’s <br />
-								time to celebrate!</div>
+					<a :href="projeto.nome" class="d-block link color-main f-22 semibold title">M&amp;M Jar</a>
+					<div class="mb-15 f-14 semibold sp-20 color-heading price">{{projeto.tags}}</div>
+					<div class="color-heading text-adaptive">{{projeto.descricao}}</div>
 					<div class="mt-30 mt-lg-0 absolute d-flex flex-wrap align-items-baseline buttons">
 						<a href="#" class="mr-10 btn sm border-action-2 medium f-16">Visitar</a>
 						<a href="#" class="link action-2 medium f-16">Detalhes</a>
 					</div>
 				</div>
 			</div>
-		
-			
-			
-			
+						
 			
 		</div>
 	</div>
 </section>
-
+<!-- 
+<section class="ecommerce_25 bg-gray pt-100 pb-100 text-center">
+	<div class="container px-xl-0">
+		<div class="col-12 pt-70 pb-75 bg-light radius10 inner">
+			<div class="mb-2 f-14 color-heading semibold text-uppercase sp-20 subtitle" data-aos-duration="600" data-aos="fade-down" data-aos-delay="0">Enjoy Our Serivces</div>
+			<h2 class="mb-40 small" data-aos-duration="600" data-aos="fade-down" data-aos-delay="150">Free Shipping on Each Purchase</h2>
+			<span data-aos-duration="600" data-aos="fade-down" data-aos-delay="300"><a href="#" class="mb-40 btn lg action-2">Go to Market</a></span>			<div class="mx-auto mw-470 color-heading text-adaptive" data-aos-duration="600" data-aos="fade-down" data-aos-delay="450">
+				Free shipping is valid for qualifying orders of $99 or more <br />
+				before taxes and after applicable discounts.			</div>
+		</div>
+	</div>
+</section> -->
 
 		<!-- Feature 22 -->
-		<section class="pt-100 pb-100 bg-light feature_22">
+		<!-- <section class="pt-100 pb-100 bg-light feature_22">
 			<div class="container px-xl-0">
 				<div class="row flex-row-reverse justify-content-between">
 					<div class="col-lg-6 col-md-7">
@@ -311,7 +309,7 @@
 					</div>
 				</div>
 			</div>
-		</section>
+		</section> -->
 
 		<!-- Testimonial 2 -->
 		<section id="sobre" class="pt-75 pb-75 bg-light testimonial_2">
@@ -332,7 +330,7 @@
 		</section>
 
 		<!-- Content 30 -->
-		<section class="pt-105 pb-70 bg-light text-center content_30">
+		<!-- <section class="pt-105 pb-70 bg-light text-center content_30">
 			<div class="container px-xl-0">
 				<div class="row justify-content-center">
 					<h2 class="col-lg-9 small">Trusted by over 500 great businesses</h2>
@@ -384,10 +382,10 @@ Big companies and thousands of freelancers trust in our apps, you could be part 
 					</div>
 				</div>
 			</div>
-		</section>
+		</section> -->
 
 
-		<!-- Contact 2 -->
+		<!-- Contact 2
 		<section class="pt-80 pb-100 bg-light text-center contact_2">
 			<div class="container px-xl-0">
 				<form action="form-handler.php" method="post">
@@ -437,7 +435,7 @@ Big companies and thousands of freelancers trust in our apps, you could be part 
 					</div>
 				</div>
 			</div>
-		</section>
+		</section> -->
 
 		<!-- Footer 11 -->
 		<footer class="pt-45 pb-45 bg-gray color-black text-center footer_11">
@@ -468,8 +466,8 @@ Big companies and thousands of freelancers trust in our apps, you could be part 
 				</div>
 				<div class="row">
 					<div class="mb-20 mb-lg-0 col-lg-7">
-						<a href="#" style="color:black" class="link color-white mr-10">Soluções</a>
-						<a href="#" style="color:black" class="link color-white mx-10">Tecnologias</a>
+						<a href="#solucoes" style="color:black" class="link color-white mr-10">Soluções</a>
+						<a href="#tecnologias" style="color:black" class="link color-white mx-10">Tecnologias</a>
 						<a href="#projetos" style="color:black" class="link color-white mx-10">Proejtos</a>
 						<a href="#sobre" style="color:black" class="link color-white mx-10">Sobre</a>
 						<!-- <a href="#" class="link color-white mx-10">Blog</a>
@@ -521,5 +519,7 @@ Big companies and thousands of freelancers trust in our apps, you could be part 
 		<script src="js/jquery.maskedinput.min.js"></script>
 		<!-- Startup 3 JS (Custom js for all blocks) -->
 		<script src="js/script.js"></script>
+		<script src="./js/projetos.js"></script>
+
 	</body>
 </html>
