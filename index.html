@@ -7,7 +7,7 @@
 	<meta property="og:title" content="F3lixTech">
 	<meta property="og:description" content="Transforme suas ideias em soluções personalizadas
 	Soluções inteligentes e inovadoras com métodos ágeis e consultorias especializadas">
-	<meta property="og:image" content="i/f3lixtechfull.png">
+	<meta property="og:image" content="./i/f3lixtechfull.png">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="icon" href="i/favicon.png" type="image/x-icon">
 	<!-- Google Fonts -->
@@ -152,6 +152,76 @@
 		</div>
 	</section>
 
+		<!-- Ecommerce 25 -->
+
+		<style>
+			.ecommerce_25 {
+				background-image: url(i/ecommerce_25_bg.jpg);
+			}
+	
+			@media(-webkit-min-device-pixel-ratio: 1.25),
+			(min-resolution: 120dpi) {
+				.ecommerce_25 {
+					background-image: url(i/ecommerce_25_bg@2x.jpg);
+				}
+			}
+		</style>
+	
+	
+	
+		<!-- -->
+	
+		<section id="projetos" class="ecommerce_18 bg-light pt-100 pb-70">
+			<div class="container px-xl-0">
+				<h2 class="mb-60 text-center" data-aos-duration="600" data-aos="fade-down" data-aos-delay="0">Projetos</h2>
+				<div class="d-flex flex-wrap justify-content-around align-items-baseline relative ecommerce_18_nav">
+					<div class="f-14  semibold text-uppercase sp-20 categories mb-20" data-aos-duration="600"
+						data-aos="fade-down" data-aos-delay="0">
+						<a v-for="tag in tags" class="badge badge-dark mr-25 link color-heading f-16 mb-20 tagbutton"
+							style="padding:10px 15px 10px  15px ; color:aliceblue">{{tag}}</a>
+	
+					</div>
+	
+				</div>
+				<div class="row  justify-content-around mt-30">
+					<div v-for="projeto in projetos" class="card border-0 projetoitem" data-aos-duration="600" data-aos="fade-down" data-aos-delay="100" style="width: 16rem;" data-toggle="tooltip"
+						data-placement="right" :title="(projeto.tags).join(' | ')">			
+						<div :id="projeto.nome" class="carousel slide" data-ride="carousel">
+							<div class="carousel-inner">
+								<div v-for="(imagem, index) in projeto.imagens" :class="index+1==1 ? 'carousel-item active' : 'carousel-item'">
+									<img class="card-img-top border radius10" :src="imagem" >
+								</div>	
+	
+							</div>
+							<a class="carousel-control-prev" :href="'#'+projeto.nome" role="button"
+								data-slide="prev" >
+								<span v-if="(projeto.imagens).length>1" class="bold f-16" style="color:black" aria-hidden="true"><</span>
+								<span v-if="(projeto.imagens).length>1" class="sr-only">Previous</span>
+							</a>
+							<a class="carousel-control-next" :href="'#'+projeto.nome" role="button"
+								data-slide="next">
+								<span v-if="(projeto.imagens).length>1" class="bold f-16" style="color:black"   aria-hidden="true">></span>
+								<span v-if="(projeto.imagens).length>1" class="sr-only p-5">Next</span>
+							</a>
+						</div>
+	
+						<div class="card-body text-center mb-5 ">
+							<div class="mb-15 f-14 semibold sp-20 color-heading price d-none">
+								<span v-for="tag in projeto.tags"> {{tag }} </span>
+							</div>
+							<h5 class="card-title">{{projeto.titulo}}</h5>
+							<p class="card-text">{{projeto.descricao}}</p>
+							<a :href="projeto.titulo" class="btn action-1 mb-2">Testar</a><br>
+							<a :href="projeto.nome" class="link action-1 f-18 bold">Detalhes</a>
+						</div>
+					</div>
+	
+					
+	
+				</div>
+			</div>
+		</section>
+
 	<!-- Application 2 -->
 	<section id="tecnologias" class="pt-65 pb-65 bg-light application_2">
 		<div class="container px-xl-0">
@@ -209,79 +279,7 @@
 		</div>
 	</section>
 
-	<!-- Ecommerce 25 -->
 
-	<style>
-		.ecommerce_25 {
-			background-image: url(i/ecommerce_25_bg.jpg);
-		}
-
-		@media(-webkit-min-device-pixel-ratio: 1.25),
-		(min-resolution: 120dpi) {
-			.ecommerce_25 {
-				background-image: url(i/ecommerce_25_bg@2x.jpg);
-			}
-		}
-	</style>
-
-
-
-	<!-- Ecommerce 18 -->
-
-	<section id="projetos" class="ecommerce_18 bg-light pt-100 pb-70">
-		<div class="container px-xl-0">
-			<h2 class="mb-60 text-center" data-aos-duration="600" data-aos="fade-down" data-aos-delay="0">Projetos</h2>
-			<div class="d-flex flex-wrap justify-content-around align-items-baseline relative ecommerce_18_nav">
-				<div class="f-14  semibold text-uppercase sp-20 categories mb-20" data-aos-duration="600"
-					data-aos="fade-down" data-aos-delay="0">
-					<a v-for="tag in tags" class="badge badge-dark mr-25 link color-heading f-16 mb-20 tagbutton"
-						style="padding:10px 15px 10px  15px ; color:aliceblue">{{tag}}</a>
-
-				</div>
-
-			</div>
-			<div class="row  justify-content-around mt-30">
-				<div v-for="projeto in projetos" class="card border-0 projetoitem" style="width: 16rem;" data-toggle="tooltip"
-					data-placement="right" :title="(projeto.tags).join(' | ')">			
-					<div :id="projeto.nome" class="carousel slide" data-ride="carousel">
-						<div class="carousel-inner">
-							<div v-for="(imagem, index) in projeto.imagens" :class="index+1==1 ? 'carousel-item active' : 'carousel-item'">
-								<img class="card-img-top border radius10" :src="imagem" >
-							</div>	
-
-						</div>
-						<a class="carousel-control-prev" :href="'#'+projeto.nome" role="button"
-							data-slide="prev" >
-							<span v-if="(projeto.imagens).length>1" class="bold f-16" style="color:black" aria-hidden="true"><</span>
-							<span v-if="(projeto.imagens).length>1" class="sr-only">Previous</span>
-						</a>
-						<a class="carousel-control-next" :href="'#'+projeto.nome" role="button"
-							data-slide="next">
-							<span v-if="(projeto.imagens).length>1" class="bold f-16" style="color:black"   aria-hidden="true">></span>
-							<span v-if="(projeto.imagens).length>1" class="sr-only p-5">Next</span>
-						</a>
-					</div>
-
-					<!-- <img class="card-img-top border radius10" :srcset="projeto.imagens[0]" :src="projeto.imagens[0]"
-						alt="Card image cap"> -->
-
-
-					<div class="card-body text-center mb-5 ">
-						<div class="mb-15 f-14 semibold sp-20 color-heading price d-none">
-							<span v-for="tag in projeto.tags"> {{tag }} </span>
-						</div>
-						<h5 class="card-title">{{projeto.titulo}}</h5>
-						<p class="card-text">{{projeto.descricao}}</p>
-						<a :href="projeto.titulo" class="btn action-1 mb-2">Testar</a><br>
-						<a :href="projeto.nome" class="link action-1 f-18 bold">Detalhes</a>
-					</div>
-				</div>
-
-				
-
-			</div>
-		</div>
-	</section>
 
 	<!-- Testimonial 2 -->
 	<section id="sobre" class="pt-75 pb-75 bg-light testimonial_2">
