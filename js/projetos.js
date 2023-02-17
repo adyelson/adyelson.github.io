@@ -6,22 +6,28 @@ let tags = [];
 let projetos = [
     {
         titulo: "TicTacToe",
-        descricao: "Jogo da velha",
+        descricao: "Jogo da velha para passar o tempo.",
         detalhes: "",
         tags: ["Bubble", "Responsividade"],
         qtd_img: 1
     }, {
         titulo: "MarketList",
-        descricao: "Lista de mercado",
+        descricao: "Aplicação para criar lista de mercado on-line.",
         detalhes: "",
         tags: ["Bubble", "Banco de dados", "Responsividade"],
         qtd_img: 1
     },{
         titulo: "Drums",
-        descricao: "Bateria virtual",
+        descricao: "Bateria virtual que reproduz som.",
         detalhes: "",
-        tags: ["Javascript", "Áudio"],
+        tags: ["Javascript", "Áudio","CSS"],
         qtd_img: 1
+    },{
+        titulo: "Weather",
+        descricao: "Aplicação para ver condições meteorológicas.",
+        detalhes: "",
+        tags: ["Javascript", "API","CSS"],
+        qtd_img: 3
     }
 ]
 
