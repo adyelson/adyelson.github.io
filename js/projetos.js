@@ -1,4 +1,7 @@
 
+
+
+
 $(function () {
     $('[data-toggle="tooltip"]').tooltip()
 });
@@ -16,17 +19,17 @@ let projetos = [
         detalhes: "",
         tags: ["Bubble", "Banco de dados", "Responsividade"],
         qtd_img: 1
-    },{
+    }, {
         titulo: "Drums",
         descricao: "Bateria virtual que reproduz som.",
         detalhes: "",
-        tags: ["Javascript", "Áudio","CSS"],
+        tags: ["Javascript", "Áudio", "CSS"],
         qtd_img: 1
-    },{
+    }, {
         titulo: "Weather",
         descricao: "Aplicação para ver condições meteorológicas.",
         detalhes: "",
-        tags: ["Javascript", "API","CSS"],
+        tags: ["Javascript", "API", "CSS"],
         qtd_img: 3
     }
 ]
@@ -101,8 +104,23 @@ document.querySelectorAll(".tagbutton").forEach(el => {
         });
     })
 })
+const tagsSpan = document.querySelector('.modal-tags');
+document.querySelectorAll(".modal-projeto-open").forEach(el => {
+    el.addEventListener('click', () => {
+        let projeto = projetos[el.getAttribute('id')];
+        document.querySelector('.modal-title').innerHTML = projeto.titulo;
 
+        let newtag = "";
+        document.querySelector('.lista-tags').innerHTML = "";
+        (projeto.tags).map((tag, index) => {                      
+            newtag = tagsSpan.cloneNode(true);
+            newtag.innerHTML = tag;
+            document.querySelector('.lista-tags').append(newtag);
+        })
+        document.querySelector('.modal-testar').setAttribute('href', projeto.titulo);
 
+    })
+})
 
 
 
