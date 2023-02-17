@@ -8,13 +8,19 @@ let projetos = [
         titulo: "TicTacToe",
         descricao: "Jogo da velha",
         detalhes: "",
-        tags: ["Jogos", "Criatividade"],
+        tags: ["Bubble", "Responsividade"],
         qtd_img: 1
     }, {
         titulo: "MarketList",
         descricao: "Lista de mercado",
         detalhes: "",
-        tags: ["Facilidades", "Ferramentas"],
+        tags: ["Bubble", "Banco de dados", "Responsividade"],
+        qtd_img: 1
+    },{
+        titulo: "Drums",
+        descricao: "Bateria virtual",
+        detalhes: "",
+        tags: ["Javascript", "Áudio"],
         qtd_img: 1
     }
 ]
@@ -40,7 +46,7 @@ projetos.forEach(projeto => {
     })
 });
 
-tags = [...new Set(tags)];
+tags = [...new Set(tags)].sort();
 
 
 
