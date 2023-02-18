@@ -157,6 +157,30 @@ document.querySelectorAll(".modal-projeto-open").forEach(el => {
     })
 })
 
+let filtroProjetos = document.querySelector('.filtrar-projetos');
+let listaDeFiltros = document.querySelector('.lista-de-filtros');
+
+filtroProjetos.addEventListener('click', function(ev){
+    if(filtroProjetos.classList.contains('color-main')){
+        listaDeFiltros.classList.remove('d-none');
+        filtroProjetos.classList.remove('color-main');
+    }else{
+        filtroProjetos.classList.add('color-main');
+        listaDeFiltros.classList.add('d-none');
+        document.querySelectorAll(".tagbutton").forEach(el => {
+            el.classList.remove('badge-primary');
+            el.classList.add('badge-dark');
+            lista_filtro_projeto = [];
+            projetoitem.forEach((projeto) => {
+                if (lista_filtro_projeto.length === 0) {
+                    projeto.style.display = 'flex';
+                }
+            })
+        })
+    }
+    ev.preventDefault();
+    
+})
 
 
 
