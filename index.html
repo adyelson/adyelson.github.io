@@ -177,15 +177,15 @@
 
 	<section id="projetos" class="ecommerce_18 bg-light pt-30 pb-30">
 		<div class="container px-xl-0">
-			<h2 class="mb-20 text-center" data-aos-duration="600" data-aos="fade-down" data-aos-delay="0">Projetos</h2>
+			<h2 class="mb-20 text-center" >Projetos</h2>
 
 			<div class="d-flex  justify-content-center align-items-center mb-30">
-				<a href="#" class="link  ml-10 filtrar-projetos color-main">
+				<a href="#" class="link filtrar-projetos color-main">
 					<i class="fa fa-filter fa-lg  f-20" aria-hidden="true"> Filtrar</i>
 				</a>
 			</div>
 			<div class="d-flex flex-wrap justify-content-around align-items-baseline relative ecommerce_18_nav">
-				<div class="f-14  semibold text-uppercase sp-20 categories mb-10 d-none lista-de-filtros"
+				<div class="row justify-content-between f-14  semibold text-uppercase sp-20 categories mb-10 d-none lista-de-filtros"
 					data-aos-duration="600" data-aos="fade-down" data-aos-delay="0">
 					<a v-for="tag in tags" class="badge badge-dark mr-25 link color-heading f-16 mb-10 tagbutton"
 						style="padding:10px 15px 10px  15px ; color:aliceblue">{{tag}}</a>
@@ -194,8 +194,7 @@
 
 			</div>
 			<div class="row  justify-content-around mt-15">
-				<div v-for="(projeto, index) in projetos" class="card border-0 projetoitem" data-aos-duration="600"
-					data-aos="fade-down" data-aos-delay="100" style="width: 16rem;">
+				<div v-for="(projeto, index) in projetos" class="card border-0 projetoitem"  style="width: 16rem;">
 					<div :id="projeto.nome" class="carousel slide" data-ride="carousel">
 						<div class="carousel-inner">
 							<div v-for="(imagem, index) in projeto.imagens"
@@ -586,15 +585,13 @@
 		</div>
 	</footer>
 
-
-
 	<!-- Bootstrap 4.3.1 JS -->
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
 	<!-- Fancybox 3 jQuery plugin JS (Open images and video in popup) -->
 	<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 	<!-- Google maps JS API -->
-	<script type="text/javascript"
-		src="https://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyDP6Ex5S03nvKZJZSvGXsEAi3X_tFkua4U"></script>
+	<!-- <script type="text/javascript"
+		src="https://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyDP6Ex5S03nvKZJZSvGXsEAi3X_tFkua4U"></script> -->
 	<!-- Slick 1.8.1 jQuery plugin JS (Sliders) -->
 	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 	<!-- AOS 2.3.4 jQuery plugin JS (Animations) -->
