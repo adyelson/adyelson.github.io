@@ -105,18 +105,53 @@ document.querySelectorAll(".tagbutton").forEach(el => {
     })
 })
 const tagsSpan = document.querySelector('.modal-tags');
+
+const imgElem = document.querySelector('.modal-img');
+
+const imgDivElem = document.querySelector('.modal-img-div');
+imgDivElem.innerHTML ="";
 document.querySelectorAll(".modal-projeto-open").forEach(el => {
+
     el.addEventListener('click', () => {
-        let projeto = projetos[el.getAttribute('id')];
-        document.querySelector('.modal-title').innerHTML = projeto.titulo;
+        let idcod = el.getAttribute('id');
+        let projeto = projetos[idcod];
+        let countImg = projeto.imagens.length;
+        
+        document.querySelector('.modal-title').innerHTML = projeto.titulo; 
+        document.querySelector('.controle-central').setAttribute('id',projeto.nome+idcod)
+        document.querySelectorAll('.controlador-carousel').forEach(el=>{
+            el.setAttribute('href','#'+projeto.nome+idcod)
+            if(countImg<=1){
+                el.classList.add('d-none');
+            }else{
+                el.classList.remove('d-none');
+            }
+        })       
+
+        let newimg = "";
+        let newDivimg = "";
+        document.querySelector('.modal-lista-img').innerHTML = "";
+        
+        (projeto.imagens).map((imagem, index) => {
+            // ---- append no div e depois na lista para imagem
+            newDivimg = imgDivElem.cloneNode(true);
+            newimg = imgElem.cloneNode(true);
+            newimg.setAttribute('src',imagem);
+            if(index+1 == 1){
+                newDivimg.classList.add('active');
+            }
+            newDivimg.append(newimg);
+            document.querySelector('.modal-lista-img').append(newDivimg);
+        })
 
         let newtag = "";
-        document.querySelector('.lista-tags').innerHTML = "";
-        (projeto.tags).map((tag, index) => {                      
+        document.querySelector('.modal-lista-tags').innerHTML = "";
+        (projeto.tags).map((tag, index) => {
             newtag = tagsSpan.cloneNode(true);
             newtag.innerHTML = tag;
-            document.querySelector('.lista-tags').append(newtag);
+            document.querySelector('.modal-lista-tags').append(newtag);
         })
+
         document.querySelector('.modal-testar').setAttribute('href', projeto.titulo);
 
     })
