@@ -7,13 +7,7 @@ $(function () {
 });
 let tags = [];
 let projetos = [
-    {
-        titulo: "TicTacToe",
-        descricao: "Jogo da velha para passar o tempo.",
-        detalhes: "",
-        tags: ["Bubble", "Responsividade"],
-        qtd_img: 1
-    }, {
+   {
         titulo: "MarketList",
         descricao: "Aplicação para criar lista de mercado on-line.",
         detalhes: "",
@@ -31,6 +25,18 @@ let projetos = [
         detalhes: "",
         tags: ["Javascript", "API", "CSS"],
         qtd_img: 3
+    }, {
+        titulo: "TicTacToe",
+        descricao: "Jogo da velha para passar o tempo.",
+        detalhes: "",
+        tags: ["Bubble", "Responsividade"],
+        qtd_img: 1
+    },  {
+        titulo: "SimuladoMestre",
+        descricao: "Sistema para cadastro de perguntas.",
+        detalhes: "",
+        tags: ["Bubble", "Responsividade","Banco de dados", "API", "Sistema de Login", "E-mail"],
+        qtd_img: 10
     }
 ]
 
