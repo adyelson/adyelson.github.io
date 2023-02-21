@@ -124,9 +124,9 @@ document.querySelectorAll(".modal-projeto-open").forEach(el => {
         let countImg = projeto.imagens.length;
         
         document.querySelector('.modal-title').innerHTML = projeto.titulo; 
-        document.querySelector('.controle-central').setAttribute('id',projeto.nome+idcod)
+        // document.querySelector('.controle-central').setAttribute('id',projeto.nome+idcod)
         document.querySelectorAll('.controlador-carousel').forEach(el=>{
-            el.setAttribute('href','#'+projeto.nome+idcod)
+            // el.setAttribute('href','#'+projeto.nome+idcod)
             if(countImg<=1){
                 el.classList.add('d-none');
             }else{
@@ -187,6 +187,8 @@ filtroProjetos.addEventListener('click', function(ev){
     ev.preventDefault();
     
 })
+
+// document.querySelector('#enviarcontato').setAttribute('data-dismiss')
 
 
 

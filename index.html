@@ -103,7 +103,7 @@
 			</div>
 			<div class="mt-40 text-center buttons">
 				<div>
-					<a href="#" class="btn lg action-1">Solicitar orçamento</a>
+					<a href="#contato" class="btn lg action-1">Entrar em contato</a>
 				</div>
 				<div>
 					<a href="#solucoes" class="link mt-15 action-1 f-18 medium">Saiba mais</a>
@@ -113,7 +113,7 @@
 	</header>
 
 	<!-- soluções -->
-	<section id="solucoes" class="pt-30 pb-30 bg-light feature_34">
+	<section id="solucoes" class="pt-45 pb-45 mb-60 mt-60 bg-light feature_34">
 		<div class="container px-xl-0">
 			<div class="row align-items-center text-center text-sm-left justify-content-center">
 				<div class="col-xl-1">
@@ -176,7 +176,7 @@
 		}
 	</style>
 
-	<section id="projetos" class="ecommerce_18 bg-light pt-30 pb-30">
+	<section id="projetos" class="ecommerce_18 bg-light pt-35 pb-35 mb-70 mt-70">
 		<div class="container px-xl-0">
 			<h2 class="mb-20 text-center">Projetos</h2>
 
@@ -196,7 +196,8 @@
 			</div>
 			<div class="row  justify-content-around mt-15">
 				<div v-for="(projeto, index) in projetos" class="card border-0 projetoitem" style="width: 16rem;">
-					<div :id="projeto.nome" class="carousel slide controle-central d-flex justify-content-center" data-ride="carousel">
+					<div :id="projeto.nome" class="carousel slide controle-central d-flex justify-content-center"
+						data-ride="carousel">
 						<div class="carousel-inner img-thumbnail h-250 w-250 d-flex align-items-center">
 							<div v-for="(imagem, index) in projeto.imagens "
 								:class="index+1==1 ? ' carousel-item active' : 'carousel-item'">
@@ -256,7 +257,8 @@
 				<div class="modal-projeto">
 
 					<div class="col justify-content-around mt-30">
-						<div id="modal" class="carousel slide controle-central d-flex justify-content-center" data-ride="carousel">
+						<div id="modalproejetofoco"
+							class="carousel slide controle-central d-flex justify-content-center" data-ride="carousel">
 							<div
 								class="carousel-inner modal-lista-img img-thumbnail h-300 w-300 d-flex align-items-center">
 								<div class="carousel-item modal-img-div ">
@@ -264,16 +266,16 @@
 								</div>
 
 							</div>
-							<a class="carousel-control-prev controlador-carousel" href="#teste" role="button"
-								data-slide="prev">
+							<a class="carousel-control-prev controlador-carousel" href="#modalproejetofoco"
+								role="button" data-slide="prev">
 								<span class="bold f-16"
 									style="color:black;background-color: white; width:25px; border-radius: 50px;"
 									aria-hidden="true">
 									< </span>
 										<span class="sr-only">Previous</span>
 							</a>
-							<a class="carousel-control-next controlador-carousel" href="#teste" role="button"
-								data-slide="next">
+							<a class="carousel-control-next controlador-carousel" href="#modalproejetofoco"
+								role="button" data-slide="next">
 								<span class="bold f-16"
 									style="color:black;background-color: white; width:25px; border-radius: 50px;"
 									aria-hidden="true"> > </span>
@@ -281,17 +283,17 @@
 							</a>
 						</div>
 
-						
+
 
 						<div class="card-body text-center mb-5 justify-content-center d-flex">
 							<div
-								class="mw-280 row justify-content-center align-items-center d-flex mb-15 f-14 semibold sp-20 color-heading price modal-lista-tags">
+								class="row justify-content-center align-items-center d-flex mb-15 f-14 semibold sp-20 color-heading price modal-lista-tags">
 								<span
-									class="mb-1 d-flex align-items-center justify-content-center mr-5 pl-2 pr-2 badge-dark radius10 modal-tags"></span>
+									class="mb-1 d-flex align-items-center justify-content-center mr-5 pl-2 pr-2 badge-dark radius10 modal-tags small"></span>
 							</div>
 							<p class="card-text modal-detalhes"> </p></i>
 						</div>
-						
+
 					</div>
 				</div>
 				<div class="modal-footer">
@@ -302,7 +304,7 @@
 	</div>
 
 	<!-- Tecnologias -->
-	<section id="tecnologias" class="pt-30 pb-30 bg-light application_2">
+	<section id="tecnologias" class="pt-35 pb-35 mb-30 mt-50  bg-light application_2">
 		<div class="container px-xl-0">
 			<div class="row justify-content-center justify-content-md-between align-items-center">
 				<div class="mb-15 mb-md-0 col-12 col-md-5 col-xl-6 d-flex justify-content-center">
@@ -354,7 +356,7 @@
 			</div>
 			<div class="mt-40 text-center buttons">
 				<div>
-					<a href="#" class="btn lg action-1">Solicitar orçamento</a>
+					<a href="#contato" class="btn lg action-1">Entrar em contato</a>
 				</div>
 				<div>
 					<a href="#projetos" class="link mt-15 action-1 f-18 medium">Projetos</a>
@@ -366,7 +368,7 @@
 
 
 	<!-- Testimonial 2 -->
-	<section id="sobre" class="pt-75 pb-75 bg-light testimonial_2">
+	<section id="sobre" class="pt-95 pb-95 mb-50 mt-40 bg-light testimonial_2">
 		<div class="container px-xl-0 text-center">
 			<div class="row justify-content-center">
 				<div class="col-xl-6 col-lg-8 col-md-10">
@@ -385,6 +387,33 @@
 			</div>
 		</div>
 	</section>
+	<!-- contato -->
+	<section id="contato" class="pt-35 pb-55 mb-20 mt-20 bg-light text-center contact_2">
+		<div class="container px-xl-0">
+			<form action="form-handler.php" method="post">
+				<div class="row justify-content-center">
+					<div class="col-xl-6 col-lg-8 col-md-10 h-500 mb-60">
+						<div class="f-14 semibold text-uppercase sp-20 color-heading">Comece um projeto</div>
+						<h2 class="mt-20 mb-40 small">Entre em contato</h2>
+
+
+						<iframe src="https://contato-f3lixtech.bubbleapps.io/version-test"
+							style=" border:0px #ffffff none; margin: 0; width:100%; height: 100%;" name="f3lixtech"
+							frameborder="0" allowfullscreen></iframe>
+					</div>
+
+
+				</div>
+			</form>
+
+		</div>
+	</section>
+
+
+
+
+
+
 	<!-- Modal  termos de uso-->
 	<div class="modal fade modal-projeto-window " id="exampleModalLongTermosUso" tabindex="-1" role="dialog"
 		aria-labelledby="exampleModalLongTitle" aria-hidden="true">
@@ -449,7 +478,7 @@
 			</div>
 		</div>
 	</div>
-	</div>
+
 	<!-- Modal politicas -->
 	<div class="modal fade modal-projeto-window " id="exampleModalLongPrivacidade" tabindex="-1" role="dialog"
 		aria-labelledby="exampleModalLongTitle" aria-hidden="true">
@@ -530,7 +559,7 @@
 			</div>
 		</div>
 	</div>
-	</div>
+
 	<!-- Modal sobre mim -->
 	<div class="modal fade modal-projeto-window" id="exampleModalLongSobreMim" tabindex="-1" role="dialog"
 		aria-labelledby="exampleModalLongTitle" aria-hidden="true">
@@ -547,19 +576,49 @@
 						<strong>Criador da F3lixTech</strong>
 						<p></p>
 
-						<p> A privacidade dos visitantes do site F3lixTech é de grande importância e esta política de
-							privacidade descreve como as informações pessoais serão coletadas, usadas, compartilhadas e
-							protegidas.</p>
-						<img src="i/foto.jpg" class="rounded mx-auto d-block img-fluid img-thumbnail w-250 " alt="Responsive image">
+						<p> texto grande sobre tecnologia e a felixtech - texto grande sobre tecnologia e a felixtech -
+							texto grande sobre tecnologia e a felixtech - texto grande sobre tecnologia e a felixtech -
+							texto grande sobre tecnologia e a felixtech - texto grande sobre tecnologia e a felixtech -
+							texto grande sobre tecnologia e a felixtech - texto grande sobre tecnologia e a felixtech -
+							texto grande sobre tecnologia e a felixtech - </p>
+						<img src="i/foto.jpg" class="rounded mx-auto d-block img-fluid img-thumbnail w-250 "
+							alt="Responsive image">
 						<p></p>
 
-						<strong>Coleta de Informações Pessoais</strong>
+						<strong>História com tecnologia</strong>
 						<p></p>
 
 						<p> Informações pessoais dos visitantes do site F3lixTech não serão coletadas, a menos que sejam
 							fornecidas voluntariamente. As informações pessoais podem incluir nome, endereço de e-mail e
 							número de telefone, e serão utilizadas apenas para responder a perguntas ou solicitações de
 							contato.</p>
+						<p> Informações pessoais dos visitantes do site F3lixTech não serão coletadas, a menos que sejam
+							fornecidas voluntariamente. As informações pessoais podem incluir nome, endereço de e-mail e
+							número de telefone, e serão utilizadas apenas para responder a perguntas ou solicitações de
+							contato.</p>
+
+							<strong>Formação</strong>
+							<p></p>
+							<ul>
+								<li>
+									curso 1
+								</li>
+								<li>
+									curso 1
+								</li>
+								<li>
+									curso 1
+								</li>
+								<li>
+									curso 1
+								</li>
+								<li>
+									curso 1
+								</li>
+								<li>
+									curso 1
+								</li>
+							</ul>
 
 
 
@@ -572,7 +631,7 @@
 			</div>
 		</div>
 	</div>
-	</div>
+
 	<!-- Footer 11 -->
 	<footer class="pt-45 pb-45 bg-gray color-black text-center footer_11">
 		<div class="container px-xl-0">
