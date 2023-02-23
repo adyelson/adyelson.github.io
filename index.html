@@ -343,7 +343,7 @@
 
 							<img src="i/application_2_img_2.png" srcset="i/application_2_img_2@2x.png 2x" alt=""
 								class="pl-15" />
-							<div class="mt-15 col-xl-11 color-main f-14 bold sp-20 text-uppercase">Figma </div>
+							<div class="mt-15 col-xl-11 color-main f-14 bold sp-20 text-uppercase">Banco de dados </div>
 						</div>
 						<div class="col-6 col-lg-4 pb-15 pt-35 with_borders">
 							<img src="i/application_2_img_7.png" srcset="i/application_2_img_7@2x.png 2x" alt=""
@@ -425,58 +425,22 @@
 						<span aria-hidden="true">&times;</span>
 					</button>
 				</div>
-				<div class="modal-projeto">
+				<div id="termosdeuso" class="modal-projeto">
 					<div class="card-body text-justify">
-						<strong>Termos de Uso para o site F3lixTech</strong>
-						<p></p>
-						<p>Estes termos de uso descrevem os direitos e responsabilidades do usuário ao acessar e usar o
-							site F3lixTech. Ao acessar e utilizar o site, o usuário concorda com estes termos de uso.
-						</p>
-						<strong>Conteúdo do Site</strong>
-						<p></p>
-						<p>Todo o conteúdo do site F3lixTech, incluindo texto, imagens, vídeos, áudios e outros
-							materiais, é protegido por direitos autorais e é de propriedade exclusiva da F3lixTech, a
-							menos que indicado de outra forma. O usuário não pode copiar, reproduzir, distribuir,
-							transmitir, exibir, vender, licenciar ou explorar comercialmente qualquer conteúdo do site
-							sem a permissão prévia por escrito da F3lixTech.</p>
-						<strong>Links para Outros Sites</strong>
-						<p></p>
-						<p>O site F3lixTech pode conter links para outros sites que não são operados pela F3lixTech. A
-							F3lixTech não é responsável pelo conteúdo e pelas práticas de privacidade desses sites e não
-							endossa nem assume qualquer responsabilidade por qualquer conteúdo, publicidade, produtos ou
-							outros materiais nesses sites. O usuário é responsável por avaliar e assumir os riscos
-							associados ao acesso e uso desses sites.</p>
-						<strong>Limitação de Responsabilidade</strong>
-						<p></p>
-						<p>O site F3lixTech é fornecido "como está" e a F3lixTech não oferece garantias de qualquer
-							tipo, expressas ou implícitas, incluindo, mas não se limitando a, garantias de adequação a
-							uma finalidade específica, não violação ou operação sem erros ou interrupções. Em nenhuma
-							circunstância a F3lixTech será responsável por quaisquer danos diretos, indiretos,
-							punitivos, incidentais, especiais ou consequentes resultantes ou relacionados ao uso do site
-							ou da incapacidade de usá-lo.</p>
-						<strong>Alterações nos Termos de Uso</strong>
-						<p></p>
-						<p>A F3lixTech se reserva o direito de atualizar ou modificar estes termos de uso a qualquer
-							momento e sem aviso prévio. O uso continuado do site após a publicação de quaisquer
-							alterações aos termos de uso constitui aceitação dessas alterações.</p>
-						<strong>Lei Aplicável</strong>
-						<p></p>
-						<p>Estes termos de uso serão regidos e interpretados de acordo com as leis do país onde a
-							F3lixTech está sediada, sem considerar conflitos de disposições legais. O usuário concorda
-							em submeter-se à jurisdição exclusiva dos tribunais desse país em relação a qualquer disputa
-							decorrente ou relacionada ao uso do site F3lixTech.</p>
-						<strong>Contato</strong>
-						<p></p>
-						<p>Se o usuário tiver alguma dúvida ou preocupação sobre estes termos de uso, entre em contato
-							com a F3lixTech através do site.</p>
+						<div v-for="(value, key) in termos" class="paragro-politica">
+							<strong>{{key}}</strong>
+							<p></p>
+							<p> {{value}}</p>
+						</div>
 					</div>
-					<div class="modal-footer">
-						<a type="button" class="link action-1 modal-testar mr-15" data-dismiss="modal"
-							aria-label="Close">Fechar</a>
-					</div>
+				</div>
+				<div class="modal-footer">
+					<a type="button" class="link action-1 modal-testar mr-15" data-dismiss="modal"
+						aria-label="Close">Fechar</a>
 				</div>
 			</div>
 		</div>
+	</div>
 	</div>
 
 	<!-- Modal politicas -->
@@ -490,74 +454,22 @@
 						<span aria-hidden="true">&times;</span>
 					</button>
 				</div>
-				<div class="modal-projeto">
+				<div id="politicasdeprivacidade" class="modal-projeto">
 					<div class="card-body text-justify">
-						<strong>Política de Privacidade para F3lixTech</strong>
-						<p></p>
-
-						<p> A privacidade dos visitantes do site F3lixTech é de grande importância e esta política de
-							privacidade descreve como as informações pessoais serão coletadas, usadas, compartilhadas e
-							protegidas.</p>
-
-						<strong>Coleta de Informações Pessoais</strong>
-						<p></p>
-
-						<p> Informações pessoais dos visitantes do site F3lixTech não serão coletadas, a menos que sejam
-							fornecidas voluntariamente. As informações pessoais podem incluir nome, endereço de e-mail e
-							número de telefone, e serão utilizadas apenas para responder a perguntas ou solicitações de
-							contato.</p>
-
-						<strong>Uso de Informações Pessoais</strong>
-						<p></p>
-
-						<p> As informações pessoais coletadas serão utilizadas exclusivamente para responder a perguntas
-							ou solicitações de contato. Não haverá compartilhamento dessas informações com terceiros, a
-							menos que exigido por lei.</p>
-
-						<strong>Cookies e Tecnologias de Rastreamento</strong>
-						<p></p>
-
-						<p> O site F3lixTech pode utilizar cookies e outras tecnologias de rastreamento para melhorar a
-							experiência do usuário e coletar informações sobre como os visitantes utilizam o site. As
-							informações podem incluir endereço IP, tipo de navegador, provedor de serviços de internet
-							(ISP), páginas visitadas e tempo gasto no site. As informações coletadas serão utilizadas
-							apenas para melhorar a experiência do usuário e analisar o tráfego do site.</p>
-
-						<strong>Links para Outros Sites</strong>
-						<p></p>
-
-						<p> O site F3lixTech pode conter links para outros sites que não são operados por ele. Não há
-							controle sobre o conteúdo e as práticas de privacidade desses sites, e não há
-							responsabilidade pela política de privacidade deles.</p>
-
-						<strong>Segurança das Informações Pessoais</strong>
-						<p></p>
-
-						<p> Medidas razoáveis serão tomadas para proteger as informações pessoais coletadas contra
-							acesso não autorizado, uso, divulgação, alteração ou destruição. No entanto, devido à
-							natureza da internet, não é possível garantir a completa segurança das informações pessoais
-							contra violações de segurança.</p>
-
-						<strong>Alterações na Política de Privacidade</strong>
-						<p></p>
-
-						<p> A política de privacidade pode ser atualizada de tempos em tempos e a versão mais recente
-							estará sempre disponível no site F3lixTech.</p>
-
-						<strong>Contato</strong>
-						<p></p>
-
-						<p> Em caso de dúvidas ou preocupações sobre a política de privacidade, é possível entrar em
-							contato por meio do site F3lixTech.</p>
-
+						<div v-for="(value, key) in politicas" class="paragro-politica">
+							<strong>{{key}}</strong>
+							<p></p>
+							<p> {{value}}</p>
+						</div>
 					</div>
-					<div class="modal-footer">
-						<a type="button" class="link action-1 modal-testar mr-15" data-dismiss="modal"
-							aria-label="Close">Fechar</a>
-					</div>
+				</div>
+				<div class="modal-footer">
+					<a type="button" class="link action-1 modal-testar mr-15" data-dismiss="modal"
+						aria-label="Close">Fechar</a>
 				</div>
 			</div>
 		</div>
+	</div>
 	</div>
 
 	<!-- Modal sobre mim -->
@@ -571,57 +483,41 @@
 						<span aria-hidden="true">&times;</span>
 					</button>
 				</div>
-				<div class="modal-projeto">
+				<div id="sobremim" class="modal-projeto">
 					<div class="card-body text-justify ">
-						<strong>Criador da F3lixTech</strong>
+						<strong>{{sobre[0].titulo}}</strong>
 						<p></p>
 
-						<p> texto grande sobre tecnologia e a felixtech - texto grande sobre tecnologia e a felixtech -
-							texto grande sobre tecnologia e a felixtech - texto grande sobre tecnologia e a felixtech -
-							texto grande sobre tecnologia e a felixtech - texto grande sobre tecnologia e a felixtech -
-							texto grande sobre tecnologia e a felixtech - texto grande sobre tecnologia e a felixtech -
-							texto grande sobre tecnologia e a felixtech - </p>
+						<p> {{sobre[0].textop1}} </p>
+						
+						<p> {{sobre[0].textop2}} </p>
 						<img src="i/foto.jpg" class="rounded mx-auto d-block img-fluid img-thumbnail w-250 "
 							alt="Responsive image">
 						<p></p>
-
-						<strong>História com tecnologia</strong>
+						<div class="d-flex socials justify-content-center">
+							<a href="#" class="link color-white mx-15">
+								<i style="color:black" class="fab fa-linkedin"></i>
+							</a>
+							<a href="#" class="link color-white mx-15">
+								<i style="color:black" class="fab fa-github"></i>
+							</a>
+							<a href="#" class="link color-white mx-15">
+								<i style="color:black" class="fab fa-youtube"></i>
+							</a>
+							<a href="#" class="link color-white mx-15">
+								<i style="color:black" class="fab fa-instagram"></i>
+							</a>
+						</div>
+						<p></p>
+						<strong>{{sobre[1].titulo}}</strong>
 						<p></p>
 
-						<p> Informações pessoais dos visitantes do site F3lixTech não serão coletadas, a menos que sejam
-							fornecidas voluntariamente. As informações pessoais podem incluir nome, endereço de e-mail e
-							número de telefone, e serão utilizadas apenas para responder a perguntas ou solicitações de
-							contato.</p>
-						<p> Informações pessoais dos visitantes do site F3lixTech não serão coletadas, a menos que sejam
-							fornecidas voluntariamente. As informações pessoais podem incluir nome, endereço de e-mail e
-							número de telefone, e serão utilizadas apenas para responder a perguntas ou solicitações de
-							contato.</p>
-
-							<strong>Formação</strong>
-							<p></p>
-							<ul>
-								<li>
-									curso 1
-								</li>
-								<li>
-									curso 1
-								</li>
-								<li>
-									curso 1
-								</li>
-								<li>
-									curso 1
-								</li>
-								<li>
-									curso 1
-								</li>
-								<li>
-									curso 1
-								</li>
-							</ul>
-
-
-
+						<p> {{sobre[1].textop1}} </p>
+						<p> {{sobre[1].textop2}} </p>
+						<p> {{sobre[1].textop3}} </p>
+						<p> {{sobre[1].textop4}} </p>
+						
+						
 					</div>
 					<div class="modal-footer">
 						<a type="button" class="link action-1 modal-testar mr-15" data-dismiss="modal"
@@ -697,7 +593,7 @@
 	<!-- Startup 3 JS (Custom js for all blocks) -->
 	<script src="js/script.js"></script>
 	<script src="./js/projetos.js"></script>
-
+	<script src="./js/dados.js"></script>
 </body>
 
 </html>

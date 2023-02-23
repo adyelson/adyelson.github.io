@@ -188,7 +188,7 @@ filtroProjetos.addEventListener('click', function(ev){
     
 })
 
-// document.querySelector('#enviarcontato').setAttribute('data-dismiss')
+
 
 
 
