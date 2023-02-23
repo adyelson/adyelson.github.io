@@ -53,16 +53,16 @@
 			<div><a href="#sobre" class="f-heading f-22 link color-white mb-20" style="color:black">Sobre</a></div>
 			<!-- <div><a href="#" class="link color-white op-3 mb-15" style="color:black">F.A.Q.</a></div> -->
 
-			<!-- <div class="socials mt-40">
-				<a style="color:black" href="#" target="_blank" class="link color-white f-18 mr-20"><i
+			<div class="socials mt-40">
+				<!-- <a style="color:black" href="#" target="_blank" class="link color-white f-18 mr-20"><i
 						class="fab fa-github"></i></a>
 				<a style="color:black" href="#" target="_blank" class="link color-white f-18 mr-20"><i
-						class="fab fa-linkedin"></i></a>
-				<a style="color:black" href="#" target="_blank" class="link color-white f-18 mr-20"><i
-						class="fab fa-youtube"></i></a>
-				<a style="color:black" href="#" target="_blank" class="link color-white f-18 mr-20"><i
-						class="fab fa-instagram"></i></a>
-			</div> -->
+						class="fab fa-linkedin"></i></a> -->
+				<a style="color:black" href="https://www.youtube.com/channel/UC5fX7rB3mas1c1zec_LVdRQ" target="_blank"
+					class="link color-white f-18 mr-20"><i class="fab fa-youtube"></i></a>
+				<a style="color:black" href="https://www.instagram.com/f3lixtech/" target="_blank"
+					class="link color-white f-18 mr-20"><i class="fab fa-instagram"></i></a>
+			</div>
 
 			<div class="mt-50 f-14 light color-white op-3 copy" style="color:black">&copy; 2023 F3lixTech. Todos os
 				direitos reservados.</div>
@@ -116,12 +116,11 @@
 	<section id="solucoes" class="pt-45 pb-45 mb-60 mt-60 bg-light feature_34">
 		<div class="container px-xl-0">
 			<div class="row align-items-center text-center text-sm-left justify-content-center">
-				<div class="col-xl-1">
-				</div>
+
 				<div class="col-lg-4 col-sm-6">
 					<h2 class="mb-20">Agilidade nas tarefas</h2>
 					<div class="mb-20 mb-sm-0 f-22 color-heading text-adaptive">Soluções para poupar tempo e evitar
-						gastos em processos repetitivos ou redundantes.
+						gastos em processos repetitivos ou redundantes, na palma da sua mão.
 					</div>
 				</div>
 				<div class="col-sm-1">
@@ -131,7 +130,7 @@
 						alt="" class="img-fluid" />
 				</div>
 			</div>
-			<div class="mt-50 row justify-content-center text-center blocks">
+			<div class="mt-100 mb-30 row justify-content-center text-center blocks">
 				<div class="mb-50 mb-md-0 col-md-4 col-sm-8">
 					<img src="i/feature_101_img.png" srcset="i/feature_101_img@2x.png 2x" alt="" />
 					<div class="mt-20 mb-20 f-14 semibold text-uppercase sp-20 title">Design responsivo</div>
@@ -150,8 +149,32 @@
 					<div class="color-heading text-adaptive">Escolha exatamente como sua aplicação irá te ajudar.
 					</div>
 				</div>
+
 			</div>
-			<div class="mt-40 text-center buttons">
+			<div class="mt-100 row justify-content-center text-center blocks">
+				<div class="mb-50 mb-md-0 col-md-4 col-sm-8">
+					<img src="i/feature_98_img.png" srcset="i/feature_98_img@2x.png 2x" alt="" />
+					<div class="mt-20 mb-20 f-14 semibold text-uppercase sp-20 title">Redução de Custo</div>
+					<div class="color-heading text-adaptive">Soluções tecnológicas de qualidade para ajudar você a
+						economizar a longo prazo.
+					</div>
+				</div>
+				<div class="mb-50 mb-md-0 col-md-4 col-sm-8">
+					<img src="i/feature_97_img.png" srcset="i/feature_97_img@2x.png 2x" alt="" />
+					<div class="mt-20 mb-20 f-14 semibold text-uppercase sp-20 title">Velocidade</div>
+					<div class="color-heading text-adaptive">Produção acelerada em comparação com o desenvolvimento
+						tradicional.
+					</div>
+				</div>
+				<div class="mb-50 mb-md-0 col-md-4 col-sm-8">
+					<img src="i/feature_96_img.png" srcset="i/feature_96_img@2x.png 2x" alt="" />
+					<div class="mt-20 mb-20 f-14 semibold text-uppercase sp-20 title">Metodologia Ágil</div>
+					<div class="color-heading text-adaptive">Agilidade e dedicação que irão garantir prazos e qualidade.
+					</div>
+				</div>
+
+			</div>
+			<div class="mt-80 text-center buttons">
 
 				<div>
 					<a href="#projetos" class="link mt-15 action-1 f-18 medium">Projetos</a> | <a href="#tecnologias"
@@ -201,7 +224,7 @@
 						<div class="carousel-inner img-thumbnail h-250 w-250 d-flex align-items-center">
 							<div v-for="(imagem, index) in projeto.imagens "
 								:class="index+1==1 ? ' carousel-item active' : 'carousel-item'">
-								<img class="card-img-top center border radius10 " :src="imagem">
+								<img class="card-img-top center border radius4 " :src="imagem">
 							</div>
 
 						</div>
@@ -262,7 +285,7 @@
 							<div
 								class="carousel-inner modal-lista-img img-thumbnail h-300 w-300 d-flex align-items-center">
 								<div class="carousel-item modal-img-div ">
-									<img class="card-img-top center border radius10 modal-img  ">
+									<img class="card-img-top center border radius4 modal-img  ">
 								</div>
 
 							</div>
@@ -388,13 +411,13 @@
 		</div>
 	</section>
 	<!-- contato -->
-	<section id="contato" class="pt-35 pb-55 mb-20 mt-20 bg-light text-center contact_2">
+	<section id="contato" class="pt-35 pb-55 mb-20 mt-10 bg-light text-center contact_2">
 		<div class="container px-xl-0">
 			<form action="form-handler.php" method="post">
 				<div class="row justify-content-center">
-					<div class="col-xl-6 col-lg-8 col-md-10 h-500 mb-60">
-						<div class="f-14 semibold text-uppercase sp-20 color-heading">Comece um projeto</div>
-						<h2 class="mt-20 mb-40 small">Entre em contato</h2>
+					<div class="col-xl-6 col-lg-8 col-md-10 h-590 mb-20">
+						<div class="f-14 semibold text-uppercase sp-20 color-heading">Comece agora!</div>
+						<h2 class="mt-10 mb-10 small">Entre em contato</h2>
 
 
 						<iframe src="https://contato-f3lixtech.bubbleapps.io/version-test"
@@ -489,22 +512,23 @@
 						<p></p>
 
 						<p> {{sobre[0].textop1}} </p>
-						
+
 						<p> {{sobre[0].textop2}} </p>
 						<img src="i/foto.jpg" class="rounded mx-auto d-block img-fluid img-thumbnail w-250 "
 							alt="Responsive image">
 						<p></p>
 						<div class="d-flex socials justify-content-center">
-							<a href="#" class="link color-white mx-15">
+							<a href="https://www.linkedin.com/in/adyelsonfl/" class="link color-white mx-15">
 								<i style="color:black" class="fab fa-linkedin"></i>
 							</a>
-							<a href="#" class="link color-white mx-15">
+							<a href="https://github.com/adyelson" class="link color-white mx-15">
 								<i style="color:black" class="fab fa-github"></i>
 							</a>
-							<a href="#" class="link color-white mx-15">
+							<a href="https://www.youtube.com/channel/UC5fX7rB3mas1c1zec_LVdRQ"
+								class="link color-white mx-15">
 								<i style="color:black" class="fab fa-youtube"></i>
 							</a>
-							<a href="#" class="link color-white mx-15">
+							<a href="https://www.instagram.com/f3lixtech/" class="link color-white mx-15">
 								<i style="color:black" class="fab fa-instagram"></i>
 							</a>
 						</div>
@@ -516,8 +540,8 @@
 						<p> {{sobre[1].textop2}} </p>
 						<p> {{sobre[1].textop3}} </p>
 						<p> {{sobre[1].textop4}} </p>
-						
-						
+
+
 					</div>
 					<div class="modal-footer">
 						<a type="button" class="link action-1 modal-testar mr-15" data-dismiss="modal"
@@ -540,40 +564,34 @@
 						class="link color-white mr-10" style="color:black">Políticas de privacidade</a>
 					<a href="#" data-toggle="modal" data-target="#exampleModalLongTermosUso"
 						class="link color-white mx-10" style="color:black">Termos de uso</a>
-					<!-- <div class="d-inline-block socials">
-						<a href="#" class="link color-white mx-10">
-							<i style="color:black" class="fab fa-linkedin"></i>
-						</a>
-						<a href="#" class="link color-white mx-10">
-							<i style="color:black" class="fab fa-github"></i>
-						</a>
-						<a href="#" class="link color-white ml-10">
-							<i style="color:black" class="fab fa-youtube"></i>
-						</a>
-						<a href="#" class="link color-white ml-10">
-							<i style="color:black" class="fab fa-instagram"></i>
-						</a>
-					</div> -->
-				</div>
-			</div>
-			<div>
-				<div class="mt-45 mb-45 hr h-2 bg-white op-3">
-				</div>
-			</div>
-			<div class="row">
-				<div class="mb-20 mb-lg-0 col-lg-7">
-					<a href="#solucoes" style="color:black" class="link color-white mr-10">Soluções</a>
-					<a href="#tecnologias" style="color:black" class="link color-white mx-10">Tecnologias</a>
-					<a href="#projetos" style="color:black" class="link color-white mx-10">Projetos</a>
-					<a href="#sobre" style="color:black" class="link color-white mx-10">Sobre</a>
 
-				</div>
-				<div class="col-lg-5 text-lg-right">
-					<div class="text-adaptive">© 2023 F3lixTech. Todos os
-						direitos reservados.
-					</div>
+					<a href="https://www.youtube.com/channel/UC5fX7rB3mas1c1zec_LVdRQ" class="link color-white ml-10">
+						<i style="color:black" class="fab fa-youtube"></i>
+					</a>
+					<a href="https://www.instagram.com/f3lixtech/" class="link color-white ml-10">
+						<i style="color:black" class="fab fa-instagram"></i>
+					</a>
 				</div>
 			</div>
+		</div>
+		<div>
+			<div class="mt-45 mb-45 hr h-2 bg-white op-3">
+			</div>
+		</div>
+		<div class="row mw-100">
+			<div class="mb-20 mb-lg-0 col-lg-6">
+				<a href="#solucoes" style="color:black" class="link color-white mr-10">Soluções</a>
+				<a href="#tecnologias" style="color:black" class="link color-white mx-10">Tecnologias</a>
+				<a href="#projetos" style="color:black" class="link color-white mx-10">Projetos</a>
+				<a href="#sobre" style="color:black" class="link color-white mx-10">Sobre</a>
+
+			</div>
+			<div class="col-lg-5 text-lg-right">
+				<div class="text-adaptive">© 2023 F3lixTech. Todos os
+					direitos reservados.
+				</div>
+			</div>
+		</div>
 		</div>
 	</footer>
 
