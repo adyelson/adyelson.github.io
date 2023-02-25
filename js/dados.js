@@ -1,6 +1,6 @@
 let sobremim = [
     { "titulo": "Criador da F3lixTech", "textop1": 
-    "Felix é o criador da F3lixTech,  que oferece soluções tecnológicas personalizadas por meio de metodologias ágeis e consultorias especializadas.",  "textop2":"A F3lixTech tem um enfoque em fornecer soluções inovadoras de maneira rápida, usando ferramentas no-code, tecnologias estabelecidas no mercado e servidores confiáveis." },
+    "Felix é o criador da F3lixTech,  que oferece soluções tecnológicas personalizadas por meio de metodologias ágeis e consultorias especializadas." },
     { "titulo": "História com Tecnologia", 
     "textop1": 
     "Há 17 anos, Felix teve seu primeiro contato com a tecnologia, quando teve seu primeiro computador. Desde então, ele mostrou uma curiosidade natural em aprender sobre o funcionamento interno do sistema operacional e seus softwares.", 
