@@ -8,42 +8,96 @@ $(function () {
 let tags = [];
 let projetos = [
    {
+        link:"MarketList", 
         titulo: "MarketList",
         descricao: "Aplicação para criar lista de mercado on-line.",
         detalhes: "",
         tags: ["Bubble", "Banco de dados", "Responsividade"],
         qtd_img: 1
     }, {
+        link:"Drums", 
         titulo: "Drums",
         descricao: "Bateria virtual que reproduz som.",
         detalhes: "",
         tags: ["Javascript", "Áudio", "CSS"],
         qtd_img: 1
     }, {
+        link:"Weather", 
         titulo: "Weather",
         descricao: "Aplicação para ver condições meteorológicas.",
         detalhes: "",
         tags: ["Javascript", "API", "CSS"],
         qtd_img: 3
     }, {
+        link:"TicTacToe", 
         titulo: "TicTacToe",
         descricao: "Jogo da velha para passar o tempo.",
         detalhes: "",
         tags: ["Bubble", "Responsividade"],
         qtd_img: 1
     },  {
+        link:"SimuladoMestre", 
         titulo: "SimuladoMestre",
         descricao: "Sistema para cadastro de perguntas.",
         detalhes: "",
         tags: ["Bubble", "Responsividade","Banco de dados", "API", "Sistema de Login", "E-mail"],
         qtd_img: 10
+    },  {
+        link:"DragAndDrop", 
+        titulo: "DragAndDrop",
+        descricao: "Demonstração de página com efeito drag and drop.",
+        detalhes: "",
+        tags: ["Javascript"],
+        qtd_img: 2
+    },  {
+        link:"Desenhando", 
+        titulo: "Desenhando",
+        descricao: "Demonstração de página com efeito drag and drop.",
+        detalhes: "",
+        tags: ["Javascript"],
+        qtd_img: 2
+    },  {
+        link:"Quiz", 
+        titulo: "Quiz",
+        descricao: "Demonstração de página com efeito drag and drop.",
+        detalhes: "",
+        tags: ["Javascript"],
+        qtd_img: 2
+    },  {
+        link:"RelogioAnalogico", 
+        titulo: "Relógio Analógico",
+        descricao: "Demonstração de página com efeito drag and drop.",
+        detalhes: "",
+        tags: ["Javascript"],
+        qtd_img: 1
+    },  {
+        link:"TicTacToeJS", 
+        titulo: "TicTacToe JS",
+        descricao: "Demonstração de página com efeito drag and drop.",
+        detalhes: "",
+        tags: ["Javascript"],
+        qtd_img: 1
+    },  {
+        link:"PizzariaVirtual", 
+        titulo: "Pizzaria Virtual",
+        descricao: "Demonstração de página com efeito drag and drop.",
+        detalhes: "",
+        tags: ["Javascript"],
+        qtd_img: 6
+    },  {
+        link:"UrnaEletronica", 
+        titulo: "Urna Eletrônica",
+        descricao: "Demonstração de página com efeito drag and drop.",
+        detalhes: "",
+        tags: ["Javascript"],
+        qtd_img: 3
     }
 ]
 
 
 function nome_projeto(titulo) {
 
-    return (titulo).toLowerCase();
+    return (titulo).toLowerCase().replace(" ", "_");
 }
 function listar_imagens(nome, qtd_img) {
     let imagens = [];
@@ -158,7 +212,7 @@ document.querySelectorAll(".modal-projeto-open").forEach(el => {
             document.querySelector('.modal-lista-tags').append(newtag);
         })
 
-        document.querySelector('.modal-testar').setAttribute('href', projeto.titulo);
+        document.querySelector('.modal-testar').setAttribute('href', projeto.link);
 
     })
 })

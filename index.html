@@ -251,7 +251,7 @@
 							data-toggle="tooltip" data-placement="top" :title="(projeto.tags).join(' | ')"
 							aria-hidden="true"></i>
 						<p class="card-text">{{projeto.descricao}} </p>
-						<a :href="projeto.titulo" class="btn action-1 mb-3 ">Testar</a><br>
+						<a :href="projeto.link" class="btn action-1 mb-3 ">Testar</a><br>
 						<a :id="index" data-toggle="modal" data-target="#exampleModalLong"
 							class="modal-projeto-open link action-1 f-18 bold">Detalhes</a>
 					</div>
@@ -540,7 +540,62 @@
 						<p> {{sobre[1].textop2}} </p>
 						<p> {{sobre[1].textop3}} </p>
 						<p> {{sobre[1].textop4}} </p>
+						<p> </p>
 
+						<div id="accordion">
+							<div>
+								<a href="#collapseOne" class="bold" data-toggle="collapse" aria-expanded="true"
+									aria-controls="collapseOne">
+									{{sobre[2].titulo}}
+								</a>
+							</div>
+							<div id="collapseOne" class="collapse" aria-labelledby="headingOne"
+								data-parent="#accordion">
+								<ul>
+									<li v-for="item in sobre[2].lista">{{item}}</li>
+								</ul>
+							</div>
+
+							<div>
+								<a href="#collapseTwo" class="bold" data-toggle="collapse" aria-expanded="true"
+									aria-controls="collapseOne">
+									{{sobre[3].titulo}}
+								</a>
+							</div>
+							<div id="collapseTwo" class="collapse" aria-labelledby="headingOne"
+								data-parent="#accordion">
+								<ul>
+									<li v-for="item in sobre[3].lista">{{item}}</li>
+								</ul>
+							</div>
+
+							<div>
+								<a href="#collapseThree" class="bold" data-toggle="collapse" aria-expanded="true"
+									aria-controls="collapseOne">
+									{{sobre[4].titulo}}
+								</a>
+							</div>
+							<div id="collapseThree" class="collapse" aria-labelledby="headingOne"
+								data-parent="#accordion">
+								<ul>
+									<li v-for="item in sobre[4].lista">{{item}}</li>
+								</ul>
+							</div>
+
+							<div>
+								<a href="#collapseFour" class="bold" data-toggle="collapse" aria-expanded="true"
+									aria-controls="collapseOne">
+									{{sobre[5].titulo}}
+								</a>
+							</div>
+							<div id="collapseFour" class="collapse" aria-labelledby="headingOne"
+								data-parent="#accordion">
+								<ul>
+									<li v-for="item in sobre[5].lista">{{item}}</li>
+								</ul>
+							</div>
+
+						</div>
 
 					</div>
 					<div class="modal-footer">
