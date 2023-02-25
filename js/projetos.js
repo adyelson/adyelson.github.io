@@ -8,29 +8,29 @@ $(function () {
 let tags = [];
 let projetos = [
    {
-        link:"MarketList", 
-        titulo: "MarketList",
+        link:"ListaDeCompras", 
+        titulo: "Lista de Compras",
         descricao: "Aplicação para criar lista de mercado on-line.",
         detalhes: "",
         tags: ["Bubble", "Banco de dados", "Responsividade"],
         qtd_img: 1
     }, {
-        link:"Drums", 
-        titulo: "Drums",
+        link:"BateriaVirtual", 
+        titulo: "Bateria Virtual",
         descricao: "Bateria virtual que reproduz som.",
         detalhes: "",
         tags: ["Javascript", "Áudio", "CSS"],
         qtd_img: 1
     }, {
-        link:"Weather", 
-        titulo: "Weather",
+        link:"Meteorologia", 
+        titulo: "Meteorologia",
         descricao: "Aplicação para ver condições meteorológicas.",
         detalhes: "",
         tags: ["Javascript", "API", "CSS"],
         qtd_img: 3
     }, {
-        link:"TicTacToe", 
-        titulo: "TicTacToe",
+        link:"JogoDaVelha", 
+        titulo: "Jogo da Velha",
         descricao: "Jogo da velha para passar o tempo.",
         detalhes: "",
         tags: ["Bubble", "Responsividade"],
@@ -43,8 +43,8 @@ let projetos = [
         tags: ["Bubble", "Responsividade","Banco de dados", "API", "Sistema de Login", "E-mail"],
         qtd_img: 10
     },  {
-        link:"DragAndDrop", 
-        titulo: "DragAndDrop",
+        link:"ArrastaeSolta", 
+        titulo: "Arrasta e Solta",
         descricao: "Demonstração de página com efeito drag and drop.",
         detalhes: "",
         tags: ["Javascript"],
@@ -71,8 +71,8 @@ let projetos = [
         tags: ["Javascript"],
         qtd_img: 1
     },  {
-        link:"TicTacToeJS", 
-        titulo: "TicTacToe JS",
+        link:"JogoDaVelhaJs", 
+        titulo: "Jogo da Velha JS",
         descricao: "Demonstração de página com efeito drag and drop.",
         detalhes: "",
         tags: ["Javascript"],
@@ -97,12 +97,12 @@ let projetos = [
 
 function nome_projeto(titulo) {
 
-    return (titulo).toLowerCase().replace(" ", "_");
+    return (titulo).toLowerCase().replaceAll(" ", "_");
 }
 function listar_imagens(nome, qtd_img) {
     let imagens = [];
     for (let i = 1; i <= qtd_img; i++) {
-        imagens.push("i/" + nome + " (" + i + ").jpg")
+        imagens.push("i/projetos/" + nome + " (" + i + ").jpg")
     }
     return imagens;
 }

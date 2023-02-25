@@ -9,7 +9,7 @@ let sobremim = [
     "textop3": 
     "Em 2009, ele concluiu um curso técnico em informática, o que o permitiu expandir ainda mais seu conhecimento e habilidades. Atualmente, Felix está se formando em Tecnologia da Informação, além de pós-graduação em Engenharia de Software, mostrando seu comprometimento em continuar aprimorando seus conhecimentos e habilidades para fornecer soluções tecnológicas cada vez mais avançadas e eficazes.",
     "textop4":
-     "Membro ativo da comunidade Sem Codar, compartilha seus conhecimentos e experiências com outros entusiastas da tecnologia. Ele está juntando todas as suas habilidades, tanto em programação tradicional quanto em no-code, para extrair o melhor que o mundo da tecnologia pode oferecer." },
+     "Membro ativo da comunidade Sem Codar desde 2021, compartilha seus conhecimentos e experiências com outros entusiastas da tecnologia. Ele está juntando todas as suas habilidades, tanto em programação tradicional quanto em no-code, para extrair o melhor que o mundo da tecnologia pode oferecer." },
     {
         "titulo": "Cursos", "texto": "",
         "lista": [
