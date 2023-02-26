@@ -11,78 +11,80 @@ let projetos = [
         link:"ListaDeCompras", 
         titulo: "Lista de Compras",
         descricao: "Aplicação para criar lista de mercado on-line.",
-        detalhes: "",
+        detalhes: [""],
         tags: ["Desktop","Mobile","Bubble", "Banco de dados", "Responsividade"],
         qtd_img: 1
     }, {
         link:"BateriaVirtual", 
         titulo: "Bateria Virtual",
         descricao: "Bateria virtual que reproduz som.",
-        detalhes: "",
+        detalhes: [""],
         tags: ["Desktop","Mobile","Javascript", "Áudio", "CSS"],
         qtd_img: 1
     }, {
         link:"Meteorologia", 
         titulo: "Meteorologia",
         descricao: "Aplicação para ver condições meteorológicas.",
-        detalhes: "",
+        detalhes: [""],
         tags: ["Desktop","Mobile","Javascript", "API", "CSS"],
         qtd_img: 3
     }, {
         link:"JogoDaVelha", 
         titulo: "Jogo da Velha",
         descricao: "Jogo da velha para passar o tempo.",
-        detalhes: "",
+        detalhes: [""],
         tags: ["Desktop","Mobile","Bubble", "Responsividade"],
         qtd_img: 1
     },  {
         link:"SimuladoMestre", 
         titulo: "SimuladoMestre",
         descricao: "Sistema para cadastro de perguntas.",
-        detalhes: "",
+        detalhes: [""],
         tags: ["Desktop","Mobile","Bubble", "Responsividade","Banco de dados", "API", "Sistema de Login", "E-mail"],
         qtd_img: 10
     },  {
         link:"Desenhando", 
         titulo: "Desenhando",
         descricao: "Demonstração de página com efeito drag and drop.",
-        detalhes: "",
+        detalhes: [""],
         tags: ["Desktop","Mobile","Javascript"],
         qtd_img: 2
     },  {
         link:"Quiz", 
         titulo: "Quiz",
         descricao: "Demonstração de página com efeito drag and drop.",
-        detalhes: "",
+        detalhes: [""],
         tags: ["Desktop","Mobile","Javascript"],
         qtd_img: 2
     },  {
         link:"RelogioAnalogico", 
         titulo: "Relógio Analógico",
         descricao: "Demonstração de página com efeito drag and drop.",
-        detalhes: "",
+        detalhes: [""],
         tags: ["Desktop","Mobile","Javascript"],
         qtd_img: 1
     },  {
         link:"JogoDaVelhaJs", 
         titulo: "Jogo da Velha JS",
         descricao: "Demonstração de página com efeito drag and drop.",
-        detalhes: "",
+        detalhes: [""],
         tags: ["Desktop","Mobile","Javascript"],
         qtd_img: 1
     },  {
         link:"PizzariaVirtual", 
         titulo: "Pizzaria Virtual",
         descricao: "Demonstração de página com efeito drag and drop.",
-        detalhes: "",
+        detalhes: [""],
         tags: ["Desktop","Mobile","Javascript"],
         qtd_img: 6
     },  {
         link:"UrnaEletronica", 
         titulo: "Urna Eletrônica",
-        descricao: "Demonstração de página com efeito drag and drop.",
-        detalhes: "",
-        tags: ["Desktop","Mobile","Javascript"],
+        descricao: "Sistema que simula uma Urna Eletrônica.",
+        detalhes: [
+            "Essa página tem como exemplo uma eleição hipotética para prefeito de uma cidade fictícia. Foram cadastrados quatro candidatos, com seus respectivos números, nomes, partidos e fotos.", "Para simplificar o uso, não foi realizado conexão com banco de dados, mas sim uso de objeto com as informações dos candidatos.", 'Na etapa de "VEREADOR", há dois candidatos cadastrados: "Fulano de Tal" do partido "ABC" com o número "38111" e "Beltrano da Silva" do partido "DEFG" com o número "77222".', 'Na etapa de "PREFEITO", há dois candidatos cadastrados: "Ciclano" do partido "ABC" com o número "99" e "Zulano" do partido "QWERTY" com o número "84". Cada candidato possui um vice, além de suas respectivas fotos e legendas.', 'Para votar, basta clicar nos números correspondentes ao número do candidato que deseja votar. Caso tenha se enganado e digitado um número errado, é possível corrigir o voto clicando no botão "CORRIGE". Caso queira votar em branco, basta clicar no botão "BRANCO" e confirmar o voto.','Após a confirmação do voto, a página exibe a próxima etapa de votação, caso haja. Caso contrário, a página exibe uma mensagem de encerramento da votação.'
+        ],
+        tags: ["Desktop","Mobile","Javascript", "CSS","Aúdio"],
         qtd_img: 3
     }
 ]
@@ -184,6 +186,16 @@ document.querySelectorAll(".modal-projeto-open").forEach(el => {
         let newimg = "";
         let newDivimg = "";
         document.querySelector('.modal-lista-img').innerHTML = "";
+
+        
+        document.querySelector('.modal-detalhes').innerHTML = '';
+        projeto.detalhes.forEach(element => {
+            let paragrafroDetalhes = document.createElement('p');
+            paragrafroDetalhes.innerHTML=element;
+            document.querySelector('.modal-detalhes').appendChild(paragrafroDetalhes);
+        });
+
+       
         
         (projeto.imagens).map((imagem, index) => {
             // ---- append no div e depois na lista para imagem
