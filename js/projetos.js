@@ -12,84 +12,77 @@ let projetos = [
         titulo: "Lista de Compras",
         descricao: "Aplicação para criar lista de mercado on-line.",
         detalhes: "",
-        tags: ["Bubble", "Banco de dados", "Responsividade"],
+        tags: ["Desktop","Mobile","Bubble", "Banco de dados", "Responsividade"],
         qtd_img: 1
     }, {
         link:"BateriaVirtual", 
         titulo: "Bateria Virtual",
         descricao: "Bateria virtual que reproduz som.",
         detalhes: "",
-        tags: ["Javascript", "Áudio", "CSS"],
+        tags: ["Desktop","Mobile","Javascript", "Áudio", "CSS"],
         qtd_img: 1
     }, {
         link:"Meteorologia", 
         titulo: "Meteorologia",
         descricao: "Aplicação para ver condições meteorológicas.",
         detalhes: "",
-        tags: ["Javascript", "API", "CSS"],
+        tags: ["Desktop","Mobile","Javascript", "API", "CSS"],
         qtd_img: 3
     }, {
         link:"JogoDaVelha", 
         titulo: "Jogo da Velha",
         descricao: "Jogo da velha para passar o tempo.",
         detalhes: "",
-        tags: ["Bubble", "Responsividade"],
+        tags: ["Desktop","Mobile","Bubble", "Responsividade"],
         qtd_img: 1
     },  {
         link:"SimuladoMestre", 
         titulo: "SimuladoMestre",
         descricao: "Sistema para cadastro de perguntas.",
         detalhes: "",
-        tags: ["Bubble", "Responsividade","Banco de dados", "API", "Sistema de Login", "E-mail"],
+        tags: ["Desktop","Mobile","Bubble", "Responsividade","Banco de dados", "API", "Sistema de Login", "E-mail"],
         qtd_img: 10
-    },  {
-        link:"ArrastaeSolta", 
-        titulo: "Arrasta e Solta",
-        descricao: "Demonstração de página com efeito drag and drop.",
-        detalhes: "",
-        tags: ["Javascript"],
-        qtd_img: 2
     },  {
         link:"Desenhando", 
         titulo: "Desenhando",
         descricao: "Demonstração de página com efeito drag and drop.",
         detalhes: "",
-        tags: ["Javascript"],
+        tags: ["Desktop","Mobile","Javascript"],
         qtd_img: 2
     },  {
         link:"Quiz", 
         titulo: "Quiz",
         descricao: "Demonstração de página com efeito drag and drop.",
         detalhes: "",
-        tags: ["Javascript"],
+        tags: ["Desktop","Mobile","Javascript"],
         qtd_img: 2
     },  {
         link:"RelogioAnalogico", 
         titulo: "Relógio Analógico",
         descricao: "Demonstração de página com efeito drag and drop.",
         detalhes: "",
-        tags: ["Javascript"],
+        tags: ["Desktop","Mobile","Javascript"],
         qtd_img: 1
     },  {
         link:"JogoDaVelhaJs", 
         titulo: "Jogo da Velha JS",
         descricao: "Demonstração de página com efeito drag and drop.",
         detalhes: "",
-        tags: ["Javascript"],
+        tags: ["Desktop","Mobile","Javascript"],
         qtd_img: 1
     },  {
         link:"PizzariaVirtual", 
         titulo: "Pizzaria Virtual",
         descricao: "Demonstração de página com efeito drag and drop.",
         detalhes: "",
-        tags: ["Javascript"],
+        tags: ["Desktop","Mobile","Javascript"],
         qtd_img: 6
     },  {
         link:"UrnaEletronica", 
         titulo: "Urna Eletrônica",
         descricao: "Demonstração de página com efeito drag and drop.",
         detalhes: "",
-        tags: ["Javascript"],
+        tags: ["Desktop","Mobile","Javascript"],
         qtd_img: 3
     }
 ]

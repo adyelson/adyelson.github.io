@@ -70,7 +70,7 @@
 	</div>
 	<!-- Header 1 -->
 	<header class="pt-195 pb-110 bg-light header_1">
-		<nav class="header_menu_1 pt-30 pb-30 ">
+		<nav class="header_menu_1 pt-30 pb-30">
 			<div class="container px-xl-0">
 				<div class="row justify-content-center align-items-center f-18 medium" data-aos-duration="600"
 					data-aos="fade-down" data-aos-delay="100">
@@ -247,9 +247,12 @@
 						<div class=" f-14 semibold sp-20 color-heading price d-none">
 							<span v-for="tag in projeto.tags"> {{tag }} </span>
 						</div>
-						<h5 class="card-title">{{projeto.titulo}} </h5><i class="fa fa-info-circle mt-0 "
+						<h5 class="card-title">{{projeto.titulo}} </h5>
+							<i class="fa fa-info-circle mt-0 "
 							data-toggle="tooltip" data-placement="top" :title="(projeto.tags).join(' | ')"
 							aria-hidden="true"></i>
+							
+
 						<p class="card-text">{{projeto.descricao}} </p>
 						<a :href="projeto.link" class="btn action-1 mb-3 ">Testar</a><br>
 						<a :id="index" data-toggle="modal" data-target="#exampleModalLong"
