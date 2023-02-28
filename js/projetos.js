@@ -7,6 +7,7 @@ $(function () {
 });
 let tags = [];
 let projetos = [{
+    linkvideo: "https://www.youtube.com/watch?v=8Z1GRo7DD2s",
     link: "SimuladoMestre",
     titulo: "SimuladoMestre",
     descricao: "Sistema para cadastro de perguntas.",
@@ -15,6 +16,7 @@ let projetos = [{
     qtd_img: 10
 },
 {
+    linkvideo: "",
     link: "ListaDeCompras",
     titulo: "Lista de Compras",
     descricao: "Aplicação para criar lista de mercado on-line.",
@@ -22,6 +24,7 @@ let projetos = [{
     tags: ["Desktop", "Mobile", "Bubble", "Banco de dados", "Responsividade"],
     qtd_img: 1
 }, {
+    linkvideo: "",
     link: "JogoDaVelha",
     titulo: "Jogo da Velha",
     descricao: "Jogo da velha para passar o tempo.",
@@ -29,6 +32,7 @@ let projetos = [{
     tags: ["Desktop", "Mobile", "Bubble", "Responsividade"],
     qtd_img: 1
 }, {
+    linkvideo: "",
     link: "Desenhando",
     titulo: "Desenhando",
     descricao: "Aplicação simplificada de desenho online.",
@@ -36,6 +40,7 @@ let projetos = [{
     tags: ["Desktop", "Mobile", "Javascript"],
     qtd_img: 2
 }, {
+    linkvideo: "",
     link: "BateriaVirtual",
     titulo: "Bateria Virtual",
     descricao: "Bateria virtual que reproduz som.",
@@ -43,6 +48,7 @@ let projetos = [{
     tags: ["Desktop", "Mobile", "Javascript", "Áudio", "CSS"],
     qtd_img: 1
 }, {
+    linkvideo: "",
     link: "Meteorologia",
     titulo: "Meteorologia",
     descricao: "Aplicação para ver condições meteorológicas.",
@@ -50,6 +56,7 @@ let projetos = [{
     tags: ["Desktop", "Mobile", "Javascript", "API", "CSS"],
     qtd_img: 3
 }, {
+    linkvideo: "",
     link: "Quiz",
     titulo: "Quiz",
     descricao: "Sistema de questionário virtual.",
@@ -57,6 +64,7 @@ let projetos = [{
     tags: ["Desktop", "Mobile", "Javascript", "CSS"],
     qtd_img: 2
 }, {
+    linkvideo: "",
     link: "RelogioAnalogico",
     titulo: "Relógio Analógico",
     descricao: "Design e Matemática para girar os ponteiros.",
@@ -64,6 +72,7 @@ let projetos = [{
     tags: ["Desktop", "Mobile", "Javascript"],
     qtd_img: 1
 }, {
+    linkvideo: "",
     link: "JogoDaVelhaJs",
     titulo: "Jogo da Velha JS",
     descricao: "Demonstração de página com efeito drag and drop.",
@@ -71,6 +80,7 @@ let projetos = [{
     tags: ["Desktop", "Mobile", "Javascript"],
     qtd_img: 1
 }, {
+    linkvideo: "",
     link: "PizzariaVirtual",
     titulo: "Pizzaria Virtual",
     descricao: "Demonstração de página com efeito drag and drop.",
@@ -78,13 +88,14 @@ let projetos = [{
     tags: ["Desktop", "Mobile", "Javascript"],
     qtd_img: 6
 }, {
+    linkvideo: "",
     link: "UrnaEletronica",
     titulo: "Urna Eletrônica",
     descricao: "Sistema que simula uma Urna Eletrônica.",
     detalhes: [
         "Essa página tem como exemplo uma eleição hipotética para prefeito de uma cidade fictícia. Foram cadastrados quatro candidatos, com seus respectivos números, nomes, partidos e fotos.", "Para simplificar o uso, não foi realizado conexão com banco de dados, mas sim uso de objeto com as informações dos candidatos.", 'Na etapa de "VEREADOR", há dois candidatos cadastrados: "Fulano de Tal" do partido "ABC" com o número "38111" e "Beltrano da Silva" do partido "DEFG" com o número "77222".', 'Na etapa de "PREFEITO", há dois candidatos cadastrados: "Ciclano" do partido "ABC" com o número "99" e "Zulano" do partido "QWERTY" com o número "84". Cada candidato possui um vice, além de suas respectivas fotos e legendas.', 'Para votar, basta clicar nos números correspondentes ao número do candidato que deseja votar. Caso tenha se enganado e digitado um número errado, é possível corrigir o voto clicando no botão "CORRIGE". Caso queira votar em branco, basta clicar no botão "BRANCO" e confirmar o voto.', 'Após a confirmação do voto, a página exibe a próxima etapa de votação, caso haja. Caso contrário, a página exibe uma mensagem de encerramento da votação.'
     ],
-    tags: ["Desktop", "Mobile", "Javascript", "CSS", "Aúdio"],
+    tags: ["Desktop", "Mobile", "Javascript", "CSS", "Áudio"],
     qtd_img: 3
 }
 ]
@@ -216,7 +227,12 @@ document.querySelectorAll(".modal-projeto-open").forEach(el => {
             newtag.innerHTML = tag;
             document.querySelector('.modal-lista-tags').append(newtag);
         })
-
+        if (projeto.linkvideo == "") {
+            document.querySelector('.modal-div-video').classList.add('d-none');
+        } else {
+            document.querySelector('.modal-div-video').classList.remove('d-none');
+            document.querySelector('.modal-linkvideo').setAttribute('href', projeto.linkvideo);
+        }
         document.querySelector('.modal-testar').setAttribute('href', projeto.link);
 
     })
