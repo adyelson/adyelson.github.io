@@ -290,6 +290,11 @@
 						<i class="fa fa-info-circle mt-0 " data-toggle="tooltip" data-placement="top"
 							:title="(projeto.tags).join(' | ')" aria-hidden="true"></i>
 
+							<a v-if="projeto.linkvideo!=''" :href="projeto.linkvideo" class="color-red">
+
+								<i class="fab fa-youtube mt-0 " aria-hidden="true"></i>
+							</a>
+
 
 						<p class="card-text">{{projeto.descricao}} </p>
 						<a :href="projeto.link" target="_blank" class="btn action-1 mb-3 ">Testar</a>
@@ -402,8 +407,8 @@
 					</div>
 					<div class="modal-footer justify-content-center modal-div-video ">
 						<a href="#" target="_blank"
-							class="modal-linkvideo mb-1 d-flex align-items-center justify-content-center mr-5 pl-4 pr-4 pt-10 pb-10 badge-dark radius12 ">
-							Vídeo demonstrativo</a>
+							class="modal-linkvideo mb-1 d-flex align-items-center justify-content-center mr-5 pl-4 pr-4 pt-10 pb-10 border radius12 link action-1 f-16 bold">
+							<i class="fab fa-youtube mr-10 color-red"></i>Vídeo demonstrativo</a>
 
 					</div>
 					<div class="modal-footer">

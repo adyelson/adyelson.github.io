@@ -7,15 +7,22 @@ $(function () {
 });
 let tags = [];
 let projetos = [{
-    linkvideo: "https://www.youtube.com/watch?v=8Z1GRo7DD2s",
+    linkvideo: "https://youtu.be/8Z1GRo7DD2s",
     link: "SimuladoMestre",
     titulo: "SimuladoMestre",
     descricao: "Sistema para cadastro de perguntas.",
-    detalhes: ["Essa é atualmente a aplicação mais complexa que existe na lista de projetos, possui diversas funcionalidades e foi criada com o objetivo inicial de ajudar nos estudos, treinando alunos para provas com questionários que aparecem com perguntas aleatórias.", "Essa ferramenta possui sistema de login, porém o cadastro é por convite, e apenas usuários com permissão para convidar conseguirão cadastrar novos usuários.", "O acesso às perguntas é feito de uma única vez e salvas em custom states, para evitar muitas consultas ao banco de dados. As respostas também são salvas em custom states para cada vez que o usuário responde. Ao fim do questionário, é possível salvar o desempenho do usuário, após a conferência das respostas.", "Existem outras funcionalidades, como cadastrar perguntas, gerenciar as perguntas, gerenciar os usuários, conferir solicitações de correção de perguntas.", "Foi acrescentada uma conexão API com Google Planilhas e Google Agenda, para visualizar escala de serviço do pessoal que utiliza esse sistema e sincronizar com a agenda de cada um."],
-    tags: ["Desktop", "Mobile", "Bubble", "Responsividade", "Banco de dados", "API", "Sistema de Login", "E-mail"],
+    detalhes: ["Essa é uma das aplicação mais complexas que existe na lista de projetos, possui diversas funcionalidades e foi criada com o objetivo inicial de ajudar nos estudos, treinando alunos para provas com questionários que aparecem com perguntas aleatórias.", "Essa ferramenta possui sistema de login, porém o cadastro é por convite, e apenas usuários com permissão para convidar conseguirão cadastrar novos usuários.", "O acesso às perguntas é feito de uma única vez e salvas em custom states, para evitar muitas consultas ao banco de dados. As respostas também são salvas em custom states para cada vez que o usuário responde. Ao fim do questionário, é possível salvar o desempenho do usuário, após a conferência das respostas.", "Existem outras funcionalidades, como cadastrar perguntas, gerenciar as perguntas, gerenciar os usuários, conferir solicitações de correção de perguntas.", "Foi acrescentada uma conexão API com Google Planilhas e Google Agenda, para visualizar escala de serviço do pessoal que utiliza esse sistema e sincronizar com a agenda de cada um."],
+    tags: ["Desktop", "Mobile", "Bubble", "Responsividade", "Banco de dados", "API", "Sistema de Login", "E-mail", "Complexo"],
     qtd_img: 10
-},
-{
+},{
+    linkvideo: "https://youtu.be/6SbKyBHSH60",
+    link: "autoescala",
+    titulo: "Auto Escala",
+    descricao: "Sistema para criação automática de escala.",
+    detalhes: ["Esse sistema de criação de escala automática exigiu um alto nível de lógica e conhecimento em JavaScript, juntamente com CSS, para alcançar 99% de eficácia na criação da escala.", "Para criar a escala, basta inserir os funcionários de acordo com suas competências e, em seguida, cadastrar os turnos com horários e regras previstas. Além disso, é possível adicionar restrições aos usuários, como férias, por exemplo. Você pode definir os dias de feriados e as prioridades dos critérios para a distribuição automática.", "O sistema ainda oferece a opção de exportar a configuração realizada em formato JSON, para ser importada posteriormente, evitando retrabalho. Além disso, é possível exportar a escala pronta em formato CSV."],
+    tags: ["Desktop", "Javascript", "Complexo", "CSS", "Upload"],
+    qtd_img: 6
+},{
     linkvideo: "",
     link: "ListaDeCompras",
     titulo: "Lista de Compras",
@@ -69,7 +76,7 @@ let projetos = [{
     titulo: "Relógio Analógico",
     descricao: "Design e Matemática para girar os ponteiros.",
     detalhes: ['Uma aplicação em JavaScript, CSS e HTML que mostra um relógio analógico é um excelente exemplo da combinação de matemática e design. A parte mais desafiadora da criação desse tipo de relógio é fazer com que os ponteiros se movam de forma precisa e contínua. Isso é feito utilizando matemática para calcular os ângulos corretos para cada um dos ponteiros.', 'No CSS, os ângulos são definidos para cada ponteiro, usando a propriedade "transform". O valor da propriedade é uma função que especifica o ângulo de rotação do elemento. Isso permite que cada ponteiro seja posicionado corretamente no relógio.', 'Já no JavaScript, o cálculo dos ângulos é feito usando a data e hora atuais. A partir disso, é possível calcular os ângulos para os ponteiros das horas, minutos e segundos. Uma vez que os ângulos são calculados, é possível atualizar as propriedades de "transform" no CSS e fazer com que os ponteiros se movam corretamente.'],
-    tags: ["Desktop", "Mobile", "Javascript"],
+    tags: ["Desktop", "Mobile", "Javascript","CSS"],
     qtd_img: 1
 }, {
     linkvideo: "",
@@ -77,7 +84,7 @@ let projetos = [{
     titulo: "Jogo da Velha JS",
     descricao: "Demonstração de página com efeito drag and drop.",
     detalhes: ['A aplicação Jogo da Velha é um exemplo de como o JavaScript pode ser utilizado para criar jogos interativos na web. Nessa aplicação, o usuário pode jogar contra si mesmo, alternando entre "X" e "O", ou jogar contra um amigo, utilizando o mesmo dispositivo. O jogo é apresentado em uma interface simples, com um layout de grade 3x3, onde o jogador clica em uma célula vazia para fazer sua jogada.', 'A lógica do jogo foi implementada inteiramente em JavaScript, com o uso de eventos de clique para registrar as jogadas do jogador e uma série de funções para verificar se houve um vencedor ou se houve um empate. O código JavaScript também é responsável por atualizar a interface do jogo em tempo real, mostrando quem é a vez de jogar e exibindo mensagens de vitória, empate ou derrota.', 'A aplicação Jogo da Velha é um ótimo exemplo de como a programação em JavaScript pode ser utilizada para criar jogos interativos na web, e serve como uma excelente base para aqueles que desejam aprender mais sobre a linguagem e sua aplicação em projetos web.'],
-    tags: ["Desktop", "Mobile", "Javascript"],
+    tags: ["Desktop", "Mobile", "Javascript","CSS"],
     qtd_img: 1
 }, {
     linkvideo: "",
@@ -85,7 +92,7 @@ let projetos = [{
     titulo: "Pizzaria Virtual",
     descricao: "Demonstração de página com efeito drag and drop.",
     detalhes: ["A interface de uma aplicação para compra de pizza é um excelente exemplo de como o CSS, HTML e JavaScript podem ser combinados para criar uma experiência de usuário agradável e interativa. Com essa aplicação, é possível escolher a quantidade de pizza desejada e adicioná-la ao carrinho, de forma rápida e fácil.", "A interface é simples e intuitiva, com botões e campos de entrada claramente identificados e organizados. O design é atraente e moderno, com cores vibrantes e imagens que fazem com que o usuário se sinta atraído a interagir com a aplicação.", "O uso de JavaScript torna a aplicação ainda mais poderosa, permitindo que o usuário adicione e remova itens do carrinho sem a necessidade de atualizar a página. Isso torna a experiência de compra mais fluida e rápida, proporcionando uma sensação de praticidade e conveniência.", "É importante ressaltar que esta aplicação para compra de pizza é apenas uma demonstração de interface e não possui conexão com um banco de dados real. Portanto, qualquer informação inserida na aplicação não será armazenada ou utilizada para qualquer outro fim."],
-    tags: ["Desktop", "Mobile", "Javascript"],
+    tags: ["Desktop", "Mobile", "Javascript","CSS"],
     qtd_img: 6
 }, {
     linkvideo: "",
