@@ -41,12 +41,13 @@ let sobremim = [
     },{
         "titulo": "Outros conhecimentos/habilidades", "texto": "",
         "lista": [
-            "Vue",
-            "Google Sheet/Excel",   
-            "Python",
-            "CSS",
             "Bubble",
             "Appgyver",
+            "Vue",
+            "Bootstrap",
+            "CSS",
+            "Google Sheet/Excel",   
+            "Python",
             "Criação de plugins - Bubble",
             "SQL",
             "MySQL",
