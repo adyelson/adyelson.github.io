@@ -9,7 +9,7 @@ let tags = [];
 let projetos = [{
     linkvideo: "https://youtu.be/8Z1GRo7DD2s",
     link: "SimuladoMestre",
-    titulo: "SimuladoMestre",
+    titulo: "Simulado-Mestre",
     descricao: "Sistema para cadastro de perguntas.",
     detalhes: ["Essa é uma das aplicação mais complexas que existe na lista de projetos, possui diversas funcionalidades e foi criada com o objetivo inicial de ajudar nos estudos, treinando alunos para provas com questionários que aparecem com perguntas aleatórias.", "Essa ferramenta possui sistema de login, porém o cadastro é por convite, e apenas usuários com permissão para convidar conseguirão cadastrar novos usuários.", "O acesso às perguntas é feito de uma única vez e salvas em custom states, para evitar muitas consultas ao banco de dados. As respostas também são salvas em custom states para cada vez que o usuário responde. Ao fim do questionário, é possível salvar o desempenho do usuário, após a conferência das respostas.", "Existem outras funcionalidades, como cadastrar perguntas, gerenciar as perguntas, gerenciar os usuários, conferir solicitações de correção de perguntas.", "Foi acrescentada uma conexão API com Google Planilhas e Google Agenda, para visualizar escala de serviço do pessoal que utiliza esse sistema e sincronizar com a agenda de cada um."],
     tags: ["Desktop", "Mobile", "Bubble", "Responsividade", "Banco de dados", "API", "Sistema de Login", "E-mail", "Complexo"],
