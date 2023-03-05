@@ -1,4 +1,8 @@
 
+let anoatual = new Date().getFullYear();
+document.querySelectorAll('.f3lixcopy').forEach(el=>{
+    el.innerHTML = `&copy;${anoatual} F3lixTech. Todos os direitos reservados.`
+})
 
 
 

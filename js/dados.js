@@ -3,7 +3,7 @@ let sobremim = [
     "Felix é o criador da F3lixTech,  que oferece soluções tecnológicas personalizadas por meio de metodologias ágeis e consultorias especializadas." },
     { "titulo": "História com Tecnologia", 
     "textop1": 
-    "Há 17 anos, Felix teve seu primeiro contato com a tecnologia, quando teve seu primeiro computador. Desde então, ele mostrou uma curiosidade natural em aprender sobre o funcionamento interno do sistema operacional e seus softwares.", 
+    "Há "+(anoatual-2005)+" anos, Felix teve seu primeiro contato com a tecnologia, quando teve seu primeiro computador. Desde então, ele mostrou uma curiosidade natural em aprender sobre o funcionamento interno do sistema operacional e seus softwares.", 
     "textop2":  
     "Na época, ele já corrigia erros e substituía dll no Windows 98. Pouco depois, aprendeu a editar arquivos em linguagem Lua para personalizar um servidor de Tibia. Isso despertou um interesse ainda maior em desenvolver suas habilidades em programação. Anos depois, ele se aventurou a criar servidores de Ragnarok e Minecraft, demonstrando uma compreensão cada vez maior em relação aos conceitos da tecnologia;", 
     "textop3": 
@@ -52,7 +52,7 @@ let sobremim = [
             "SQL",
             "MySQL",
             "Shellscript/Linux",
-            "Integração API"   
+            "Integração API"
         ]
     },
 
