@@ -108,6 +108,15 @@ let projetos = [{
     ],
     tags: ["Desktop", "Mobile", "Javascript", "CSS", "Áudio"],
     qtd_img: 3
+},{
+    linkvideo: "",
+    link: "linkedinaddcertification",
+    titulo: "LinkedIn add certification",
+    descricao: "Este plugin foi desenvolvido para abrir o formulário de criação de certificação do LinkedIn e preencher automaticamente alguns campos com base nas propriedades fornecidas.",
+    detalhes: ["Para utilizar este plugin, basta fornecer as propriedades necessárias para a criação da certificação e executar a função que abre o formulário de criação no LinkedIn, preenchendo os campos automaticamente.", 
+               "É importante utilizar um fluxo de trabalho para executar a ação que receberá as informações do certificado e navegar até a página do LinkedIn com o formulário pré-preenchido automaticamente."],
+    tags: ["Bubble", "Complexo", "Plugin"],
+    qtd_img: 0
 }
 ]
 
