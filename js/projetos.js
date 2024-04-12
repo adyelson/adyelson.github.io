@@ -12,7 +12,7 @@ let projetos = [
     linkvideo: "",
     link: "https://casher.app.br/",
     titulo: "Casher",
-    descricao: "Sistema de cupons.",
+    descricao: "Sistema de cupons para receber descontos.",
     detalhes: [
       "Sistema completo de cupons com sistema de autenticação, listagem de campanhas de lojas para uso de pontos para ganho de desconto.",
     ],
@@ -207,8 +207,7 @@ let projetos = [
     linkvideo: "",
     link: "linkedinaddcertification",
     titulo: "LinkedIn add certification",
-    descricao:
-      "Este plugin foi desenvolvido para formulário de certificação do LinkedIn.",
+    descricao: "Plugin para formulário de certificação do LinkedIn.",
     detalhes: [
       "Para utilizar este plugin, basta fornecer as propriedades necessárias para a criação da certificação e executar a função que abre o formulário de criação no LinkedIn, preenchendo os campos automaticamente.",
       "É importante utilizar um fluxo de trabalho para executar a ação que receberá as informações do certificado e navegar até a página do LinkedIn com o formulário pré-preenchido automaticamente.",
