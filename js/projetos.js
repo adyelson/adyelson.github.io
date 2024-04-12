@@ -195,6 +195,19 @@ let projetos = [
     tags: ["Bubble", "Complexo", "Plugin"],
     qtd_img: 1,
   },
+  {
+    linkvideo: "",
+    link: "circulocoord",
+    titulo: "Círculo Coordenada",
+    descricao:
+      "A partir de uma coordenada central de um círculo, encontre as coordenadas geográficas do perímetro.",
+    detalhes: [
+      "Após inserir os dados sobre o círculo geográfico, o sistema irá retornar as coordenadas geográficas que formam o círculo inserido.",
+      "As fórmulas utilizadas nesse sistema não levam em conta as declinações magnéticas.",
+    ],
+    tags: ["Desktop", "Mobile", "Javascript", "CSS"],
+    qtd_img: 1,
+  },
 ];
 
 function nome_projeto(titulo) {
