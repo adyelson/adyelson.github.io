@@ -9,6 +9,27 @@ $(function () {
 let tags = [];
 let projetos = [
   {
+    linkvideo: "",
+    link: "https://casher.app.br/",
+    titulo: "Casher",
+    descricao: "Sistema de cupons.",
+    detalhes: [
+      "Sistema completo de cupons com sistema de autenticação, listagem de campanhas de lojas para uso de pontos para ganho de desconto.",
+    ],
+    tags: [
+      "Desktop",
+      "Mobile",
+      "Bubble",
+      "Responsividade",
+      "Banco de dados",
+      "API",
+      "Sistema de Login",
+      "E-mail",
+      "Complexo",
+    ],
+    qtd_img: 3,
+  },
+  {
     linkvideo: "https://youtu.be/8Z1GRo7DD2s",
     link: "SimuladoMestre",
     titulo: "Simulado-Mestre",
@@ -156,7 +177,7 @@ let projetos = [
     linkvideo: "",
     link: "PizzariaVirtual",
     titulo: "Pizzaria Virtual",
-    descricao: "Demonstração de página com efeito drag and drop.",
+    descricao: "Interface de uma pizzaria virtual.",
     detalhes: [
       "A interface de uma aplicação para compra de pizza é um excelente exemplo de como o CSS, HTML e JavaScript podem ser combinados para criar uma experiência de usuário agradável e interativa. Com essa aplicação, é possível escolher a quantidade de pizza desejada e adicioná-la ao carrinho, de forma rápida e fácil.",
       "A interface é simples e intuitiva, com botões e campos de entrada claramente identificados e organizados. O design é atraente e moderno, com cores vibrantes e imagens que fazem com que o usuário se sinta atraído a interagir com a aplicação.",
@@ -187,7 +208,7 @@ let projetos = [
     link: "linkedinaddcertification",
     titulo: "LinkedIn add certification",
     descricao:
-      "Este plugin foi desenvolvido para abrir o formulário de criação de certificação do LinkedIn e preencher automaticamente alguns campos com base nas propriedades fornecidas.",
+      "Este plugin foi desenvolvido para formulário de certificação do LinkedIn.",
     detalhes: [
       "Para utilizar este plugin, basta fornecer as propriedades necessárias para a criação da certificação e executar a função que abre o formulário de criação no LinkedIn, preenchendo os campos automaticamente.",
       "É importante utilizar um fluxo de trabalho para executar a ação que receberá as informações do certificado e navegar até a página do LinkedIn com o formulário pré-preenchido automaticamente.",
@@ -199,8 +220,7 @@ let projetos = [
     linkvideo: "",
     link: "circulocoord",
     titulo: "Círculo Coordenadas",
-    descricao:
-      "A partir de uma coordenada central de um círculo, encontre as coordenadas geográficas do perímetro.",
+    descricao: "Encontre as coordenadas geográficas de um círculo.",
     detalhes: [
       "Após inserir os dados sobre o círculo geográfico, o sistema irá retornar as coordenadas geográficas que formam o círculo inserido.",
       "As fórmulas utilizadas nesse sistema não levam em conta as declinações magnéticas.",
@@ -337,6 +357,7 @@ document.querySelectorAll(".modal-projeto-open").forEach((el) => {
         .querySelector(".modal-linkvideo")
         .setAttribute("href", projeto.linkvideo);
     }
+
     document.querySelector(".modal-testar").setAttribute("href", projeto.link);
   });
 });
