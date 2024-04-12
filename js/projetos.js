@@ -198,7 +198,7 @@ let projetos = [
   {
     linkvideo: "",
     link: "circulocoord",
-    titulo: "Círculo Coordenada",
+    titulo: "Círculo Coordenadas",
     descricao:
       "A partir de uma coordenada central de um círculo, encontre as coordenadas geográficas do perímetro.",
     detalhes: [
