@@ -1,0 +1,10 @@
+
+
+sexto check - que verifica quem tem mais folgas na sequencia anterior
+ocultar quinto check - fds
+
+
+equalizar melhor os dias
+
+
+distribuir por função + de uma função por trabalhador

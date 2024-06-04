@@ -1,0 +1,419 @@
+<!--
+------------------------------------------------------
+------------------------------------------------------
+------------------------------------------------------
+------------------------------------------------------
+(c) Todos os direitos reservados. 2022
+
+Adyelson Felix Loureiro
+
+f3lixtech@f3lixtech.com 
+------------------------------------------------------
+------------------------------------------------------
+------------------------------------------------------
+------------------------------------------------------
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1720958403949609"
+      crossorigin="anonymous"
+    ></script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="vue.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="icon"
+      href="https://f3lixtech.com/i/logo/semtexto.svg"
+      type="image/x-icon"
+    />
+
+    <title>Auto Escala</title>
+  </head>
+
+  <body>
+    <div class="copyright">
+      <p>&copy Todos os direitos Reservados. 2024</p>
+      <p style="margin-left: 10px">
+        <a href="https://www.f3lixtech.com">F3lixTech</a>
+      </p>
+    </div>
+    <div class="mainWindow">
+      <h1>Auto Escala</h1>
+      <div class="menu" style="margin-bottom: 25px">
+        <div class="startAreaButton">Início</div>
+        <div class="workerInsertAreaButton">Funcionários</div>
+        <div class="shiftInsertAreaButton">Turnos</div>
+        <div class="shiftAreaButton">Escala</div>
+      </div>
+      <div class="startArea">
+        <div>
+          <div>
+            <p
+              style="border: 1px solid black; padding: 10px; text-align: center"
+            >
+              <label class="labelfile" for="export">Salve seus dados</label
+              ><br />
+              <button class="exportButton" id="export">Exportar dados</button>
+            </p>
+          </div>
+          <form
+            id="upload"
+            style="
+              justify-content: center;
+              border: 1px solid black;
+              padding: 10px;
+              text-align: center;
+            "
+          >
+            <p>
+              <label class="labelfile" for="file">upload .json</label>
+              <input
+                class="exportButton"
+                type="file"
+                style="width: 120px; word-wrap: normal"
+                id="file"
+                accept=".json"
+              />
+              <button class="labelfile" style="background-color: gray" ;>
+                Importar dados
+              </button>
+            </p>
+          </form>
+        </div>
+      </div>
+      <div class="shiftArea hide">
+        <div class="escalarButton" style="width: 250px">Escalar!</div>
+
+        <div
+          id="prioritylevel"
+          style="
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+          "
+        >
+          <div
+            style="
+              display: flex;
+              justify-content: center;
+              width: 250px;
+              margin-bottom: 10px;
+            "
+          >
+            1:<select class="optionmaster" id="opt0">
+              <option
+                v-for="(a, indexa) in optionsa"
+                v-text="optionsa[indexa]"
+              ></option>
+            </select>
+          </div>
+          <div
+            style="
+              display: flex;
+              justify-content: center;
+              width: 250px;
+              margin-bottom: 10px;
+            "
+          >
+            2:<select class="optionmaster" id="opt1">
+              <option
+                v-for="(b, indexb) in optionsb"
+                v-text="optionsb[indexb]"
+              ></option>
+            </select>
+          </div>
+          <div
+            style="
+              display: flex;
+              justify-content: center;
+              width: 250px;
+              margin-bottom: 10px;
+            "
+          >
+            3:
+            <select class="optionmaster" id="opt2">
+              <option
+                v-for="(c, indexc) in optionsc"
+                v-text="optionsc[indexc]"
+              ></option>
+            </select>
+          </div>
+          <div
+            style="
+              display: flex;
+              justify-content: center;
+              width: 250px;
+              margin-bottom: 10px;
+            "
+          >
+            4:<select class="optionmaster" id="opt3">
+              <option
+                v-for="(d, indexd) in optionsd"
+                v-text="optionsd[indexd]"
+              ></option>
+            </select>
+          </div>
+          <!-- 5: <select class="optionmaster" id='opt4'><option v-for="(e, indexe) in optionsd" v-text="optionse[indexe]"></select> -->
+        </div>
+
+        <input
+          type="month"
+          id="qtdDiasMes"
+          class="qtdDiasMes"
+          value="2022-01"
+          min="2022-01"
+        /><br />
+        Feriados: <input class="holidays" type="text" /> (ex: 1,2,10,11)
+
+        <button onclick="exportDataCsv()" class="exportExcel labelfile hide">
+          Exportar csv
+        </button>
+        <div class="shiftList" id="shiftList">
+          <br />
+          <table class="horizontalShift" v-if="amountDays>0">
+            <thead>
+              <tr class="header-table">
+                <th>Leg</th>
+                <th>Nome</th>
+                <th class="habilitacao">Hab.</th>
+                <th
+                  v-for="(i,index) in headerShift"
+                  v-html="index+1"
+                  v-bind:class="i"
+                ></th>
+                <th class="grayDias">dias</th>
+                <th class="grayCH">CH</th>
+                <th class="Friday">Sex</th>
+                <th class="Saturday">Sab</th>
+                <th class="Sunday">Dom</th>
+                <th class="grayDias">FDS</th>
+                <th class="Holiday">Fer</th>
+                <th v-for="l in definedShifts">{{l}}</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr v-for="info in workers" :key="workerList[info].workerId">
+                <th v-html="workerList[info].workerId"></th>
+                <th v-html="workerList[info].name"></th>
+                <th class="habilitacao" v-html="workerList[info].level"></th>
+                <th v-for="a in amountDays">
+                  <span
+                    class="everyshift"
+                    v-html="workerList[info].shiftWork[a-1]"
+                  ></span>
+                </th>
+                <th
+                  class="grayDias"
+                  v-html="workerList[info].daysOfWorkTotal"
+                ></th>
+                <th class="grayCH" v-html="workerList[info].workHours"></th>
+                <th v-html="workerList[info].daysOfWorkType['Friday']"></th>
+                <th v-html="workerList[info].daysOfWorkType['Saturday']"></th>
+                <th v-html="workerList[info].daysOfWorkType['Sunday']"></th>
+                <th v-html="workerList[info].daysOfWeekend"></th>
+                <th v-html="workerList[info].daysOfWorkType['Holiday']"></th>
+                <th v-for="l in definedShifts">
+                  {{workerList[info].daysOfWork[l].days}}
+                </th>
+              </tr>
+            </tbody>
+            <br />
+          </table>
+        </div>
+        <br />
+        <div class="workIdshiftList" id="workIdshiftList">
+          <table class="idShift" v-if="amountDays>0">
+            <thead>
+              <tr class="header-table">
+                <th>dias</th>
+                <th v-for="i in header" v-html="i"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr v-for="(info, index) in shifts" :key="index">
+                <th>{{index+1}}</th>
+                <th v-for="tag in info">
+                  <span class="emptyshift" v-if="tag=='??'" v-html="tag"></span>
+                  <span
+                    class="filledshift"
+                    v-if="tag!='??'"
+                    v-html="tag"
+                  ></span>
+                </th>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="workerInsertArea hide">
+        <br />
+
+        <div class="buttonAddWorker">+</div>
+        <span class="countWorker"></span>
+        <div class="workers">
+          <div class="worker sample">
+            <div class="row">
+              <div class="buttonRemove">X</div>
+              <input id="id" type="text" placeholder="id" />
+              <input id="worker" type="text" placeholder="Nome" />
+              <input id="level" type="text" placeholder="Hab" />
+              <div class="buttonPlus">+</div>
+            </div>
+            <div class="especialSituation">
+              <div class="condition sample">
+                <div class="buttonRemoveCondition">-</div>
+                <div class="row">
+                  <div>
+                    <label>
+                      Início
+                      <input
+                        class="hourStart"
+                        type="number"
+                        min="0"
+                        max="23"
+                        placeholder="Hora"
+                      />
+                      <input
+                        class="dayStart"
+                        type="number"
+                        min="1"
+                        max="31"
+                        placeholder="Dia"
+                      />
+                    </label>
+                  </div>
+                  <div>
+                    <label>
+                      Fim
+                      <input
+                        class="hourEnd"
+                        type="number"
+                        min="0"
+                        max="23"
+                        placeholder="Hora"
+                      />
+                      <input
+                        class="dayEnd"
+                        type="number"
+                        min="1"
+                        max="31"
+                        placeholder="Dia"
+                      />
+                    </label>
+                  </div>
+                  <div>
+                    <label
+                      >Descanso
+                      <input
+                        class="restAfterSpecial"
+                        type="number"
+                        min="0"
+                        placeholder="Horas"
+                      />
+                    </label>
+                    <input class="signal" type="text" placeholder="Sigla" />
+                  </div>
+                </div>
+                <div style="display: flex; flex-direction: row">
+                  Somar Horas
+                  <input type="checkbox" id="countHour" checked />
+
+                  Somar Dias<input
+                    style="margin-left: 0"
+                    type="checkbox"
+                    id="countDays"
+                    checked
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="shiftInsertArea hide">
+        <br />
+        Max de dias seguidos (ex: 10)<input
+          id="maxdayssequence"
+          type="number"
+        />
+        Horas de folga obrigatória após sequencia (ex: 60)
+        <input id="restaftersequence" type="number" />
+        <div class="buttonAddShift">+</div>
+        <span class="countWorker"></span>
+        <div class="shifts">
+          <div class="shift sample">
+            <div class="buttonRemove">-</div>
+            <label>Turno <input id="shiftName" type="text" /></label>
+            <label>Legenda <input id="shiftTag" type="text" /></label>
+            <label
+              >Hora de Início <input class="date" id="startTime" type="text"
+            /></label>
+            <label>Duração <input id="workHours" type="text" /></label>
+            <label
+              >Hrs de folga após <input id="restAfter" type="number"
+            /></label>
+            <label>Habilitação <input id="level" type="text" /></label>
+            <label
+              >Mínimo de trabalhador <input id="minWorkers" type="text"
+            /></label>
+            <label
+              >Aplicar em: <br />
+              Seg-Qui<input
+                class="applyin"
+                id="Normal"
+                type="checkbox"
+                checked
+              />
+              Sexta-feira<input
+                class="applyin"
+                id="Friday"
+                type="checkbox"
+                checked
+              />
+              <br />
+              Sábado<input
+                class="applyin"
+                id="Saturday"
+                type="checkbox"
+                checked
+              />
+              Doming<input
+                class="applyin"
+                id="Sunday"
+                type="checkbox"
+                checked
+              />
+              Feriado<input
+                class="applyin"
+                id="Holiday"
+                type="checkbox"
+                checked
+              />
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="globalvar.js"></script>
+    <script src="clickevents.js"></script>
+    <script src="includeworker.js"></script>
+    <script src="includeshift.js"></script>
+    <script src="setdays.js"></script>
+    <script src="startdistribuition.js"></script>
+    <script src="addworker.js"></script>
+    <script src="complesquare.js"></script>
+    <script src="updatevue.js"></script>
+    <script src="navbuttons.js"></script>
+    <script src="exportshiftmonth.js"></script>
+    <script src="convertmatrizshift.js"></script>
+    <script src="exportdata.js"></script>
+    <script src="importdata.js"></script>
+  </body>
+</html>
