@@ -31,7 +31,7 @@ let projetos = [
   },
   {
     linkvideo: "https://youtu.be/8Z1GRo7DD2s",
-    link: "projetos/simuladomestre",
+    link: "br/projetos/simuladomestre",
     titulo: "Simulado-Mestre",
     descricao: "Sistema para cadastro de perguntas.",
     detalhes: [
@@ -56,7 +56,7 @@ let projetos = [
   },
   {
     linkvideo: "https://youtu.be/6SbKyBHSH60",
-    link: "ferramentas/autoescala",
+    link: "br/ferramentas/autoescala",
     titulo: "Auto Escala",
     descricao: "Sistema para criação automática de escala.",
     detalhes: [
@@ -69,7 +69,7 @@ let projetos = [
   },
   {
     linkvideo: "",
-    link: "microprojetos/listadecompras",
+    link: "br/microprojetos/listadecompras",
     titulo: "Lista de Compras",
     descricao: "Aplicação para criar lista de mercado on-line.",
     detalhes: [
@@ -82,7 +82,7 @@ let projetos = [
   },
   {
     linkvideo: "",
-    link: "microprojetos/jogodavelha",
+    link: "br/microprojetos/jogodavelha",
     titulo: "Jogo da Velha",
     descricao: "Jogo da velha para passar o tempo.",
     detalhes: [
@@ -95,7 +95,7 @@ let projetos = [
   },
   {
     linkvideo: "",
-    link: "ferramentas/desenhando",
+    link: "br/ferramentas/desenhando",
     titulo: "Desenhando",
     descricao: "Aplicação simplificada de desenho online.",
     detalhes: [
@@ -109,7 +109,7 @@ let projetos = [
   },
   {
     linkvideo: "",
-    link: "ferramentas/bateriavirtual",
+    link: "br/ferramentas/bateriavirtual",
     titulo: "Bateria Virtual",
     descricao: "Bateria virtual que reproduz som.",
     detalhes: [
@@ -122,7 +122,7 @@ let projetos = [
   },
   {
     linkvideo: "",
-    link: "ferramentas/meteorologia",
+    link: "br/ferramentas/meteorologia",
     titulo: "Meteorologia",
     descricao: "Aplicação para ver condições meteorológicas.",
     detalhes: [
@@ -135,7 +135,7 @@ let projetos = [
   },
   {
     linkvideo: "",
-    link: "microprojetos/quiz",
+    link: "br/microprojetos/quiz",
     titulo: "Quiz",
     descricao: "Sistema de questionário virtual.",
     detalhes: [
@@ -149,7 +149,7 @@ let projetos = [
   },
   {
     linkvideo: "",
-    link: "ferramentas/relogioanalogico",
+    link: "br/ferramentas/relogioanalogico",
     titulo: "Relógio Analógico",
     descricao: "Design e Matemática para girar os ponteiros.",
     detalhes: [
@@ -162,7 +162,7 @@ let projetos = [
   },
   {
     linkvideo: "",
-    link: "microprojetos/jogodavelhajs",
+    link: "br/microprojetos/jogodavelhajs",
     titulo: "Jogo da Velha JS",
     descricao: "Demonstração de página com efeito drag and drop.",
     detalhes: [
@@ -175,7 +175,7 @@ let projetos = [
   },
   {
     linkvideo: "",
-    link: "microprojetos/pizzariavirtual",
+    link: "br/microprojetos/pizzariavirtual",
     titulo: "Pizzaria Virtual",
     descricao: "Interface de uma pizzaria virtual.",
     detalhes: [
@@ -189,7 +189,7 @@ let projetos = [
   },
   {
     linkvideo: "",
-    link: "microprojetos/urnaeletronica",
+    link: "br/microprojetos/urnaeletronica",
     titulo: "Urna Eletrônica",
     descricao: "Sistema que simula uma Urna Eletrônica.",
     detalhes: [
@@ -205,7 +205,7 @@ let projetos = [
   },
   {
     linkvideo: "",
-    link: "plugins/linkedinaddcertification",
+    link: "br/plugins/linkedinaddcertification",
     titulo: "LinkedIn add certification",
     descricao: "Plugin para formulário de certificação do LinkedIn.",
     detalhes: [
@@ -217,7 +217,7 @@ let projetos = [
   },
   {
     linkvideo: "",
-    link: "ferramentas/circulocoord",
+    link: "br/ferramentas/circulocoord",
     titulo: "Círculo Coordenadas",
     descricao: "Encontre as coordenadas geográficas de um círculo.",
     detalhes: [
