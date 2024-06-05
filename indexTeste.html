@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Página Interativa</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f0f0f0;
+        margin: 0;
+        overflow: hidden;
+      }
+      .waves {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: -1;
+      }
+      .wave {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 20px;
+        height: 20px;
+        border: 4px solid rgba(127, 0, 255, 0.7); /* Aumentado a grossura das ondas */
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        animation: ripple 4s infinite;
+        opacity: 0;
+      }
+      .wave:nth-child(1) {
+        animation-delay: 0s;
+      }
+      .wave:nth-child(2) {
+        animation-delay: 1s;
+      }
+      .wave:nth-child(3) {
+        animation-delay: 2s;
+      }
+      .wave:nth-child(4) {
+        animation-delay: 3s;
+      }
+      @keyframes ripple {
+        0% {
+          width: 20px;
+          height: 20px;
+          opacity: 1;
+        }
+        100% {
+          width: 800px;
+          height: 800px;
+          opacity: 0;
+        }
+      }
+      .logo-container {
+        position: relative;
+        width: 150px;
+        height: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        z-index: 1;
+      }
+      .logo {
+        width: 100%;
+        height: 100%;
+        background-image: url("https://f3lixtech.com/i/logo/logof3lixtechfull.svg"); /* Substitua pelo URL da sua logo */
+        background-size: contain;
+        background-position: center;
+        border-radius: 50%;
+        animation: pulse 4s infinite;
+        transition: transform 0.7s ease;
+      }
+      .logo-container:hover .logo {
+        transform: scale(1.1);
+      }
+      @keyframes pulse {
+        0% {
+          transform: scale(0.9);
+        }
+        50% {
+          transform: scale(1.4);
+        }
+        100% {
+          transform: scale(0.9);
+        }
+      }
+      .menu {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        animation: pulse 2s infinite;
+        transition: transform 0.3s ease;
+      }
+      .logo-container:hover .menu,
+      .logo-container.clicked .menu {
+        display: flex;
+      }
+      .menu img {
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+      }
+      .menu:hover {
+        transform: scale(1.2);
+      }
+      .menu.clicked .submenu {
+        display: flex;
+        flex-direction: column;
+      }
+      .submenu {
+        position: absolute;
+        width: 150px;
+        display: none;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        top: 60px; /* Ajustado para aparecer abaixo da bandeira */
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .submenu-item {
+        background-color: #fff;
+        padding: 10px;
+        margin: 5px 0;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        text-align: center;
+      }
+      .menu1 {
+        top: 150px; /* Aumentado para afastar a bandeira do logo */
+        left: 150px; /* Aumentado para afastar a bandeira do logo */
+        transform: translate(-50%, -50%);
+      }
+      .menu2 {
+        top: 150px; /* Aumentado para afastar a bandeira do logo */
+        left: -150px; /* Aumentado para afastar a bandeira do logo */
+        transform: translate(50%, -50%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="waves">
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+    </div>
+    <div class="logo-container" id="logo-container">
+      <div class="logo"></div>
+      <div class="menu menu1">
+        <img src="br.png" alt="Brazil Flag" />
+        <!-- Substitua pelo URL da bandeira do Brasil -->
+        <div class="submenu">
+          <div class="submenu-item">Ferramentas</div>
+          <div class="submenu-item">Projetos</div>
+          <div class="submenu-item">Microprojetos</div>
+          <div class="submenu-item">Plugins</div>
+        </div>
+      </div>
+      <div class="menu menu2">
+        <img src="usa.png" alt="USA Flag" />
+        <!-- Substitua pelo URL da bandeira dos EUA -->
+        <div class="submenu">
+          <div class="submenu-item">Ferramentas</div>
+          <div class="submenu-item">Projetos</div>
+          <div class="submenu-item">Microprojetos</div>
+          <div class="submenu-item">Plugins</div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const logoContainer = document.getElementById("logo-container");
+      logoContainer.addEventListener("click", () => {
+        logoContainer.classList.toggle("clicked");
+        document.querySelectorAll(".menu").forEach((menu) => {
+          menu.classList.toggle("clicked");
+        });
+      });
+    </script>
+  </body>
+</html>
