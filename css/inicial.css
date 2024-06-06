@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
   display: flex;
   justify-content: center;
@@ -8,7 +13,12 @@ body {
   overflow: hidden;
   background-image: url("/i/inicial/bgpic.jpg");
   background-size: cover;
+  user-select: none; /* Para a maioria dos navegadores modernos */
+  -webkit-user-select: none; /* Para Safari e Chrome */
+  -moz-user-select: none; /* Para Firefox */
+  -ms-user-select: none; /* Para Internet Explorer e Edge */
 }
+
 a {
   text-decoration: none; /* Remove o sublinhado */
   color: #000; /* Cor padrão */
@@ -65,10 +75,6 @@ a:active {
   align-items: center;
   cursor: pointer;
   z-index: 1;
-  user-select: none; /* Para a maioria dos navegadores modernos */
-  -webkit-user-select: none; /* Para Safari e Chrome */
-  -moz-user-select: none; /* Para Firefox */
-  -ms-user-select: none; /* Para Internet Explorer e Edge */
 }
 .logo {
   width: 100%;

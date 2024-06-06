@@ -46,6 +46,17 @@
       const submenus = document.querySelectorAll(".submenu");
       const noise = document.querySelector(".noise");
 
+      logo.addEventListener("touchstart", function (e) {
+        e.preventDefault();
+        // Simula um clique
+        var clickEvent = new MouseEvent("click", {
+          bubbles: true,
+          cancelable: true,
+          view: window,
+        });
+        e.target.dispatchEvent(clickEvent);
+      });
+
       logo.addEventListener("click", () => {
         if (noise.style.zIndex != "-1") {
           noise.style.zIndex = "-1";
