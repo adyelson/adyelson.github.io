@@ -19,23 +19,23 @@
   <body>
     <div class="noise"></div>
     <div class="logo-container" id="logo-container">
-      <div class="logo graylogo pulsante"></div>
-      <div class="menu menu1">
-        <img src="/i/inicial/br.png" alt="Brazil Flag" />
-        <div class="submenu">
-          <div class="submenu-item disabled">Ferramentas</div>
-          <div class="submenu-item disabled">Plugins</div>
-          <div class="submenu-item">
+      <div class="logo graylogo pulsante disable-select"></div>
+      <div class="menu menu1 disable-select">
+        <img class="disable-select" src="/i/inicial/br.png" alt="Brazil Flag" />
+        <div class="submenu disable-select">
+          <div class="submenu-item disabled disable-select">Ferramentas</div>
+          <div class="submenu-item disabled disable-select">Plugins</div>
+          <div class="submenu-item disable-select">
             <a href="br/portifolio"> Portifólio</a>
           </div>
         </div>
       </div>
-      <div class="menu menu2">
-        <img src="/i/inicial/usa.png" alt="USA Flag" />
-        <div class="submenu">
-          <div class="submenu-item disabled">Tools</div>
-          <div class="submenu-item disabled">Plugins</div>
-          <div class="submenu-item disabled">Portifolio</div>
+      <div class="menu menu2 disable-select">
+        <img class="disable-select" src="/i/inicial/usa.png" alt="USA Flag" />
+        <div class="submenu disable-select">
+          <div class="submenu-item disabled disable-select">Tools</div>
+          <div class="submenu-item disabled disable-select">Plugins</div>
+          <div class="submenu-item disabled disable-select">Portifolio</div>
         </div>
       </div>
     </div>
@@ -45,16 +45,22 @@
       const menus = document.querySelectorAll(".menu");
       const submenus = document.querySelectorAll(".submenu");
       const noise = document.querySelector(".noise");
+      const logoContainer = document.querySelector("#logo-container");
 
-      logo.addEventListener("touchstart", function (e) {
-        e.preventDefault();
-        // Simula um clique
-        var clickEvent = new MouseEvent("click", {
-          bubbles: true,
-          cancelable: true,
-          view: window,
+      const listRemoveSelectEffect =
+        document.querySelectorAll(".disable-select");
+
+      listRemoveSelectEffect.forEach((el) => {
+        el.addEventListener("touchstart", function (e) {
+          e.preventDefault();
+          // Simula um clique
+          var clickEvent = new MouseEvent("click", {
+            bubbles: true,
+            cancelable: true,
+            view: window,
+          });
+          e.target.dispatchEvent(clickEvent);
         });
-        e.target.dispatchEvent(clickEvent);
       });
 
       logo.addEventListener("click", () => {
