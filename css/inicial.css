@@ -69,7 +69,7 @@ a:active {
 .logo {
   width: 100%;
   height: 100%;
-  background-image: url("https://f3lixtech.com/i/logo/logof3lixtechfull.svg");
+  background-image: url("/i/inicial/logof3lixtechfull.svg");
   background-size: contain;
   background-position: center;
   border-radius: 10%;
@@ -143,6 +143,18 @@ a:active {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   width: 100%;
   text-align: center;
+}
+
+.submenu-item:hover {
+  background-color: #a2a2a2;
+}
+
+.disabled {
+  cursor: default;
+  background-color: #414141;
+}
+.disabled:hover {
+  background-color: #414141;
 }
 
 .noise {
