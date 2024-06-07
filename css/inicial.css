@@ -13,6 +13,7 @@ body {
   overflow: hidden;
   background-image: url("/i/inicial/bgpic.jpg");
   background-size: cover;
+  background-position: center;
   user-select: none; /* Para a maioria dos navegadores modernos */
   -webkit-user-select: none; /* Para Safari e Chrome */
   -moz-user-select: none; /* Para Firefox */
