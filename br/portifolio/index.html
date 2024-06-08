@@ -2,6 +2,9 @@
 <html lang="pt-BR">
 
 <head>
+	<script>
+		const pagelanguage = "br"; // br ou en
+	</script>
 	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1720958403949609"
      crossorigin="anonymous"></script>
 	<meta charset="utf-8">
@@ -35,12 +38,14 @@
 	<link href="css/style.css" rel="stylesheet" />
 	<!-- jQuery 3.3.1 -->
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	
 	<script src="./js/vue.js"></script>
+	
 </head>
 
 <body>
 	<!-- Navigation Mobile type 1 -->
-
+<div class="pagedata">
 	<a href="#" class="open_menu bg-light radius_full"><i class="fas fa-bars lh-40"></i></a>
 	<div class="navigation_mobile bg-gray type1">
 		<a href="#" class="close_menu color-white"><i style="color:black" class="fas fa-times"></i></a>
@@ -99,16 +104,17 @@
 				<a href="#" class="logo link color-main "><img class="w-200" src="./i/logo/logof3lixtechfull.svg"></a>
 			</div>
 			<br>
-			<h1 class="medium text-center mt-60 pb-15">Transforme suas ideias em soluções personalizadas </h1>
-			<div class="mw-600 mx-auto mt-30 f-22 color-heading text-center text-adaptive">Soluções inteligentes e
-				inovadoras com métodos ágeis e consultorias especializadas.
+			<h1 class=" medium text-center mt-60 pb-15">
+				{{pagedata.tituloprincipal[pagelanguage]}}
+				 </h1>
+			<div class=" mw-600 mx-auto mt-30 f-22 color-heading text-center text-adaptive">{{pagedata.subtituloprincipal[pagelanguage]}}
 			</div>
 			<div class="mt-70 pt-25 pb-25 text-center buttons">
 				<div>
-					<a href="#contato" class="btn lg action-1">Entrar em contato</a>
+					<a href="#contato" class="btn lg action-1">{{pagedata.entrarcontato[pagelanguage]}}</a>
 				</div>
 				<div>
-					<a href="#saibamais" class="link mt-15 action-1 f-18 medium">Saiba mais</a>
+					<a href="#saibamais" class="link mt-15 action-1 f-18 medium">{{pagedata.saibamais[pagelanguage]}}</a>
 				</div>
 			</div>
 		</div>
@@ -118,9 +124,8 @@
 		<div class="container px-xl-0">
 			<div class="row align-items-center text-center text-left justify-content-center">
 				<div class="col-lg-4 col-md-6">
-					<h3 class="mb-20 color-main">Otimização</h3>
-					<div class="mb-20 mb-md-0 f-22 color-heading text-adaptive">Soluções para poupar tempo e evitar
-						gastos em processos repetitivos, tudo na palma da sua mão.
+					<h3 class="mb-20 color-main">{{pagedata.call1titulo[pagelanguage]}}</h3>
+					<div class="mb-20 mb-md-0 f-22 color-heading text-adaptive">{{pagedata.call1texto[pagelanguage]}}
 					</div>
 				</div>
 				<div class="col-md-1">
@@ -148,9 +153,8 @@
 				<div class="col-md-1">
 				</div>
 				<div class="col-lg-4 col-md-6">
-					<h3 class="mb-20 color-main">Multiplataforma</h3>
-					<div class="mb-20 mb-md-0 f-22 color-heading text-adaptive">Acesse sua aplicação sempre que quiser,
-						de qualquer dispositivo.
+					<h3 class="mb-20 color-main">{{pagedata.call2titulo[pagelanguage]}}</h3>
+					<div class="mb-20 mb-md-0 f-22 color-heading text-adaptive">{{pagedata.call2texto[pagelanguage]}}
 					</div>
 				</div>
 			</div>
@@ -164,9 +168,8 @@
 
 				<div class="col-lg-4 col-sm-6">
 					<div class="mb-20 f-14 color-heading semibold text-uppercase sp-20 subtitle aos-init aos-animate text-center"
-						data-aos-duration="600" data-aos="fade-down" data-aos-delay="0">Processos repetitivos e
-						complicados?</div>
-					<h2 class="mb-20 color-main text-center">Soluções</h2>
+						data-aos-duration="600" data-aos="fade-down" data-aos-delay="0">{{pagedata.introsolucao[pagelanguage]}}</div>
+					<h2 class="mb-20 color-main text-center">{{pagedata.solucaotitulo[pagelanguage]}}</h2>
 
 				</div>
 
@@ -861,6 +864,6 @@
 	<script src="js/script.js"></script>
 	<script src="./js/projetos.js"></script>
 	<script src="./js/dados.js"></script>
-</body>
+</div></body>
 
 </html>
