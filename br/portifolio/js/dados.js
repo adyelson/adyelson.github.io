@@ -160,6 +160,54 @@ let pagedatatextos = {
     en: "More",
     br: "Soluções",
   },
+  solucao1titulo: {
+    en: "More",
+    br: "Acessibilidade",
+  },
+  solucao1texto: {
+    en: "More",
+    br: "Não sofra mais com limitação de acesso, algo comum em sistemas antigos.",
+  },
+  solucao2titulo: {
+    en: "More",
+    br: "Integrações",
+  },
+  solucao2texto: {
+    en: "More",
+    br: "Sua aplicação terá acesso as informações necessárias concentradas em um só lugar.",
+  },
+  solucao3titulo: {
+    en: "More",
+    br: "Inovação",
+  },
+  solucao3texto: {
+    en: "More",
+    br: "Escolha exatamente como sua aplicação irá te ajudar.",
+  },
+  solucao4titulo: {
+    en: "More",
+    br: "Redução de Custo",
+  },
+  solucao4texto: {
+    en: "More",
+    br: "Evite custos desnecessários com operações manuais que erram e causam prejuízos.",
+  },
+  solucao5titulo: {
+    en: "More",
+    br: "Velocidade",
+  },
+  solucao5texto: {
+    en: "More",
+    br: "Com processos otimizados e automatizados, as informações sempre estarão atualizadas.",
+  },
+  solucao6titulo: {
+    en: "More",
+    br: "Disponibilidade",
+  },
+  solucao6texto: {
+    en: "More",
+    br: "Servidores que oferecem maior disponibilidade para acesso que qualquer outro no mundo.",
+  },
 };
 
 let pagedata = new Vue({
