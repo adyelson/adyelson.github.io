@@ -13,393 +13,404 @@
 // ------------------------------------------------------
 // ------------------------------------------------------
  */
-*{
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
 
-body{
-    margin: 0;
+body {
+  margin: 0;
 }
 
 .exportButton {
-    display: none;
+  display: none;
 }
 .labelfile {
-    padding: 20px 10px;
-    width: 200px;
-    background-color: #333;
-    color: #FFF;
-    text-transform: uppercase;
-    text-align: center;
-    display: block;
-    margin-top: 10px;
-    cursor: pointer;
+  padding: 20px 10px;
+  width: 200px;
+  background-color: #333;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  display: block;
+  margin-top: 10px;
+  cursor: pointer;
 }
 
-.shiftArea, .workerInsertArea, .shiftInsertArea{
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.shiftArea,
+.workerInsertArea,
+.shiftInsertArea {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-table{
-    text-align: center;
-    font-size: 10px;
-    font-family: Montserrat, Arial, sans-serif;
-    background:#fafafa ;
-    margin: 0 auto;
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    
+table {
+  text-align: center;
+  font-size: 10px;
+  font-family: Montserrat, Arial, sans-serif;
+  background: #fafafa;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0;
+  margin: 0;
 }
-td,tbody{
-    padding: 0;
-    margin: 0;   
+td,
+tbody {
+  padding: 0;
+  margin: 0;
 }
-th{
-    border: 1px solid black;
-    padding: 0;
-    margin: 0;
-    width: 20px;
-    
+th {
+  border: 1px solid black;
+  padding: 0;
+  margin: 0;
+  width: 20px;
 }
 
-.header-table,.Normal{
-    background-color: black;
-    color: white;
-    padding: 0;
-    margin: 0;
+.header-table,
+.Normal {
+  background-color: black;
+  color: white;
+  padding: 0;
+  margin: 0;
 }
 
 tr:nth-child(even) {
-    background:lightgray;
-    padding: 0;
-    margin: 0;
-  }
-span{
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
+  background: lightgray;
+  padding: 0;
+  margin: 0;
 }
-.especialShift{
-    background-color: rgb(37, 71, 165);
-    color: rgb(255, 255, 255);
-    width: 100%;
-    margin: 0;
-    font-weight: 400px;
-
+span {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
-.emptyshift{
-    background-color: rgb(255, 0, 0);
-    color: rgb(255, 255, 255);
-    width: 100%;
-    margin: 0;
-    font-weight: 400px;
-
+.especialShift {
+  background-color: rgb(37, 71, 165);
+  color: rgb(255, 255, 255);
+  width: 100%;
+  margin: 0;
+  font-weight: 400px;
+}
+.emptyshift {
+  background-color: rgb(255, 0, 0);
+  color: rgb(255, 255, 255);
+  width: 100%;
+  margin: 0;
+  font-weight: 400px;
 }
 
-.mainWindow{
-    display: flex;
-    flex-direction: column;
-    justify-content:center;
-    align-items: center;
-    width: 100%;
-    padding: 0;
-    margin: 10;
+.mainWindow {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 0;
+  margin: 10;
 }
-#qtdDiasMes{
-    margin-top: 10px;
+#qtdDiasMes {
+  margin-top: 10px;
 }
-.insertWorker{
-    margin-top: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    width: 100%;
-    
-   
+.insertWorker {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
 }
-.buttonAddWorker:hover, .buttonAddShift:hover{
-    background-color: rgb(60, 146, 60);
+.buttonAddWorker:hover,
+.buttonAddShift:hover {
+  background-color: rgb(60, 146, 60);
 }
-.buttonAddWorker, .buttonAddShift{
-    border-radius: 50%;
-    color: white;
-    font-weight: bold;
-    font-size: 34px;
-    background-color: green;
-    height: 34px;
-    width: 34px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 15px;
-    cursor: pointer;
-    box-shadow: 2px 2px 1px black;
-}
-
-
-.buttonRemove:hover, .buttonRemoveCondition:hover{
-    background-color: rgb(255, 118, 118);
-}
-.buttonRemove, .buttonPlus, .buttonRemoveCondition{
-    font-family: Arial, Helvetica, sans-serif;
-    border-radius: 15%;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    
-    height: 80%;
-    width: 27px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-   
-    
-    cursor: pointer;
-   
-}
-.buttonRemove, .buttonRemoveCondition{
-    background-color: rgb(255, 0, 0);
-    margin-right: 5px;
-}
-.buttonPlus{
-    background-color: rgb(15, 0, 151);
-    margin-left: 5px;
+.buttonAddWorker,
+.buttonAddShift {
+  border-radius: 50%;
+  color: white;
+  font-weight: bold;
+  font-size: 34px;
+  background-color: green;
+  height: 34px;
+  width: 34px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px;
+  cursor: pointer;
+  box-shadow: 2px 2px 1px black;
 }
 
-
-.workers{
-    display: block;
-    align-items: center;
-    justify-content:center;
-    flex-direction: column;
-    flex-wrap: wrap;
-    margin-left: 0;
+.buttonRemove:hover,
+.buttonRemoveCondition:hover {
+  background-color: rgb(255, 118, 118);
 }
-.worker{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    width: 320px;
-    margin-top: 8px;
-    margin-left: 10px;
-    min-height: 24px;
-    padding: 5px;
-    border: 2px solid rgb(43, 38, 38);
-    border-radius: 10px;
-}
+.buttonRemove,
+.buttonPlus,
+.buttonRemoveCondition {
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 15%;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
 
-.shifts{
-    display: block;
-    align-items: center;
-    justify-content:center;
-    flex-direction: column;
-    flex-wrap: wrap;
-    margin-left: 0;
-}
+  height: 80%;
+  width: 27px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-.shift{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    width: 300px;
-    margin-top: 8px;
-    border: 2px solid rgb(43, 38, 38);
-    border-radius: 10px;
-    padding: 5px;
-    
+  cursor: pointer;
+}
+.buttonRemove,
+.buttonRemoveCondition {
+  background-color: rgb(255, 0, 0);
+  margin-right: 5px;
+}
+.buttonPlus {
+  background-color: rgb(15, 0, 151);
+  margin-left: 5px;
 }
 
-
-#id{
-    width: 25px;
-    margin-right: 5px;
+.workers {
+  display: block;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-left: 0;
+}
+.worker {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 360px;
+  margin-top: 8px;
+  min-height: 24px;
+  padding: 5px;
+  border: 2px solid rgb(43, 38, 38);
+  border-radius: 10px;
+}
+.worker #id {
+  width: 40px;
+}
+.worker #level {
+  width: 50px;
 }
 
-#level{
-    width: 35px;
-    margin-left: 5px;
-}
-#shiftTag{
-    width: 35px;
-    margin-left: 5px;
-    margin-top: 8px;
-}
-#shiftName{
-    width: 174px;
-}
-.date{
-    width: 85px;
-
+.shifts {
+  display: block;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-left: 0;
 }
 
-.shift{
-    margin-top: 10px;
-    display: block;
-   
-}
-.row{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-}
-.condition{
-    margin-top: 5px;
-    flex-direction: column;
-    display: flex;
-    border: .5px solid gray;
-    padding: 5px;
+.shift {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 300px;
+  margin-top: 8px;
+  border: 2px solid rgb(43, 38, 38);
+  border-radius: 10px;
+  padding: 5px;
 }
 
-
-.condition input{
-    width: 100%;
-    margin-right: 5px;
+#id {
+  width: 25px;
+  margin-right: 5px;
 }
 
-.sample{
-    display: none;
+#level {
+  width: 35px;
+  margin-left: 5px;
+}
+#shiftTag {
+  width: 35px;
+  margin-left: 5px;
+  margin-top: 8px;
+}
+#shiftName {
+  width: 174px;
+}
+.date {
+  width: 85px;
 }
 
-
-.include{
-    display: flex;
+.shift {
+  margin-top: 10px;
+  display: block;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.condition {
+  margin-top: 5px;
+  flex-direction: column;
+  display: flex;
+  border: 0.5px solid gray;
+  padding: 5px;
 }
 
-.hide{
-    display: none;
+.condition input {
+  width: 100%;
+  margin-right: 5px;
 }
 
-.menu{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 200px;
-    margin-top: 10px;
-    height: 50px;
+.sample {
+  display: none;
 }
 
-.startArea{
-    justify-content: center;
-    text-align: justify;
-}
-.startAreaButton, .shiftAreaButton, .workerInsertAreaButton, .shiftInsertAreaButton, .escalarButton{
-    padding: 20px 10px;
-    max-width: 200px;
-    background-color: #333;
-    color: #FFF;
-    text-transform: uppercase;
-    text-align: center;
-    display: block;
-    margin-top: 10px;
-    margin-bottom: 15px;
-    cursor: pointer;
+.include {
+  display: flex;
 }
 
-.buttonPlus:hover, .startAreaButton:hover, .shiftAreaButton:hover, .workerInsertAreaButton:hover, .shiftInsertAreaButton:hover, .escalarButton:hover{
-    background-color: rgb(93, 93, 190);
+.hide {
+  display: none;
 }
 
-.show{
-    background-color: rgb(48, 48, 48);
+.menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  margin-top: 10px;
+  height: 50px;
 }
 
-.Saturday{
-    background-color: rgb(207, 0, 0);
-    color: white;
+.startArea {
+  justify-content: center;
+  text-align: justify;
 }
-.Sunday{
-    background-color: rgb(207, 0, 0);
-    color: white;
-}
-.Friday{
-    background-color: rgb(238, 106, 58);
-    color: white;
-}
-.Holiday{
-    background-color: purple;
-    color: white;
-}
-
-.grayDias{
-    background-color: blueviolet;
-}
-.grayCH{
-    background-color: gray;
-}
-.habilitacao{
-    background-color: rgb(59, 59, 59);
-    color: white;
+.startAreaButton,
+.shiftAreaButton,
+.workerInsertAreaButton,
+.shiftInsertAreaButton,
+.escalarButton {
+  padding: 20px 10px;
+  max-width: 200px;
+  background-color: #333;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  cursor: pointer;
 }
 
-.copyright{
-    font-size: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
+.buttonPlus:hover,
+.startAreaButton:hover,
+.shiftAreaButton:hover,
+.workerInsertAreaButton:hover,
+.shiftInsertAreaButton:hover,
+.escalarButton:hover {
+  background-color: rgb(93, 93, 190);
 }
 
-.shiftList, .workIdshiftList{
+.show {
+  background-color: rgb(48, 48, 48);
+}
+
+.Saturday {
+  background-color: rgb(207, 0, 0);
+  color: white;
+}
+.Sunday {
+  background-color: rgb(207, 0, 0);
+  color: white;
+}
+.Friday {
+  background-color: rgb(238, 106, 58);
+  color: white;
+}
+.Holiday {
+  background-color: purple;
+  color: white;
+}
+
+.grayDias {
+  background-color: blueviolet;
+}
+.grayCH {
+  background-color: gray;
+}
+.habilitacao {
+  background-color: rgb(59, 59, 59);
+  color: white;
+}
+
+.copyright {
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.shiftList,
+.workIdshiftList {
   box-sizing: border-box;
   display: flex;
   flex: auto;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  left:0px;
+  left: 0px;
   justify-self: center;
-  
 }
-@media (max-width: 950px){
-    .shiftList, .workIdshiftList{
-        width: 100%;    
-        margin-left: 20%;
-    }
+@media (max-width: 950px) {
+  .shiftList,
+  .workIdshiftList {
+    width: 100%;
+    margin-left: 20%;
+  }
 }
-@media (max-width: 620px){
-    .shiftList, .workIdshiftList{
-        width: 100%;    
-        margin-left: 40%;
-    }
+@media (max-width: 620px) {
+  .shiftList,
+  .workIdshiftList {
+    width: 100%;
+    margin-left: 40%;
+  }
 }
-@media (max-width: 550px){
-    .shiftList, .workIdshiftList{
-        width: 100%;    
-        margin-left: 50%;
-    }
+@media (max-width: 550px) {
+  .shiftList,
+  .workIdshiftList {
+    width: 100%;
+    margin-left: 50%;
+  }
 }
-@media (max-width: 480px){
-    .shiftList, .workIdshiftList{
-        width: 100%;    
-        margin-left: 60%;
-    }
+@media (max-width: 480px) {
+  .shiftList,
+  .workIdshiftList {
+    width: 100%;
+    margin-left: 60%;
+  }
 }
-@media (max-width: 430px){
-    .shiftList, .workIdshiftList{
-        width: 100%;    
-        margin-left: 70%;
-    }
-    .menu{
-        font-size: 12px;
-    }
+@media (max-width: 430px) {
+  .shiftList,
+  .workIdshiftList {
+    width: 100%;
+    margin-left: 70%;
+  }
+  .menu {
+    font-size: 12px;
+  }
 }
-@media (max-width: 350px){
-    .shiftList,.workIdshiftList{
-        width: 100%;    
-        margin-left: 80%;
-    
-     
-    }
+@media (max-width: 350px) {
+  .shiftList,
+  .workIdshiftList {
+    width: 100%;
+    margin-left: 80%;
+  }
 }
