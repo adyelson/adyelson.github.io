@@ -16,46 +16,26 @@ function startShift() {
   for (let i = 0; i < monthDays; i++) {
     let actualDay = [];
     month[i];
-    if (i % 2 == 0) {
-      // if (true) {
-      for (let u = 0; u < month[i].length; u++) {
-        let reqLevel = month[i][u].reqLevel;
-        let shiftTagSep = month[i][u].shift;
-        let typeOfDay = month[i][u].typeOfDay;
-        let shiftWorks = [];
-        for (let w = 0; w < month[i][u].minWorkers; w++) {
-          valueReturn = add(i, u, w, reqLevel, shiftTagSep, typeOfDay);
-          w = valueReturn.w;
-          shiftWorks.push(valueReturn.workerId);
-        }
-        let shiftObject = {
-          dia: i + 1,
-          shift: month[i][u].shift,
-          minWorkers: month[i][u].minWorkers,
-          workers: shiftWorks,
-        };
-        actualDay.push(shiftObject);
+
+    for (let u = 0; u < month[i].length; u++) {
+      let reqLevel = month[i][u].reqLevel;
+      let shiftTagSep = month[i][u].shift;
+      let typeOfDay = month[i][u].typeOfDay;
+      let shiftWorks = [];
+      for (let w = 0; w < month[i][u].minWorkers; w++) {
+        valueReturn = add(i, u, w, reqLevel, shiftTagSep, typeOfDay);
+        w = valueReturn.w;
+        shiftWorks.push(valueReturn.workerId);
       }
-    } else {
-      for (let u = month[i].length - 1; u >= 0; u--) {
-        let reqLevel = month[i][u].reqLevel;
-        let shiftTagSep = month[i][u].shift;
-        let typeOfDay = month[i][u].typeOfDay;
-        let shiftWorks = [];
-        for (let w = 0; w < month[i][u].minWorkers; w++) {
-          valueReturn = add(i, u, w, reqLevel, shiftTagSep, typeOfDay);
-          w = valueReturn.w;
-          shiftWorks.push(valueReturn.workerId);
-        }
-        let shiftObject = {
-          dia: i + 1,
-          shift: month[i][u].shift,
-          minWorkers: month[i][u].minWorkers,
-          workers: shiftWorks,
-        };
-        actualDay.push(shiftObject);
-      }
+      let shiftObject = {
+        dia: i + 1,
+        shift: month[i][u].shift,
+        minWorkers: month[i][u].minWorkers,
+        workers: shiftWorks,
+      };
+      actualDay.push(shiftObject);
     }
+
     monthShift.push(actualDay);
   }
 
