@@ -94,7 +94,7 @@ f3lixtech@f3lixtech.com
         <div
           id="prioritylevel"
           style="
-            display: flex;
+            display: none;
             flex-direction: column;
             justify-content: center;
             align-items: center;
@@ -214,7 +214,10 @@ f3lixtech@f3lixtech.com
                   class="grayDias"
                   v-html="workerList[info].daysOfWorkTotal"
                 ></th>
-                <th class="grayCH" v-html="workerList[info].workHours"></th>
+                <th
+                  class="grayCH"
+                  v-html="roundToTwo(workerList[info].workHours)"
+                ></th>
                 <th v-html="workerList[info].daysOfWorkType['Friday']"></th>
                 <th v-html="workerList[info].daysOfWorkType['Saturday']"></th>
                 <th v-html="workerList[info].daysOfWorkType['Sunday']"></th>
