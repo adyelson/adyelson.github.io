@@ -100,58 +100,75 @@ function add(i, u, w, reqLevel, shiftTagS, typeOfDay) {
     }
   }
   /////////////////////////////////////////////////////////////	VERIFICAR
-  let arrayCheck = [listEntries.reverse()]; // inverter para sempre pegar do ultimo da lista de baixo pra cima
-  let paramCheckList = [];
-  document.querySelectorAll(".optionmaster").forEach((el) => {
-    if (el.value != "") {
-      paramCheckList.push(el.value);
-    }
-  });
+  function shuffleFourParts(array, variable) {
+    const length = array.length;
+    const quarterLength = Math.floor(length / 4);
 
-  let paramCheck = 1; //[...new Set(paramCheckList)].length;
+    // Dividir a lista em quatro partes
+    const firstPart = array.slice(0, quarterLength);
+    const secondPart = array.slice(quarterLength, 2 * quarterLength);
+    const thirdPart = array.slice(2 * quarterLength, 3 * quarterLength);
+    const fourthPart = array.slice(3 * quarterLength);
+
+    let result = [];
+
+    // Variável para determinar a ordem das partes
+    switch (variable % 4) {
+      case 0:
+        result = firstPart.concat(secondPart, thirdPart, fourthPart);
+        break;
+      case 1:
+        result = secondPart.concat(thirdPart, fourthPart, firstPart);
+        break;
+      case 2:
+        result = thirdPart.concat(fourthPart, firstPart, secondPart);
+        break;
+      case 3:
+        result = fourthPart.concat(firstPart, secondPart, thirdPart);
+        break;
+    }
+
+    return result;
+  }
+  let arrayCheck = [shuffleFourParts(listEntries, i)]; // inverter para sempre pegar do ultimo da lista de baixo pra cima
+  // document.querySelectorAll(".optionmaster").forEach((el) => {
+  //   if (el.value != "") {
+  //     paramCheckList.push(el.value);
+  //   }
+  // });
+
+  let paramCheckList = ["param1", "param2", "param3"];
+  let paramCheck = [...new Set(paramCheckList)].length;
   for (let o = 0; o < paramCheck; o++) {
     workArrayPos = [];
     arrayCheck[o].forEach((element) => {
-      //           element.daysOfWork[shiftTagS].days +
-      //           element.daysOfWorkType[typeOfDay] +
-      //           element.daysOfWeekend +
-      //           element.workHours +
-      //           element.daysOfWorkTotal
       if (["Friday", "Saturday", "Sunday", "Holiday"].includes(typeOfDay)) {
-        // Critérios para sextas, sábados, domingos e feriados
-        o == 0
+        paramCheckList[o] == "param3"
           ? workArrayPos.push(
-              (element.daysOfWorkType[typeOfDay] % 2 == 1 ? 2 : 0) +
-                (element.daysOfWork[shiftTagS].days % 2 == 1 ? 2 : 0)
+              element.daysOfWorkType[typeOfDay] * element.daysOfWeekend * 0.4
+            )
+          : "";
+        paramCheckList[o] == "param1"
+          ? workArrayPos.push(element.daysOfWeekend % 3 == 0 ? 1 : 0)
+          : "";
+        paramCheckList[o] == "param2"
+          ? workArrayPos.push(
+              element.daysOfWork[shiftTagS].days * element.daysOfWeekend * 0.4
             )
           : "";
       } else {
-        // Critérios para os outros dias da semana
-        o == 0
+        paramCheckList[o] == "param1"
           ? workArrayPos.push(
-              element.daysOfWork[shiftTagS].days +
-                element.daysOfWorkType[typeOfDay] +
-                element.daysOfWeekend +
-                element.workHours +
-                element.daysOfWorkTotal
+              element.daysOfWork[shiftTagS].days + element.workHours / 100
             )
           : "";
+        paramCheckList[o] == "param3"
+          ? workArrayPos.push(element.daysOfWorkTotal)
+          : "";
+        paramCheckList[o] == "param2"
+          ? workArrayPos.push(element.daysOfWorkType[typeOfDay])
+          : "";
       }
-      // paramCheckList[o] == "Tipo do turno"
-      //   ? workArrayPos.push(element.daysOfWork[shiftTagS].days)
-      //   : "";
-      // paramCheckList[o] == "Tipo do dia"
-      //   ? workArrayPos.push(element.daysOfWorkType[typeOfDay])
-      //   : "";
-      // paramCheckList[o] == "Carga Horária"
-      //   ? workArrayPos.push(element.workHours)
-      //   : "";
-      // paramCheckList[o] == "Total de dias"
-      //   ? workArrayPos.push(element.daysOfWorkTotal)
-      //   : "";
-      // paramCheckList[o] == "Fim de semana"
-      //   ? workArrayPos.push(element.daysOfWeekend)
-      //   : "";
     });
     arrayCheck[o + 1] = makeListToCheck(
       arrayCheck[o],
@@ -165,8 +182,12 @@ function add(i, u, w, reqLevel, shiftTagS, typeOfDay) {
     // document.querySelector('.shiftList').classList.add('hide');
     // document.querySelector('.workIdshiftList').classList.add('hide');
   } else {
+    /////////
+
     let workerName =
       arrayCheck[paramCheck - 1][searchLessDay(workArrayPos)[0]].name;
+
+    /////////
     workerId = workerList[workerName].workerId;
     workerList[workerName].daysOfWorkType[typeOfDay]++;
     if (["Friday", "Saturday", "Sunday"].includes(typeOfDay)) {
@@ -229,13 +250,41 @@ function makeListToCheck(entries, listLessDay) {
   });
   return listCheck;
 }
+// function searchLessDay(array) {
+//   let element = Math.min.apply(Math, array);
+//   let indices = [];
+
+//   let idx = array.indexOf(element);
+//   while (idx != -1) {
+//     indices.push(idx);
+//     idx = array.indexOf(element, idx + 1);
+//   }
+
+//   return indices;
+// }
+
 function searchLessDay(array) {
-  let element = Math.min.apply(Math, array);
+  let minElement = Math.min.apply(Math, array);
   let indices = [];
-  let idx = array.indexOf(element);
+  let idx = array.indexOf(minElement);
+
   while (idx != -1) {
     indices.push(idx);
-    idx = array.indexOf(element, idx + 1);
+    idx = array.indexOf(minElement, idx + 1);
   }
+
+  // Encontrar o próximo valor maior
+  let nextMinElement = Math.min.apply(
+    Math,
+    array.filter((el) => el > minElement)
+  );
+  if (!isNaN(nextMinElement)) {
+    idx = array.indexOf(nextMinElement);
+    while (idx != -1) {
+      indices.push(idx);
+      idx = array.indexOf(nextMinElement, idx + 1);
+    }
+  }
+
   return indices;
 }
