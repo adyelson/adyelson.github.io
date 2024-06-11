@@ -100,52 +100,49 @@ function add(i, u, w, reqLevel, shiftTagS, typeOfDay) {
     }
   }
   /////////////////////////////////////////////////////////////	VERIFICAR
-  function shuffleFourParts(array, variable) {
-    const length = array.length;
-    const quarterLength = Math.floor(length / 4);
 
-    // Dividir a lista em quatro partes
-    const firstPart = array.slice(0, quarterLength);
-    const secondPart = array.slice(quarterLength, 2 * quarterLength);
-    const thirdPart = array.slice(2 * quarterLength, 3 * quarterLength);
-    const fourthPart = array.slice(3 * quarterLength);
-
-    let result = [];
-
-    // Variável para determinar a ordem das partes
-    switch (variable % 4) {
-      case 0:
-        result = firstPart.concat(secondPart, thirdPart, fourthPart);
-        break;
-      case 1:
-        result = secondPart.concat(thirdPart, fourthPart, firstPart);
-        break;
-      case 2:
-        result = thirdPart.concat(fourthPart, firstPart, secondPart);
-        break;
-      case 3:
-        result = fourthPart.concat(firstPart, secondPart, thirdPart);
-        break;
-    }
-
-    return result;
-  }
-  let arrayCheck = [shuffleFourParts(listEntries, i)]; // inverter para sempre pegar do ultimo da lista de baixo pra cima
-  // document.querySelectorAll(".optionmaster").forEach((el) => {
-  //   if (el.value != "") {
-  //     paramCheckList.push(el.value);
-  //   }
-  // });
+  let arrayCheck = [listEntries.reverse()];
+  // inverter para sempre pegar do ultimo da lista de baixo pra cima
 
   let paramCheckList = ["param1", "param2", "param3"];
   let paramCheck = [...new Set(paramCheckList)].length;
   for (let o = 0; o < paramCheck; o++) {
     workArrayPos = [];
     arrayCheck[o].forEach((element) => {
-      if (["Friday", "Saturday", "Sunday", "Holiday"].includes(typeOfDay)) {
+      if (i > 26) {
+        if (["Friday", "Saturday", "Sunday", "Holiday"].includes(typeOfDay)) {
+          paramCheckList[o] == "param2"
+            ? workArrayPos.push(
+                element.daysOfWorkType[typeOfDay] + element.workHours
+              )
+            : "";
+          paramCheckList[o] == "param1"
+            ? workArrayPos.push(element.daysOfWeekend + element.workHours)
+            : "";
+          paramCheckList[o] == "param3"
+            ? workArrayPos.push(
+                element.daysOfWork[shiftTagS].days + element.workHours
+              )
+            : "";
+        } else {
+          paramCheckList[o] == "param1"
+            ? workArrayPos.push(element.workHours)
+            : "";
+          paramCheckList[o] == "param2"
+            ? workArrayPos.push(element.daysOfWorkTotal * element.workHours)
+            : "";
+          paramCheckList[o] == "param3"
+            ? workArrayPos.push(
+                element.daysOfWork[shiftTagS].days * element.workHours
+              )
+            : "";
+        }
+      } else if (
+        ["Friday", "Saturday", "Sunday", "Holiday"].includes(typeOfDay)
+      ) {
         paramCheckList[o] == "param3"
           ? workArrayPos.push(
-              element.daysOfWorkType[typeOfDay] * element.daysOfWeekend * 0.4
+              element.daysOfWorkType[typeOfDay] * element.daysOfWeekend
             )
           : "";
         paramCheckList[o] == "param1"
@@ -153,19 +150,17 @@ function add(i, u, w, reqLevel, shiftTagS, typeOfDay) {
           : "";
         paramCheckList[o] == "param2"
           ? workArrayPos.push(
-              element.daysOfWork[shiftTagS].days * element.daysOfWeekend * 0.4
+              element.daysOfWork[shiftTagS].days * element.daysOfWeekend
             )
           : "";
       } else {
         paramCheckList[o] == "param1"
-          ? workArrayPos.push(
-              element.daysOfWork[shiftTagS].days + element.workHours / 100
-            )
-          : "";
-        paramCheckList[o] == "param3"
-          ? workArrayPos.push(element.daysOfWorkTotal)
+          ? workArrayPos.push(element.workHours)
           : "";
         paramCheckList[o] == "param2"
+          ? workArrayPos.push(element.daysOfWorkTotal)
+          : "";
+        paramCheckList[o] == "param3"
           ? workArrayPos.push(element.daysOfWorkType[typeOfDay])
           : "";
       }
