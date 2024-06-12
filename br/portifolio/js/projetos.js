@@ -250,14 +250,6 @@ projetos.forEach((projeto) => {
 
 tags = [...new Set(tags)].sort();
 
-let lista_projetos = new Vue({
-  el: "#projetos",
-  data: {
-    projetos: projetos,
-    tags: tags,
-  },
-});
-
 const projetoitem = document.querySelectorAll(".projetoitem");
 let lista_filtro_projeto = [];
 

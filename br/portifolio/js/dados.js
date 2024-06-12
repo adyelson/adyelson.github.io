@@ -208,6 +208,34 @@ let pagedatatextos = {
     en: "More",
     br: "Servidores que oferecem maior disponibilidade para acesso que qualquer outro no mundo.",
   },
+  projetolink: {
+    en: "More",
+    br: "Projetos",
+  },
+  tecnologiaslink: {
+    en: "More",
+    br: "Tecnologias",
+  },
+  melhorescolhalink: {
+    en: "More",
+    br: "Melhor escolha",
+  },
+  projetostiutlo: {
+    en: "More",
+    br: "Projetos",
+  },
+  projetossubtitulo: {
+    en: "More",
+    br: "skills code e no-code",
+  },
+  projetosintroducao: {
+    en: "More",
+    br: "Veja abaixo alguns projetos desenvolvidos com bubble e outros que são ótimos exemplos das habilidades de codificar que existem na F3lixtech.",
+  },
+  filtrar: {
+    en: "Filter",
+    br: "Filtrar",
+  },
 };
 
 let pagedata = new Vue({
@@ -215,26 +243,10 @@ let pagedata = new Vue({
   data: {
     pagedata: pagedatatextos,
     pagelanguage: pagelanguage,
-  },
-});
-
-let politicas = new Vue({
-  el: "#politicasdeprivacidade",
-  data: {
+    projetos: projetos,
+    tags: tags,
     politicas: politicasdeprivacidade,
-  },
-});
-
-let termos = new Vue({
-  el: "#termosdeuso",
-  data: {
     termos: termosdeuso,
-  },
-});
-
-let sobre = new Vue({
-  el: "#sobremim",
-  data: {
     sobre: sobremim,
   },
 });

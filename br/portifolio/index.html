@@ -135,15 +135,7 @@
 						srcset="i/mockups/feature_34_img@2x.png 2x" alt="" class="img-fluid" />
 				</div>
 			</div>
-			<style>
-				@media(max-width: 767px){
-					.itemespecial{
-						display: flex;
-						flex-direction: column-reverse;
-						
-					}
-				}
-			</style>
+			
 			<div class="mt-80 itemespecial row align-items-center text-center text-left justify-content-center" >
 
 				<div class="col-md-4">
@@ -220,9 +212,9 @@
 			<div class="mt-10 text-center buttons">
 
 				<div>
-					<a href="#projetos" class="link mt-15 action-1 f-18 medium">Projetos</a> | <a href="#tecnologias"
-						class="link mt-15 action-1 f-18 medium">Tecnologias</a> | <a href="#melhor"
-						class="link mt-15 action-1 f-18 medium">Melhor escolha</a>
+					<a href="#projetos" class="link mt-15 action-1 f-18 medium">{{pagedata.projetolink[pagelanguage]}}</a> | <a href="#tecnologias"
+						class="link mt-15 action-1 f-18 medium">{{pagedata.tecnologiaslink[pagelanguage]}}</a> | <a href="#melhor"
+						class="link mt-15 action-1 f-18 medium">{{pagedata.melhorescolhalink[pagelanguage]}}</a>
 				</div>
 			</div>
 		</div>
@@ -237,22 +229,21 @@
 
 	<section id="projetos" class="ecommerce_18 bg-light pb-35 ">
 		<div class="container px-xl-0">
-			<h2 class="mb-20 text-center">Projetos</h2>
+			<h2 class="mb-20 text-center">{{pagedata.projetostiutlo[pagelanguage]}}</h2>
 			<div class="mb-20 f-14 color-heading semibold text-uppercase sp-20 subtitle aos-init aos-animate text-center"
-				data-aos-duration="600" data-aos="fade-down" data-aos-delay="0">skills code e no-code.</div>
+				data-aos-duration="600" data-aos="fade-down" data-aos-delay="0">{{pagedata.projetossubtitulo[pagelanguage]}}</div>
 			<div class="mx-auto mw-600 mb-20 mt-20 color-black text-adaptive aos-init aos-animate text-center f-14"
 				data-aos-duration="600" data-aos="fade-down" data-aos-delay="450">
 				<strong>
 					<p>
-						Veja abaixo alguns projetos desenvolvidos com bubble e outros que são ótimos exemplos das
-						habilidades de codificar que existem na F3lixtech.
+						{{pagedata.projetosintroducao[pagelanguage]}}
 					</p>
 				</strong>
 
 			</div>
 			<div class="d-flex  justify-content-center align-items-center mb-30">
 				<a href="#" class="link filtrar-projetos color-main">
-					<i class="fa fa-filter fa-lg  f-20" aria-hidden="true"> Filtrar</i>
+					<i class="fa fa-filter fa-lg  f-20" aria-hidden="true"> {{pagedata.filtrar[pagelanguage]}}</i>
 				</a>
 			</div>
 			<div class="d-flex flex-wrap justify-content-around align-items-baseline relative ecommerce_18_nav">
@@ -321,29 +312,7 @@
 		</div>
 	</section>
 
-	<style>
-		.ecommerce_25 {
-			background-image: url(i/bg/ecommerce_25_bg.jpg);
-		}
-
-		@media(-webkit-min-device-pixel-ratio: 1.25),
-		(min-resolution: 120dpi) {
-			.ecommerce_25 {
-				background-image: url(i/bg/ecommerce_25_bg@2x.jpg);
-			}
-		}
-
-		.codigos_bg {
-			background-image: url(i/bg/codigos_bg.jpg);
-		}
-
-		@media(-webkit-min-device-pixel-ratio: 1.25),
-		(min-resolution: 120dpi) {
-			.codigos_bg {
-				background-image: url(i/bg/codigos_bg@2x.jpg);
-			}
-		}
-	</style>
+	
 	<!-- Diferencial -->
 	<section id="melhor" class=" codigos_bg bg-dark pt-90 pb-90  text-center">
 		<div class="container px-xl-0">
@@ -859,6 +828,37 @@
 	<script src="js/script.js"></script>
 	<script src="./js/projetos.js"></script>
 	<script src="./js/dados.js"></script>
-</div></body>
+</div>
+<style>
+	.ecommerce_25 {
+		background-image: url(i/bg/ecommerce_25_bg.jpg);
+	}
+
+	@media(-webkit-min-device-pixel-ratio: 1.25),
+	(min-resolution: 120dpi) {
+		.ecommerce_25 {
+			background-image: url(i/bg/ecommerce_25_bg@2x.jpg);
+		}
+	}
+
+	.codigos_bg {
+		background-image: url(i/bg/codigos_bg.jpg);
+	}
+
+	@media(-webkit-min-device-pixel-ratio: 1.25),
+	(min-resolution: 120dpi) {
+		.codigos_bg {
+			background-image: url(i/bg/codigos_bg@2x.jpg);
+		}
+	}
+	
+				@media(max-width: 767px){
+					.itemespecial{
+						display: flex;
+						flex-direction: column-reverse;
+						
+					}
+				}
+			</style></body>
 
 </html>
