@@ -126,7 +126,7 @@ let pagedatatextos = {
   },
   subtituloprincipal: {
     en: "Smart and innovative solutions with agile methods and specialized consulting.",
-    br: "Soluções inteligentes e				inovadoras com métodos ágeis e consultorias especializadas.",
+    br: "Soluções inteligentes e inovadoras com métodos ágeis e consultorias especializadas.",
   },
   entrarcontato: {
     en: "Contact us",
