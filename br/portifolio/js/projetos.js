@@ -438,6 +438,14 @@ let pagedatatextos = {
     en: "More",
     br: "Servidores que oferecem maior disponibilidade para acesso que qualquer outro no mundo.",
   },
+  sobrelink: {
+    en: "More",
+    br: "Sobre",
+  },
+  solucoeslink: {
+    en: "More",
+    br: "Soluções",
+  },
   projetolink: {
     en: "More",
     br: "Projetos",
@@ -466,7 +474,120 @@ let pagedatatextos = {
     en: "Filter",
     br: "Filtrar",
   },
+  testarbutton: {
+    en: "Test",
+    br: "Testar",
+  },
+  detalhesbutton: {
+    en: "Details",
+    br: "Detalhes",
+  },
+  melhorescolhatitulo: {
+    en: "Details",
+    br: "Melhor escolha",
+  },
+  melhorescolhatexto: {
+    en: "Details",
+    br: "As plataformas No-Code aceleram o desenvolvimento, e mesmo quando surgirem obstáculos, aqui todas as dificuldades serão superadas devido ao alto nível de conhecimento técnico.",
+  },
+  tenologiasecapacidadestitulo: {
+    en: "Details",
+    br: "Tecnologias e Capacidades",
+  },
+  tenologiasecapacidadestexto: {
+    en: "Details",
+    br: "Rápida entrega utilizando ferramentas no-code com o suporte de tecnologias conhecidas do mercado.",
+  },
+  tccall1texto: {
+    en: "Details",
+    br: "Bubble.io",
+  },
+  tccall2texto: {
+    en: "Details",
+    br: "HTML, CSS, javascript",
+  },
+  tccall3texto: {
+    en: "Details",
+    br: "Criação de plugins",
+  },
+  tccall4texto: {
+    en: "Details",
+    br: "Conexões API",
+  },
+  tccall5texto: {
+    en: "Details",
+    br: "Banco de dados",
+  },
+  tccall6texto: {
+    en: "Details",
+    br: "Servidores Confiáveis",
+  },
+  metodologiatitulo: {
+    en: "Details",
+    br: "Métodologia",
+  },
+  metodologiatexto: {
+    en: "Details",
+    br: "Processos bem definidos.",
+  },
+  metodologiacall1titulo: {
+    en: "Details",
+    br: "1.Planejamento",
+  },
+  metodologiacall1texto: {
+    en: "Details",
+    br: "Definição das principais funcionalidades e objetivos a serem alcançados.",
+  },
+  metodologiacall2titulo: {
+    en: "Details",
+    br: "2.Prototipagemo",
+  },
+  metodologiacall2texto: {
+    en: "Details",
+    br: "Criação protótipos das principais telas para que o cliente possa validar.",
+  },
+  metodologiacall3titulo: {
+    en: "Details",
+    br: "3.Cronograma",
+  },
+  metodologiacall3texto: {
+    en: "Details",
+    br: "Definição do cronograma, para implementar cada uma das funcionalidades.",
+  },
+  metodologiacall4titulo: {
+    en: "Details",
+    br: "4.Desenvolvimento",
+  },
+  metodologiacall4texto: {
+    en: "Details",
+    br: "Início do desenvolvimento das funcionalidades, com reuniões ao final de cada uma.",
+  },
+  metodologiacall5titulo: {
+    en: "Details",
+    br: "5.Entrega",
+  },
+  metodologiacall5texto: {
+    en: "Details",
+    br: "Será realizada uma última rodada de testes e entregue o produto final.",
+  },
+  metodologiacall6titulo: {
+    en: "Details",
+    br: "6.Acompanhamento",
+  },
+  metodologiacall6texto: {
+    en: "Details",
+    br: " Após a entrega final, existirá suporte para manutenção do produto.",
+  },
+  frasefinal: {
+    en: "Details",
+    br: "Tudo é alcançavel! Só depende do tempo e energia que você irá dedicar para alcançar seu objetivo!",
+  },
+  textodesenvolvedor: {
+    en: "Details",
+    br: "Desenvolvedor",
+  },
 };
+
 function nome_projeto(titulo) {
   return titulo.toLowerCase().replaceAll(" ", "_");
 }
@@ -603,7 +724,9 @@ document.querySelectorAll(".modal-projeto-open").forEach((el) => {
         .setAttribute("href", projeto.linkvideo);
     }
 
-    document.querySelector(".modal-testar").setAttribute("href", projeto.link);
+    document
+      .querySelector(".modal-testar-projeto")
+      .setAttribute("href", projeto.link);
   });
 });
 

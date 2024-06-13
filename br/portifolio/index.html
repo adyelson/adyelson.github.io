@@ -84,7 +84,7 @@
               href="#solucoes"
               class="f-heading f-22 link color-white mb-20"
               style="color: black"
-              >Soluções</a
+              >{{pagedata.solucoeslink[pagelanguage]}}</a
             >
           </div>
           <div>
@@ -92,7 +92,7 @@
               href="#tecnologias"
               class="f-heading f-22 link color-white mb-20"
               style="color: black"
-              >Tecnologias</a
+              >{{pagedata.tecnologiaslink[pagelanguage]}}</a
             >
           </div>
           <div>
@@ -100,7 +100,7 @@
               href="#projetos"
               class="f-heading f-22 link color-white mb-20"
               style="color: black"
-              >Projetos</a
+              >{{pagedata.projetolink[pagelanguage]}}</a
             >
           </div>
           <div>
@@ -108,19 +108,29 @@
               href="#sobre"
               class="f-heading f-22 link color-white mb-20"
               style="color: black"
-              >Sobre</a
+              >{{pagedata.sobrelink[pagelanguage]}}</a
             >
           </div>
           <!-- <div><a href="#" class="link color-white op-3 mb-15" style="color:black">F.A.Q.</a></div> -->
 
           <div class="socials mt-40">
-            <!-- <a style="color:black" href="#" target="_blank" class="link color-white f-18 mr-20"><i
-						class="fab fa-github"></i></a>
-				<a style="color:black" href="#" target="_blank" class="link color-white f-18 mr-20"><i
-						class="fab fa-linkedin"></i></a> -->
             <a
               style="color: black"
-              href="https://www.youtube.com/channel/UC5fX7rB3mas1c1zec_LVdRQ"
+              href="https://github.com/adyelson"
+              target="_blank"
+              class="link color-white f-18 mr-20"
+              ><i class="fab fa-github"></i
+            ></a>
+            <a
+              style="color: black"
+              href="https://www.linkedin.com/in/felix-adyelson"
+              target="_blank"
+              class="link color-white f-18 mr-20"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+            <a
+              style="color: black"
+              href="https://www.youtube.com/@f3lix_tech"
               target="_blank"
               class="link color-white f-18 mr-20"
               ><i class="fab fa-youtube"></i
@@ -152,15 +162,17 @@
               </div>
               <div class="col-lg-6 text-center">
                 <a href="#solucoes" class="link color-heading mx-15"
-                  >Soluções</a
+                  >{{pagedata.solucoeslink[pagelanguage]}}</a
                 >
                 <a href="#tecnologias" class="link color-heading mx-15"
-                  >Tecnologias</a
+                  >{{pagedata.tecnologiaslink[pagelanguage]}}</a
                 >
                 <a href="#projetos" class="link color-heading mx-15"
-                  >Projetos</a
+                  >{{pagedata.projetolink[pagelanguage]}}</a
                 >
-                <a href="#sobre" class="link color-heading mx-15">Sobre</a>
+                <a href="#sobre" class="link color-heading mx-15"
+                  >{{pagedata.sobrelink[pagelanguage]}}</a
+                >
                 <!-- <a href="#" class="link color-heading f-16 mx-15">
 							<i class="fas fa-search"></i>
 						</a> -->
@@ -527,7 +539,7 @@
                   :href="projeto.link"
                   target="_blank"
                   class="btn action-1 mb-3"
-                  >Testar</a
+                  >{{pagedata.testarbutton[pagelanguage]}}</a
                 >
                 <!-- <a v-if="(projeto.link).substr(1,4) == 'http'" :href="projeto.link"
 							class="btn action-1 mb-3 ">Testar</a> -->
@@ -537,7 +549,7 @@
                   data-toggle="modal"
                   data-target="#exampleModalLong"
                   class="modal-projeto-open link action-1 f-18 bold"
-                  >Detalhes</a
+                  >{{pagedata.detalhesbutton[pagelanguage]}}</a
                 >
               </div>
             </div>
@@ -555,7 +567,7 @@
               data-aos="fade-down"
               data-aos-delay="0"
             >
-              Melhor escolha
+              {{pagedata.melhorescolhatitulo[pagelanguage]}}
             </div>
             <div class="mb-50 mb-lg-0 justify-content-center">
               <a href="#" class="logo link color-main"
@@ -569,15 +581,13 @@
               data-aos="fade-down"
               data-aos-delay="450"
             >
-              <p>
-                As plataformas No-Code aceleram o desenvolvimento, e mesmo
-                quando surgirem obstáculos, aqui todas as dificuldades serão
-                superadas devido ao alto nível de conhecimento técnico.
-              </p>
+              <p>{{pagedata.melhorescolhatexto[pagelanguage]}}</p>
             </div>
             <div class="mt-60">
               <p>
-                <a href="#contato" class="btn lg action-1">Entrar em contato</a>
+                <a href="#contato" class="btn lg action-1"
+                  >{{pagedata.entrarcontato[pagelanguage]}}</a
+                >
               </p>
             </div>
           </div>
@@ -604,10 +614,11 @@
               />
             </div>
             <div class="col-md-7 col-xl-6">
-              <h3 class="color-main text-center">Tecnologias e Capacidades</h3>
+              <h3 class="color-main text-center">
+                {{pagedata.tenologiasecapacidadestitulo[pagelanguage]}}
+              </h3>
               <div class="mt-25 color-heading f-18 text-center">
-                Rápida entrega utilizando ferramentas no-code com o suporte de
-                tecnologias conhecidas do mercado.
+                {{pagedata.tenologiasecapacidadestexto[pagelanguage]}}
               </div>
               <div class="mt-35 row">
                 <div class="col-6 col-lg-4 pb-15 with_borders">
@@ -620,7 +631,7 @@
                   <div
                     class="mt-15 color-main f-14 bold sp-20 text-uppercase text-center"
                   >
-                    Bubble.io
+                    {{pagedata.tccall1texto[pagelanguage]}}
                   </div>
                 </div>
                 <div class="col-6 col-lg-4 pb-15 with_borders">
@@ -633,7 +644,7 @@
                   <div
                     class="mt-15 color-main f-14 bold sp-20 text-uppercase text-center"
                   >
-                    HTML, CSS, javascript
+                    {{pagedata.tccall2texto[pagelanguage]}}
                   </div>
                 </div>
                 <div class="col-6 col-lg-4 pb-15 with_borders">
@@ -646,7 +657,7 @@
                   <div
                     class="mt-15 color-main f-14 bold sp-20 text-uppercase text-center"
                   >
-                    criação de plugins
+                    {{pagedata.tccall3texto[pagelanguage]}}
                   </div>
                 </div>
                 <div class="col-6 col-lg-4 pb-15 pt-35 with_borders">
@@ -659,7 +670,7 @@
                   <div
                     class="mt-15 color-main f-14 bold sp-20 text-uppercase text-center"
                   >
-                    Conexões API
+                    {{pagedata.tccall4texto[pagelanguage]}}
                   </div>
                 </div>
                 <div class="col-6 col-lg-4 pb-15 pt-35 with_borders">
@@ -672,7 +683,7 @@
                   <div
                     class="mt-15 color-main f-14 bold sp-20 text-uppercase text-center"
                   >
-                    Banco de dados
+                    {{pagedata.tccall5texto[pagelanguage]}}
                   </div>
                 </div>
                 <div class="col-6 col-lg-4 pb-15 pt-35 with_borders">
@@ -685,7 +696,7 @@
                   <div
                     class="mt-15 color-main f-14 bold sp-20 text-uppercase text-center"
                   >
-                    Servidores Confiáveis
+                    {{pagedata.tccall6texto[pagelanguage]}}
                   </div>
                 </div>
               </div>
@@ -693,11 +704,13 @@
           </div>
           <div class="mt-40 text-center buttons">
             <div>
-              <a href="#contato" class="btn lg action-1">Entrar em contato</a>
+              <a href="#contato" class="btn lg action-1"
+                >{{pagedata.entrarcontato[pagelanguage]}}</a
+              >
             </div>
             <div>
               <a href="#projetos" class="link mt-15 action-1 f-18 medium"
-                >Projetos</a
+                >{{pagedata.projetolink[pagelanguage]}}</a
               >
             </div>
           </div>
@@ -717,7 +730,7 @@
               data-aos="fade-down"
               data-aos-delay="0"
             >
-              Processos bem definidos.
+              {{pagedata.metodologiatexto[pagelanguage]}}
             </div>
             <h2
               class="mb-40 small aos-init aos-animate"
@@ -725,7 +738,7 @@
               data-aos="fade-down"
               data-aos-delay="150"
             >
-              Métodologia
+              {{pagedata.metodologiatitulo[pagelanguage]}}
             </h2>
 
             <div class="mt-60 row justify-content-center text-center blocks">
@@ -738,11 +751,10 @@
                 <div
                   class="mt-10 mb-10 f-14 semibold text-uppercase sp-10 title"
                 >
-                  1.Planejamento
+                  {{pagedata.metodologiacall1titulo[pagelanguage]}}
                 </div>
                 <div class="color-heading text-adaptive">
-                  Definição das principais funcionalidades e objetivos a serem
-                  alcançados.
+                  {{pagedata.metodologiacall1texto[pagelanguage]}}
                 </div>
               </div>
               <div class="mb-30 col-md-4 col-sm-8">
@@ -754,11 +766,10 @@
                 <div
                   class="mt-10 mb-10 f-14 semibold text-uppercase sp-10 title"
                 >
-                  2.Prototipagem
+                  {{pagedata.metodologiacall2titulo[pagelanguage]}}
                 </div>
                 <div class="color-heading text-adaptive">
-                  Criação protótipos das principais telas para que o cliente
-                  possa validar.
+                  {{pagedata.metodologiacall2texto[pagelanguage]}}
                 </div>
               </div>
               <div class="mb-30 col-md-4 col-sm-8">
@@ -770,11 +781,10 @@
                 <div
                   class="mt-10 mb-10 f-14 semibold text-uppercase sp-10 title"
                 >
-                  3.Cronograma
+                  {{pagedata.metodologiacall3titulo[pagelanguage]}}
                 </div>
                 <div class="color-heading text-adaptive">
-                  Definição do cronograma, para implementar cada uma das
-                  funcionalidades.
+                  {{pagedata.metodologiacall3texto[pagelanguage]}}
                 </div>
               </div>
             </div>
@@ -788,11 +798,10 @@
                 <div
                   class="mt-10 mb-10 f-14 semibold text-uppercase sp-10 title"
                 >
-                  4.Desenvolvimento
+                  {{pagedata.metodologiacall4titulo[pagelanguage]}}
                 </div>
                 <div class="color-heading text-adaptive">
-                  Início do desenvolvimento das funcionalidades, com reuniões ao
-                  final de cada uma.
+                  {{pagedata.metodologiacall4texto[pagelanguage]}}
                 </div>
               </div>
               <div class="mb-30 col-md-4 col-sm-8">
@@ -804,11 +813,10 @@
                 <div
                   class="mt-10 mb-10 f-14 semibold text-uppercase sp-10 title"
                 >
-                  5.Entrega
+                  {{pagedata.metodologiacall5titulo[pagelanguage]}}
                 </div>
                 <div class="color-heading text-adaptive">
-                  Será realizada uma última rodada de testes e entregue o
-                  produto final.
+                  {{pagedata.metodologiacall5texto[pagelanguage]}}
                 </div>
               </div>
               <div class="mb-30 col-md-4 col-sm-8">
@@ -820,11 +828,10 @@
                 <div
                   class="mt-10 mb-10 f-14 semibold text-uppercase sp-10 title"
                 >
-                  6.Acompanhamento
+                  {{pagedata.metodologiacall6titulo[pagelanguage]}}
                 </div>
                 <div class="color-heading text-adaptive">
-                  Após a entrega final, existirá suporte para manutenção do
-                  produto.
+                  {{pagedata.metodologiacall6texto[pagelanguage]}}
                 </div>
               </div>
             </div>
@@ -839,8 +846,7 @@
             <div class="col-xl-6 col-lg-8 col-md-10">
               <i class="fas fa-quote-left f-30 color-gray"></i>
               <div class="mt-35 mb-45 f-22 text-adaptive">
-                Tudo é alcançavel! Só depende do tempo e energia que você irá
-                dedicar para alcançar seu objetivo!
+                {{pagedata.frasefinal[pagelanguage]}}
               </div>
               <img
                 src="i/sobre/avatar.svg"
@@ -852,7 +858,7 @@
               <div
                 class="f-14 semibold color-heading text-uppercase sp-20 mb-20"
               >
-                Desenvolvedor
+                {{pagedata.textodesenvolvedor[pagelanguage]}}
               </div>
               <!--<strong>
 						<a href="#" data-toggle="modal" data-target="#exampleModalLongSobreMim">Sobre mim</a>
@@ -1022,7 +1028,7 @@
                 <p></p>
                 <div class="d-flex socials justify-content-center">
                   <a
-                    href="https://www.linkedin.com/in/adyelsonfl/"
+                    href="https://www.linkedin.com/in/felix-adyelson"
                     target="_blank"
                     class="link color-white mx-15"
                   >
@@ -1036,19 +1042,19 @@
                     <i style="color: black" class="fab fa-github"></i>
                   </a>
                   <a
-                    href="https://www.youtube.com/channel/UC5fX7rB3mas1c1zec_LVdRQ"
+                    href="https://www.youtube.com/@f3lix_tech"
                     target="_blank"
                     class="link color-white mx-15"
                   >
                     <i style="color: black" class="fab fa-youtube"></i>
                   </a>
-                  <a
+                  <!-- <a
                     href="https://www.instagram.com/f3lixtech/"
                     target="_blank"
                     class="link color-white mx-15"
                   >
                     <i style="color: black" class="fab fa-instagram"></i>
-                  </a>
+                  </a> -->
                 </div>
                 <p></p>
                 <div id="accordion">
@@ -1289,7 +1295,10 @@
               ></div>
             </div>
             <div class="modal-footer">
-              <a type="button" target="_blank" class="btn action-1 modal-testar"
+              <a
+                type="button"
+                target="_blank"
+                class="btn action-1 modal-testar-projeto"
                 >Testar</a
               >
             </div>
@@ -1326,15 +1335,26 @@
           </div>
           <div class="col-lg-2 text-lg-right pt-10 pb-10">
             <a
-              href="https://www.youtube.com/channel/UC5fX7rB3mas1c1zec_LVdRQ"
+              href="https://www.linkedin.com/in/felix-adyelson"
               target="_blank"
-              class="link color-white ml-10 md-10"
+              class="link color-white mx-15"
+            >
+              <i style="color: black" class="fab fa-linkedin"></i>
+            </a>
+            <a
+              href="https://github.com/adyelson"
+              target="_blank"
+              class="link color-white mx-15"
+            >
+              <i style="color: black" class="fab fa-github"></i>
+            </a>
+            <a
+              href="https://www.youtube.com/@f3lix_tech"
+              target="_blank"
+              class="link color-white mx-15"
             >
               <i style="color: black" class="fab fa-youtube"></i>
             </a>
-            <!-- <a href="https://www.instagram.com/f3lixtech/" target="_blank" class="link color-white ml-10 md-10">
-					<i style="color:black" class="fab fa-instagram"></i>
-				</a> -->
           </div>
         </div>
 
@@ -1391,7 +1411,6 @@
     <!-- Startup 3 JS (Custom js for all blocks) -->
     <script src="js/script.js"></script>
     <script src="./js/projetos.js"></script>
-    <script src="./js/dados.js"></script>
     <style>
       .ecommerce_25 {
         background-image: url(i/bg/ecommerce_25_bg.jpg);
