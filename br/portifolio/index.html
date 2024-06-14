@@ -514,14 +514,16 @@
 
               <div class="card-body text-center mb-3">
                 <div class="f-14 semibold sp-20 color-heading price d-none">
-                  <span v-for="tag in projeto.tags"> {{tag }} </span>
+                  <span v-for="tag in projeto.tags[pagelanguage]">
+                    {{tag }}
+                  </span>
                 </div>
-                <h5 class="card-title">{{projeto.titulo}}</h5>
+                <h5 class="card-title">{{projeto.titulo[pagelanguage]}}</h5>
                 <i
                   class="fa fa-info-circle mt-0"
                   data-toggle="tooltip"
                   data-placement="top"
-                  :title="(projeto.tags).join(' | ')"
+                  :title="(projeto.tags[pagelanguage]).join(' | ')"
                   aria-hidden="true"
                 ></i>
 
@@ -534,7 +536,7 @@
                   <i class="fab fa-youtube mt-0" aria-hidden="true"></i>
                 </a>
 
-                <p class="card-text">{{projeto.descricao}}</p>
+                <p class="card-text">{{projeto.descricao[pagelanguage]}}</p>
                 <a
                   :href="projeto.link"
                   target="_blank"
@@ -877,9 +879,11 @@
             <div class="row justify-content-center">
               <div class="col-xl-6 col-lg-8 col-md-10 h-590 mb-20">
                 <div class="f-14 semibold text-uppercase sp-20 color-heading">
-                  Comece agora!
+                  {{pagedata.textocomeceagora[pagelanguage]}}
                 </div>
-                <h2 class="mt-10 mb-10 small">Entre em contato</h2>
+                <h2 class="mt-10 mb-10 small">
+                  {{pagedata.entrarcontato[pagelanguage]}}
+                </h2>
 
                 <iframe
                   src="https://contato-f3lixtech.bubbleapps.io/version-test"
@@ -912,7 +916,7 @@
           <div class="modal-content">
             <div class="modal-header">
               <h5 class="modal-title" id="exampleModalLongTitle">
-                Termos de uso
+                {{pagedata.termosdeuso[pagelanguage]}}
               </h5>
               <button
                 type="button"
@@ -938,7 +942,7 @@
                 class="link action-1 modal-testar mr-15"
                 data-dismiss="modal"
                 aria-label="Close"
-                >Fechar</a
+                >{{pagedata.fechar[pagelanguage]}}</a
               >
             </div>
           </div>
@@ -958,7 +962,7 @@
           <div class="modal-content">
             <div class="modal-header">
               <h5 class="modal-title" id="exampleModalLongTitle">
-                Políticas de privacidade
+                {{pagedata.politicasprivacidade[pagelanguage]}}
               </h5>
               <button
                 type="button"
@@ -984,8 +988,8 @@
                 class="link action-1 modal-testar mr-15"
                 data-dismiss="modal"
                 aria-label="Close"
-                >Fechar</a
-              >
+                >{{pagedata.fechar[pagelanguage]}}
+              </a>
             </div>
           </div>
         </div>
@@ -1003,7 +1007,9 @@
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLongTitle">Sobre mim</h5>
+              <h5 class="modal-title" id="exampleModalLongTitle">
+                {{pagedata.sobremim[pagelanguage]}}
+              </h5>
               <button
                 type="button"
                 class="close"
@@ -1195,7 +1201,7 @@
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLongTitle">
+              <h5 class="modal-title-projeto" id="exampleModalLongTitle">
                 Modal title
               </h5>
               <button
@@ -1271,8 +1277,8 @@
                   target="_blank"
                   class="modal-linkvideo mb-1 d-flex align-items-center justify-content-center mr-5 pl-4 pr-4 pt-10 pb-10 border radius12 link action-1 f-16 bold"
                 >
-                  <i class="fab fa-youtube mr-10 color-red"></i>Vídeo
-                  demonstrativo</a
+                  <i class="fab fa-youtube mr-10 color-red"></i
+                  >{{pagedata.videodemotexto[pagelanguage]}}</a
                 >
               </div>
               <div class="modal-footer">
@@ -1299,7 +1305,7 @@
                 type="button"
                 target="_blank"
                 class="btn action-1 modal-testar-projeto"
-                >Testar</a
+                >{{pagedata.testarbutton[pagelanguage]}}</a
               >
             </div>
           </div>
@@ -1322,7 +1328,7 @@
               data-target="#exampleModalLongPrivacidade"
               class="link color-white mr-10"
               style="color: black"
-              >Políticas de privacidade</a
+              >{{pagedata.politicasprivacidade[pagelanguage]}}</a
             >
             <a
               href="#"
@@ -1330,7 +1336,7 @@
               data-target="#exampleModalLongTermosUso"
               class="link color-white mx-10"
               style="color: black"
-              >Termos de uso</a
+              >{{pagedata.termosdeuso[pagelanguage]}}</a
             >
           </div>
           <div class="col-lg-2 text-lg-right pt-10 pb-10">
@@ -1367,22 +1373,22 @@
               href="#solucoes"
               style="color: black"
               class="link color-white mr-10"
-              >Soluções</a
+              >{{pagedata.solucoeslink[pagelanguage]}}</a
             >
             <a
               href="#tecnologias"
               style="color: black"
               class="link color-white mx-10"
-              >Tecnologias</a
+              >{{pagedata.tecnologiaslink[pagelanguage]}}</a
             >
             <a
               href="#projetos"
               style="color: black"
               class="link color-white mx-10"
-              >Projetos</a
+              >{{pagedata.projetolink[pagelanguage]}}</a
             >
             <a href="#sobre" style="color: black" class="link color-white mx-10"
-              >Sobre</a
+              >{{pagedata.sobrelink[pagelanguage]}}</a
             >
           </div>
           <div class="col-lg-5 text-lg-right">
