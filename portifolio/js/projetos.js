@@ -14,7 +14,10 @@ let tags = [];
 let projetos = [
   {
     linkvideo: "",
-    link: "https://casher.app.br/",
+    link: {
+      en: "https://casher.app.br/",
+      br: "https://casher.app.br/",
+    },
     titulo: {
       en: "Casher",
       br: "Casher",
@@ -59,7 +62,10 @@ let projetos = [
   },
   {
     linkvideo: "https://youtu.be/8Z1GRo7DD2s",
-    link: "../projetos/simuladomestre",
+    link: {
+      en: "../projetos/simuladomestre/?en",
+      br: "../projetos/simuladomestre/?br",
+    },
     titulo: {
       en: "Mock Exam",
       br: "Simulado-Mestre",
@@ -108,11 +114,14 @@ let projetos = [
         "Complexo",
       ],
     },
-    qtd_img: 10,
+    qtd_img: 11,
   },
   {
     linkvideo: "https://youtu.be/6SbKyBHSH60",
-    link: "../ferramentas/autoescala",
+    link: {
+      en: "../ferramentas/autoescala/?en",
+      br: "../ferramentas/autoescala/?br",
+    },
     titulo: {
       en: "Automatic Service Scheduling",
       br: "Auto Escala",
@@ -141,7 +150,10 @@ let projetos = [
   },
   {
     linkvideo: "",
-    link: "../projetos/listadecompras",
+    link: {
+      en: "../projetos/listadecompras/?en",
+      br: "../projetos/listadecompras/?br",
+    },
     titulo: {
       en: "Shopping List",
       br: "Lista de Compras",
@@ -164,162 +176,166 @@ let projetos = [
     },
     tags: {
       en: ["Desktop", "Mobile", "Bubble", "Database", "Responsiveness"],
-      br: ["Desktop", "Mobile", "Bubble", "Banco de dados", "Responsividade"],
+      br: ["Desktop", "Mobile", "Bubble", "Banco de dados", "Responsiveness"],
     },
     qtd_img: 1,
   },
   {
     linkvideo: "",
-    link: "../projetos/jogodavelha",
+    link: {
+      en: "../projetos/jogodavelha/?en",
+      br: "../projetos/jogodavelha/?br",
+    },
     titulo: {
       en: "Tic-Tac-Toe",
       br: "Jogo da Velha",
     },
     descricao: {
-      en: "Tic-tac-toe game to pass the time.",
-      br: "Jogo da velha para passar o tempo.",
+      en: "Classic tic-tac-toe game implementation.",
+      br: "Implementação do clássico jogo da velha.",
     },
     detalhes: {
       en: [
-        "As a visual web application development platform, Bubble.io offers an intuitive and easy-to-use interface for creating games like tic-tac-toe. You can use the design tool to drag and drop elements, such as buttons, text fields, and checkboxes, to create the game's interface, and then program the game's logic using a visual flowchart interface.",
-        "Creating a tic-tac-toe game in Bubble.io begins with creating a blank page and selecting the game's basic elements, such as the board cells and reset buttons. Then, the developer can use the style editor to customize the game's appearance, like the cell colors, fonts, and background.",
-        "After designing the interface, the developer can add the game logic, using Bubble.io's visual programming tool to create condition rules and actions that determine the game's behavior. For example, you can program a condition rule that checks if a player has won the game, and if so, display a winning message.",
+        "This is a simple implementation of the classic tic-tac-toe game. It allows two players to play against each other on the same device, taking turns to place their symbols (X or O) on a 3x3 grid. The first player to align three of their symbols horizontally, vertically, or diagonally wins the game.",
+        "The game keeps track of the score between rounds and allows players to reset the board to start a new game.",
       ],
       br: [
-        "Como uma plataforma de desenvolvimento de aplicativos web visual, o Bubble.io oferece uma interface intuitiva e fácil de usar para criar jogos como o jogo da velha. Você pode usar a ferramenta de design para arrastar e soltar elementos, como botões, campos de texto e caixas de seleção, para criar a interface do jogo e, em seguida, programar a lógica do jogo usando uma interface de fluxograma visual.",
-        "Criar um jogo da velha no Bubble.io começa com a criação de uma página em branco e a seleção dos elementos básicos do jogo, como as células do tabuleiro e os botões de reinício. Em seguida, o desenvolvedor pode usar o editor de estilo para personalizar a aparência do jogo, como as cores das células, fontes e plano de fundo.",
-        "Depois de projetar a interface, o desenvolvedor pode adicionar a lógica do jogo, usando a ferramenta de programação visual do Bubble.io para criar regras de condição e ações que determinam o comportamento do jogo. Por exemplo, você pode programar uma regra de condição que verifica se um jogador ganhou o jogo e, em caso afirmativo, exibir uma mensagem de vitória.",
+        "Essa é uma implementação simples do clássico jogo da velha. Permite que dois jogadores joguem entre si no mesmo dispositivo, alternando para colocar seus símbolos (X ou O) em uma grade 3x3. O primeiro jogador a alinhar três de seus símbolos horizontal, vertical ou diagonalmente vence o jogo.",
+        "O jogo mantém o controle da pontuação entre as rodadas e permite que os jogadores reiniciem o tabuleiro para começar um novo jogo.",
       ],
     },
     tags: {
-      en: ["Desktop", "Mobile", "Bubble", "Database", "Responsiveness"],
-      br: ["Desktop", "Mobile", "Bubble", "Banco de dados", "Responsividade"],
+      en: ["Desktop", "Mobile", "Javascript", "Game", "Multiplayer"],
+      br: ["Desktop", "Mobile", "Javascript", "Jogo", "Multiplayer"],
     },
     qtd_img: 1,
   },
   {
-    linkvideo: "",
-    link: "../projetos/desenhando",
+    linkvideo: "https://youtu.be/mDpEqoXxSqA",
+    link: {
+      en: "../projetos/desenhando/?en",
+      br: "../projetos/desenhando/?br",
+    },
     titulo: {
       en: "Drawing",
       br: "Desenhando",
     },
     descricao: {
-      en: "Simplified online drawing application.",
-      br: "Aplicação simplificada de desenho online.",
+      en: "Application for drawing and painting.",
+      br: "Aplicação para desenhar e pintar.",
     },
     detalhes: {
       en: [
-        'The "Drawing" application is a tool that allows the user to create drawings on a canvas, using freehand drawing and color selection features. The application was developed in HTML, CSS, and JavaScript.',
-        "The application's interface is simple and intuitive, with buttons to select the color and a clear screen button to erase the current drawing. By selecting the color, the user can draw on the screen with the mouse or with the finger on mobile devices.",
-        "The application is responsive and adapts to different screen sizes, allowing the user to draw on both desktops and mobile devices. The application's code is quite simple and can be easily modified to include new features, such as the ability to save drawings or undo actions.",
-        'In short, the "Drawing" application is a simple and useful tool for those who want to create drawings in a digital environment, albeit with some limitations. With its intuitive interface and responsiveness, it is easy for the user to get familiar and start drawing quickly.',
+        "Drawing is an application developed for artistic expression through digital drawing and painting. It provides a range of tools such as brushes, colors, and erasers to create digital art.",
+        "Users can save their creations locally or share them online. The application supports various file formats for saving and exporting artwork.",
       ],
       br: [
-        'A aplicação "Desenhando" é uma ferramenta que permite ao usuário criar desenhos em um canvas, utilizando as funcionalidades de desenho de mão livre e seleção de cores. A aplicação foi desenvolvida em HTML, CSS e JavaScript.',
-        "A interface da aplicação é simples e intuitiva, com botões para selecionar a cor e um botão de limpar tela para apagar o desenho atual. Ao selecionar a cor, o usuário pode desenhar na tela com o mouse ou com o dedo em dispositivos móveis.",
-        "A aplicação é responsiva e se adapta a diferentes tamanhos de tela, permitindo que o usuário desenhe tanto em desktops quanto em dispositivos móveis. O código da aplicação é bastante simples e pode ser facilmente modificado para incluir novas funcionalidades, como a capacidade de salvar desenhos ou desfazer ações.",
-        'Em suma, a aplicação "Desenhando" é uma ferramenta simples e útil para quem quer criar desenhos em um ambiente digital, porém com algumas limitações. Com sua interface intuitiva e responsividade, é fácil para o usuário se familiarizar e começar a desenhar rapidamente.',
+        "Desenhando é uma aplicação desenvolvida para expressão artística por meio de desenho e pintura digital. Ela oferece uma variedade de ferramentas como pincéis, cores e borrachas para criar arte digital.",
+        "Os usuários podem salvar suas criações localmente ou compartilhá-las online. A aplicação suporta diversos formatos de arquivo para salvar e exportar as obras de arte.",
       ],
     },
     tags: {
-      en: ["Desktop", "Mobile", "Javascript"],
-      br: ["Desktop", "Mobile", "Javascript"],
+      en: ["Desktop", "Drawing", "Painting", "Tools"],
+      br: ["Desktop", "Desenho", "Pintura", "Ferramentas"],
     },
     qtd_img: 2,
   },
   {
-    linkvideo: "",
-    link: "../projetos/bateriavirtual",
+    linkvideo: "https://youtu.be/D4TkG1i_xX8",
+    link: {
+      en: "../projetos/bateriavirtual/?en",
+      br: "../projetos/bateriavirtual/?br",
+    },
     titulo: {
       en: "Virtual Drums",
       br: "Bateria Virtual",
     },
     descricao: {
-      en: "Virtual drums that play sounds.",
-      br: "Bateria virtual que reproduz som.",
+      en: "Virtual drums simulator.",
+      br: "Simulador de bateria virtual.",
     },
     detalhes: {
       en: [
-        "This page is a virtual drum application that allows the user to play different drum sounds by pressing the corresponding keyboard keys. The page uses HTML, CSS, and JavaScript to create the interface and interactive behavior.",
-        "In HTML, there is a basic structure of the page, with tags that define the elements and their content, such as the header with the page title, the drum button area, and an area to compose and play music. CSS is responsible for styling the page, defining the visual appearance of the elements, such as colors and borders.",
-        "JavaScript is responsible for the interactive behavior of the page, receiving user actions and triggering corresponding events. Each time the user presses a keyboard key, JavaScript captures the event and executes a function that plays the corresponding sound. Additionally, there are buttons to play and reset the user's musical composition, which are also implemented with JavaScript functions. The drum sounds are stored in audio files, which are accessed and played using audio objects in JavaScript.",
+        "Virtual Drums is a fun and interactive application that simulates playing a drum set. Users can play various drum sounds by tapping on the virtual drums displayed on the screen.",
+        "The application provides a realistic drumming experience with responsive sounds based on touch interactions. It's a great tool for drum enthusiasts or anyone looking to have some musical fun.",
       ],
       br: [
-        "Essa página é uma aplicação de bateria virtual, que permite ao usuário tocar diferentes sons de bateria ao pressionar as teclas do teclado correspondentes. A página utiliza HTML, CSS e JavaScript para criar a interface e o comportamento interativo.",
-        "No HTML, há uma estrutura básica da página, com tags que definem os elementos e seu conteúdo, como o cabeçalho com o título da página, a área de botões da bateria e uma área para compor e tocar músicas. O CSS é responsável pela estilização da página, definindo a aparência visual dos elementos, como cores e bordas.",
-        "O JavaScript é responsável pelo comportamento interativo da página, recebendo as ações do usuário e acionando os eventos correspondentes. A cada vez que o usuário pressiona uma tecla do teclado, o JavaScript captura o evento e executa uma função que reproduz o som correspondente. Além disso, há botões para tocar e resetar a composição musical do usuário, que também são implementados com funções em JavaScript. Os sons da bateria são armazenados em arquivos de áudio, que são acessados e reproduzidos por meio de objetos de áudio em JavaScript.",
+        "Bateria Virtual é uma aplicação divertida e interativa que simula tocar uma bateria. Os usuários podem reproduzir vários sons de bateria ao tocar nas baterias virtuais exibidas na tela.",
+        "A aplicação proporciona uma experiência realista de bateria com sons responsivos com base em interações de toque. É uma ótima ferramenta para entusiastas de bateria ou qualquer pessoa que queira se divertir com música.",
       ],
     },
     tags: {
-      en: ["Desktop", "Mobile", "Javascript", "Audio", "CSS"],
-      br: ["Desktop", "Mobile", "Javascript", "Áudio", "CSS"],
+      en: ["Desktop", "Music", "Simulation", "Interactive"],
+      br: ["Desktop", "Música", "Simulação", "Interativo"],
     },
     qtd_img: 1,
   },
   {
     linkvideo: "",
-    link: "../projetos/meteorologia",
+    link: {
+      en: "../projetos/meteorologia/?en",
+      br: "../projetos/meteorologia/?br",
+    },
     titulo: {
       en: "Meteorology",
       br: "Meteorologia",
     },
     descricao: {
-      en: "Application to view weather conditions.",
-      br: "Aplicação para ver condições meteorológicas.",
+      en: "Application for checking weather conditions.",
+      br: "Aplicação para verificar condições climáticas.",
     },
     detalhes: {
       en: [
-        "This page is a weather web application that allows users to search for weather information of a given location.",
-        "The page has a search field to enter the city name and a button to perform the search. The results are displayed on the page, including temperature, wind speed, and an image representing the weather conditions.",
-        "The page was created using HTML, CSS, and JavaScript, and uses API connection to receive information.",
+        "Meteorology is an application designed to provide users with up-to-date weather information. It fetches data from reliable sources to display current weather conditions, forecasts, and other meteorological data.",
+        "Users can search for specific locations to get detailed weather reports, including temperature, humidity, wind speed, and more. The application may also include features like weather maps or notifications for severe weather alerts.",
       ],
       br: [
-        "Esta página é uma aplicação web de meteorologia que permite aos usuários buscar informações meteorológicas de uma determinada localidade.",
-        "A página possui um campo de busca para inserir o nome da cidade e um botão para realizar a busca. Os resultados são exibidos na página, incluindo a temperatura, a velocidade do vento e uma imagem que representa as condições meteorológicas.",
-        "A página foi criada usando HTML, CSS e JavaScript, e utiliza conexão API para receber as informações.",
+        "Meteorologia é uma aplicação projetada para fornecer aos usuários informações meteorológicas atualizadas. Ela busca dados de fontes confiáveis para exibir as condições climáticas atuais, previsões e outros dados meteorológicos.",
+        "Os usuários podem buscar locais específicos para obter relatórios meteorológicos detalhados, incluindo temperatura, umidade, velocidade do vento e muito mais. A aplicação também pode incluir recursos como mapas climáticos ou notificações para alertas de condições climáticas severas.",
       ],
     },
     tags: {
-      en: ["Desktop", "Mobile", "Javascript", "API", "CSS"],
-      br: ["Desktop", "Mobile", "Javascript", "API", "CSS"],
+      en: ["Desktop", "Mobile", "Weather", "API", "Search"],
+      br: ["Desktop", "Mobile", "Clima", "API", "Busca"],
     },
     qtd_img: 3,
   },
   {
-    linkvideo: "",
-    link: "../projetos/quiz",
+    linkvideo: "https://youtu.be/IuRTh2iLVE0",
+    link: {
+      en: "../projetos/quiz/?en",
+      br: "../projetos/quiz/?br",
+    },
     titulo: {
       en: "Quiz",
       br: "Quiz",
     },
     descricao: {
-      en: "Virtual questionnaire system.",
-      br: "Sistema de questionário virtual.",
+      en: "Interactive quiz application.",
+      br: "Aplicação de quiz interativo.",
     },
     detalhes: {
       en: [
-        "A virtual questionnaire system is an application that allows users to answer questions on a digital platform. This application was developed in JS, CSS, and HTML. This is possible thanks to the way the system was developed, using JavaScript objects.",
-        "With this application, it is possible to create a variety of questionnaires to meet different needs, such as customer satisfaction questionnaires, user feedback questionnaires, or market research questionnaires. Each questionnaire can contain multiple questions.",
-        "The interface of the virtual questionnaire system is designed to be easy to use and intuitive. The questions are displayed on a single page.",
-        "Thanks to its JavaScript object architecture, the application can be updated to easily obtain questions through APIs. This means that developers can create an external database of questions and connect it to the virtual questionnaire system to obtain questions automatically. This architecture also allows developers to easily add new questions or update existing questions.",
+        "Quiz is an interactive application that allows users to participate in quizzes on various topics. It offers multiple-choice questions with scoring and feedback for users.",
+        "The application can be customized to include different quiz categories, levels of difficulty, and scoring systems. It's a great tool for educational purposes, testing knowledge, or just having fun with quizzes.",
       ],
       br: [
-        "Um sistema de questionário virtual é uma aplicação que permite aos usuários responder perguntas em uma plataforma digital. Essa aplicação foi desenvolvida em JS, CSS e HTML. Isso é possível graças à maneira como o sistema foi desenvolvido, usando objetos JavaScript.",
-        "Com essa aplicação, é possível criar uma variedade de questionários para atender a diferentes necessidades, como questionários de satisfação do cliente, questionários de feedback do usuário ou questionários de pesquisa de mercado. Cada questionário pode conter várias perguntas.",
-        "A interface do sistema de questionário virtual é projetada para ser fácil de usar e intuitiva. As perguntas são exibidas em uma única página.",
-        "Graças à sua arquitetura de objeto JavaScript, a aplicação pode receber atualização para obter as perguntas facilmente por meio de APIs. Isso significa que os desenvolvedores podem criar um banco de dados externo de perguntas e conectá-lo ao sistema de questionário virtual para obter perguntas automaticamente. Essa arquitetura também permite que os desenvolvedores adicionem facilmente novas perguntas ou atualizem perguntas existentes.",
+        "Quiz é uma aplicação interativa que permite aos usuários participarem de quizzes sobre diversos temas. Ela oferece perguntas de múltipla escolha com pontuação e feedback para os usuários.",
+        "A aplicação pode ser personalizada para incluir diferentes categorias de quiz, níveis de dificuldade e sistemas de pontuação. É uma ótima ferramenta para fins educacionais, testar conhecimentos ou simplesmente se divertir com quizzes.",
       ],
     },
     tags: {
-      en: ["Desktop", "Mobile", "Javascript", "CSS"],
-      br: ["Desktop", "Mobile", "Javascript", "CSS"],
+      en: ["Desktop", "Mobile", "Quiz", "Interactive", "Scoring"],
+      br: ["Desktop", "Mobile", "Quiz", "Interativo", "Pontuação"],
     },
     qtd_img: 2,
   },
   {
     linkvideo: "",
-    link: "../projetos/relogioanalogico",
+    link: {
+      en: "../projetos/relogioanalogico/?en",
+      br: "../projetos/relogioanalogico/?br",
+    },
     titulo: {
       en: "Analog Clock",
       br: "Relógio Analógico",
@@ -348,7 +364,10 @@ let projetos = [
   },
   {
     linkvideo: "",
-    link: "../projetos/jogodavelhajs",
+    link: {
+      en: "../projetos/jogodavelhajs/?en",
+      br: "../projetos/jogodavelhajs/?br",
+    },
     titulo: {
       en: "Tic Tac Toe JS",
       br: "Jogo da Velha JS",
@@ -377,7 +396,10 @@ let projetos = [
   },
   {
     linkvideo: "",
-    link: "../projetos/pizzariavirtual",
+    link: {
+      en: "../projetos/pizzariavirtual/?en",
+      br: "../projetos/pizzariavirtual/?br",
+    },
     titulo: {
       en: "Virtual Pizzeria",
       br: "Pizzaria Virtual",
@@ -408,7 +430,10 @@ let projetos = [
   },
   {
     linkvideo: "",
-    link: "../projetos/urnaeletronica",
+    link: {
+      en: "../projetos/urnaeletronica/?en",
+      br: "../projetos/urnaeletronica/?br",
+    },
     titulo: {
       en: "Electronic Voting Machine",
       br: "Urna Eletrônica",
@@ -423,7 +448,7 @@ let projetos = [
         "To simplify use, no database connection was made, but an object with the candidates' information was used.",
         'In the "COUNCILOR" stage, there are two registered candidates: "Fulano de Tal" from the "ABC" party with the number "38111" and "Beltrano da Silva" from the "DEFG" party with the number "77222".',
         'In the "MAYOR" stage, there are two registered candidates: "Ciclano" from the "ABC" party with the number "99" and "Zulano" from the "QWERTY" party with the number "84". Each candidate has a vice, in addition to their respective photos and captions.',
-        'To vote, just click on the numbers corresponding to the candidate\'s number you want to vote for. If you made a mistake and entered the wrong number, you can correct the vote by clicking the "CORRIGE" button. If you want to vote blank, just click the "BRANCO" button and confirm the vote.',
+        'To vote, just click on the numbers corresponding to the candidate s number you want to vote for. If you made a mistake and entered the wrong number, you can correct the vote by clicking the "CORRIGE" button. If you want to vote blank, just click the "BRANCO" button and confirm the vote.',
         "After confirming the vote, the page displays the next voting stage, if any. Otherwise, the page displays a message ending the voting process.",
       ],
       br: [
@@ -441,9 +466,13 @@ let projetos = [
     },
     qtd_img: 3,
   },
+
   {
     linkvideo: "",
-    link: "../plugins/linkedinaddcertification",
+    link: {
+      en: "../plugins/linkedinaddcertification/?en",
+      br: "../plugins/linkedinaddcertification/?br",
+    },
     titulo: {
       en: "LinkedIn add certification",
       br: "LinkedIn adicionar certificação",
@@ -470,7 +499,10 @@ let projetos = [
   },
   {
     linkvideo: "",
-    link: "../ferramentas/circulocoord",
+    link: {
+      en: "../ferramentas/circulocoord/?en",
+      br: "../ferramentas/circulocoord/?br",
+    },
     titulo: {
       en: "Geographic Coordinates Circle",
       br: "Círculo de Coordenadas Geográficas",
@@ -1070,7 +1102,7 @@ document.querySelectorAll(".modal-projeto-open").forEach((el) => {
 
     document
       .querySelector(".modal-testar-projeto")
-      .setAttribute("href", projeto.link);
+      .setAttribute("href", projeto.link[pagelanguage]);
   });
 });
 
