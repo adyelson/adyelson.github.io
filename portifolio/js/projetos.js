@@ -170,7 +170,7 @@ let projetos = [
   },
   {
     linkvideo: "",
-    link: "../microprojetos/jogodavelha",
+    link: "../projetos/jogodavelha",
     titulo: {
       en: "Tic-Tac-Toe",
       br: "Jogo da Velha",
@@ -199,7 +199,7 @@ let projetos = [
   },
   {
     linkvideo: "",
-    link: "../ferramentas/desenhando",
+    link: "../projetos/desenhando",
     titulo: {
       en: "Drawing",
       br: "Desenhando",
@@ -230,7 +230,7 @@ let projetos = [
   },
   {
     linkvideo: "",
-    link: "../ferramentas/bateriavirtual",
+    link: "../projetos/bateriavirtual",
     titulo: {
       en: "Virtual Drums",
       br: "Bateria Virtual",
@@ -259,7 +259,7 @@ let projetos = [
   },
   {
     linkvideo: "",
-    link: "../ferramentas/meteorologia",
+    link: "../projetos/meteorologia",
     titulo: {
       en: "Meteorology",
       br: "Meteorologia",
@@ -288,7 +288,7 @@ let projetos = [
   },
   {
     linkvideo: "",
-    link: "../microprojetos/quiz",
+    link: "../projetos/quiz",
     titulo: {
       en: "Quiz",
       br: "Quiz",
@@ -319,7 +319,7 @@ let projetos = [
   },
   {
     linkvideo: "",
-    link: "../ferramentas/relogioanalogico",
+    link: "../projetos/relogioanalogico",
     titulo: {
       en: "Analog Clock",
       br: "Relógio Analógico",
@@ -348,7 +348,7 @@ let projetos = [
   },
   {
     linkvideo: "",
-    link: "../microprojetos/jogodavelhajs",
+    link: "../projetos/jogodavelhajs",
     titulo: {
       en: "Tic Tac Toe JS",
       br: "Jogo da Velha JS",
@@ -377,7 +377,7 @@ let projetos = [
   },
   {
     linkvideo: "",
-    link: "../microprojetos/pizzariavirtual",
+    link: "../projetos/pizzariavirtual",
     titulo: {
       en: "Virtual Pizzeria",
       br: "Pizzaria Virtual",
@@ -408,7 +408,7 @@ let projetos = [
   },
   {
     linkvideo: "",
-    link: "../microprojetos/urnaeletronica",
+    link: "../projetos/urnaeletronica",
     titulo: {
       en: "Electronic Voting Machine",
       br: "Urna Eletrônica",
