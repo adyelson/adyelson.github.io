@@ -809,7 +809,7 @@ let pagedatatextos = {
     en: "Best Choice",
     br: "Melhor escolha",
   },
-  projetostiutlo: {
+  projetostitulo: {
     en: "Projects",
     br: "Projetos",
   },
@@ -974,19 +974,6 @@ function listar_imagens(nome, qtd_img) {
   return imagens;
 }
 
-tags = [...new Set(tags)].sort();
-
-const projetoitem = document.querySelectorAll(".projetoitem");
-let lista_filtro_projeto = [];
-const tagsSpan = document.querySelector(".modal-tags");
-
-const imgElem = document.querySelector(".modal-img");
-
-const imgDivElem = document.querySelector(".modal-img-div");
-imgDivElem.innerHTML = "";
-
-let filtroProjetos = document.querySelector(".filtrar-projetos");
-let listaDeFiltros = document.querySelector(".lista-de-filtros");
 projetos.forEach((projeto) => {
   projeto.nome = nome_projeto(projeto.titulo["br"]);
   projeto.imagens = listar_imagens(projeto.nome, projeto.qtd_img);
@@ -994,6 +981,7 @@ projetos.forEach((projeto) => {
     tags.push(tag);
   });
 });
+tags = [...new Set(tags)].sort();
 
 let pagedata = new Vue({
   el: ".pagedata",
@@ -1007,7 +995,14 @@ let pagedata = new Vue({
     sobre: sobremim,
   },
 });
+const projetoitem = document.querySelectorAll(".projetoitem");
+let lista_filtro_projeto = [];
+const tagsSpan = document.querySelector(".modal-tags");
 
+const imgElem = document.querySelector(".modal-img");
+
+const imgDivElem = document.querySelector(".modal-img-div");
+imgDivElem.innerHTML = "";
 document.querySelectorAll(".tagbutton").forEach((el) => {
   el.addEventListener("click", () => {
     if (lista_filtro_projeto.includes(el.innerHTML)) {
@@ -1048,7 +1043,6 @@ document.querySelectorAll(".modal-projeto-open").forEach((el) => {
     let idcod = el.getAttribute("id");
     let projeto = projetos[idcod];
     let countImg = projeto.imagens.length;
-
     document.querySelector(".modal-title-projeto").innerHTML =
       projeto.titulo[pagelanguage];
     // document.querySelector('.controle-central').setAttribute('id',projeto.nome+idcod)
@@ -1060,18 +1054,15 @@ document.querySelectorAll(".modal-projeto-open").forEach((el) => {
         el.classList.remove("d-none");
       }
     });
-
     let newimg = "";
     let newDivimg = "";
     document.querySelector(".modal-lista-img").innerHTML = "";
-
     document.querySelector(".modal-detalhes").innerHTML = "";
     projeto.detalhes[pagelanguage].forEach((element) => {
       let paragrafroDetalhes = document.createElement("p");
       paragrafroDetalhes.innerHTML = element;
       document.querySelector(".modal-detalhes").appendChild(paragrafroDetalhes);
     });
-
     projeto.imagens.map((imagem, index) => {
       // ---- append no div e depois na lista para imagem
       newDivimg = imgDivElem.cloneNode(true);
@@ -1083,7 +1074,6 @@ document.querySelectorAll(".modal-projeto-open").forEach((el) => {
       newDivimg.append(newimg);
       document.querySelector(".modal-lista-img").append(newDivimg);
     });
-
     let newtag = "";
     document.querySelector(".modal-lista-tags").innerHTML = "";
     projeto.tags[pagelanguage].map((tag, index) => {
@@ -1099,13 +1089,14 @@ document.querySelectorAll(".modal-projeto-open").forEach((el) => {
         .querySelector(".modal-linkvideo")
         .setAttribute("href", projeto.linkvideo);
     }
-
     document
       .querySelector(".modal-testar-projeto")
       .setAttribute("href", projeto.link[pagelanguage]);
   });
 });
 
+let filtroProjetos = document.querySelector(".filtrar-projetos");
+let listaDeFiltros = document.querySelector(".lista-de-filtros");
 filtroProjetos.addEventListener("click", function (ev) {
   if (filtroProjetos.classList.contains("color-main")) {
     listaDeFiltros.classList.remove("d-none");
