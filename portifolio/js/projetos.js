@@ -211,7 +211,7 @@ let projetos = [
     qtd_img: 1,
   },
   {
-    linkvideo: "https://youtu.be/mDpEqoXxSqA",
+    linkvideo: "",
     link: {
       en: "../projetos/desenhando/?en",
       br: "../projetos/desenhando/?br",
@@ -241,7 +241,7 @@ let projetos = [
     qtd_img: 2,
   },
   {
-    linkvideo: "https://youtu.be/D4TkG1i_xX8",
+    linkvideo: "",
     link: {
       en: "../projetos/bateriavirtual/?en",
       br: "../projetos/bateriavirtual/?br",
@@ -301,7 +301,7 @@ let projetos = [
     qtd_img: 3,
   },
   {
-    linkvideo: "https://youtu.be/IuRTh2iLVE0",
+    linkvideo: "",
     link: {
       en: "../projetos/quiz/?en",
       br: "../projetos/quiz/?br",
@@ -468,7 +468,7 @@ let projetos = [
   },
 
   {
-    linkvideo: "",
+    linkvideo: "https://youtu.be/T8Y0hczCFY8",
     link: {
       en: "../plugins/linkedinaddcertification/?en",
       br: "../plugins/linkedinaddcertification/?br",
